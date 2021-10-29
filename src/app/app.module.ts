@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
 import { EvenementComponent } from './evenement/evenement.component';
+import { PlantesComponent } from './plantes/plantes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireEventComponent,
-    EvenementComponent
+    EvenementComponent,
+    PlantesComponent
   ],
   imports: [
     BrowserModule,
