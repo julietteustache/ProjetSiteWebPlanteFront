@@ -1,1 +1,13 @@
-<p>plantes works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" *ngFor='let p of plantes'>
+            <div class="card p-2 myshadow">
+                <p class="text-secondary">Espèce : {{p.espece}}</p>
+                <div>
+                    <p>{{p.description}}</p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
