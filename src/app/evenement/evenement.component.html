@@ -1,9 +1,10 @@
 <div class="container">
     
     <div class="row">
-        <div class="col-sm-4" (ngsubmit)=redirection()>
+        <div class="col-sm-4">
                 <p>Carte</p>
-                <button class="btn btn-secondary btn block" type="submit">Créer un évenement</button>
+                <button routerLink="/formulaireEvent" class="btn btn-secondary btn block" type="button">Créer un évenement</button>
+                
         </div>
         <div class="col-sm-8">
             <p>Evenements</p>
@@ -15,6 +16,9 @@
                 <p style="text-align: right;">Nombre de participants:{{m.NbParticipants}}</p>
                 <div>
                     <p>{{m.description}}</p>
+                </div>
+                <div>
+                    <button type="submit">Voir plus</button>
                 </div>
             </div>
         </div>
