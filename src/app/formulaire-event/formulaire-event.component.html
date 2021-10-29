@@ -1,7 +1,7 @@
 <div style="margin-top: 200px;">
     <div style="margin:auto;width: 40%;">
         <div class="card p-4 my-shadow">
-        <form>
+        <form #fConnect="ngForm" (ngSubmit)="formulaireE(fConnect.value)">
             <div class="form-group">
                 <label class="grey-text">Titre</label>
                 <input type="text" class="form-control" name="titre" ngModel="">

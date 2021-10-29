@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulaire-event',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire-event.component.css']
 })
 export class FormulaireEventComponent implements OnInit {
-
-  constructor() { }
+evenement:any;
+  constructor(private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
   }
-
+  formulaireE(val:any):void{
+    //console.log(val);
+    this.http.post('http://localhost:8085/insertEvent',val).subscribe({
+      next:(data)=>{this.evenement=data},
+      error:(err)=>{console.log(err)}
+    })
+  }
 }
