@@ -1,0 +1,27 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-4">
+                <p>Carte</p>
+                <button routerLink="/formulaireEvent" class="btn btn-secondary btn block" type="button">Créer un évenement</button>
+                
+        </div>
+        <div class="col-sm-8">
+            <p>Evenements</p>
+        </div>
+        <div style="left:400px;top:50px;padding: 10px;"class="col-sm-8"*ngFor='let m of evenement'>
+            
+            <div class="card p-2 my-shadow">
+                <p style="text-align: left;">{{m.titre}}</p>
+                <p style="text-align: right;">Nombre de participants:{{m.NbParticipants}}</p>
+                <div>
+                    <p>{{m.description}}</p>
+                </div>
+                <div>
+                    <button type="submit">Voir plus</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

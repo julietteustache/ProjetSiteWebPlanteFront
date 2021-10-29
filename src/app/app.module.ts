@@ -4,16 +4,26 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
+import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlantesComponent
+    FormulaireEventComponent,
+    EvenementComponent,
+    PlantesComponent,
+    EvenementSpecifiqueComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
