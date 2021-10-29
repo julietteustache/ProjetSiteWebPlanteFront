@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PlantesComponent } from './plantes/plantes.component';
 
 const routes: Routes = [
-  {path: 'plante', component: PlantesComponent}
+  {path: 'liste_plantes', component: PlantesComponent}
 ];
 
 @NgModule({
