@@ -21,7 +21,5 @@ constructor(private http:HttpClient,private route:Router) { }
       error:(err)=>{console.log(err)}
     })
     }
-    redirection():void{
-      this.route.navigateByUrl('formulaireEvent');
-    }
+   
 }
