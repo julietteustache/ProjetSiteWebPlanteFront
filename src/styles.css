@@ -1,3 +1,4 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 /* You can add global styles to this file, and also import other style files */
 
 .navbar-default {
@@ -9,6 +10,13 @@
     left : -100px !important;
     right :0 !important;
 }
+
+
+ [class*="col-"] {
+    float: left;
+   
+  }
+
   .col-1 {width: 45%; background-color:red;}
   .col-2 {width: 45%;background-color: blue;}
   .col-5{border : none;}
@@ -26,7 +34,8 @@
     border: none;
     border-radius: 40px;
     box-shadow: 0 3px #999;
-    margin: 100px 100px;
+    margin-top: 150px ;
+    
   }
   
   .button1:hover {background-color: #3e8e41}
@@ -41,3 +50,21 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.3)!important;
 }
 
+.buttonChoix{
+    
+    font-size: 10px;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: rgba(209, 191, 191, 0.637);
+    border-style: solid rgba(209, 191, 191, 0.637);
+    border-radius: 5px;
+    margin-right:auto;
+    width: 100%;
+    padding-top :5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+
+}
