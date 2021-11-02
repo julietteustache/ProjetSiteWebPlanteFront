@@ -12,8 +12,9 @@ import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
-
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
     EvenementComponent,
     PlantesComponent,
     EvenementSpecifiqueComponent,
+    ConnexionComponent,
+    InscriptionComponent,
     CreerPlanteComponent
 
   ],
