@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top:50px !important;">
     <div class="row">
         <div class="col-sm-4" *ngFor='let p of plantes'>
             <div class="card p-2 myshadow">
@@ -10,5 +10,11 @@
             <br>
         </div>
     </div>
-        <button routerLink="/nouvellePlante" class="btn btn-secondary" type="button">Ajouter une nouvelle plante</button>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <button routerLink="/nouvellePlante" class="btn btn-secondary btn-block" type="button">Ajouter une nouvelle plante</button>
+        </div>
+    </div>
+
 </div>
