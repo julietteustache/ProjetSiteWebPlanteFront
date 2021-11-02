@@ -17,7 +17,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
-  {path: 'plante', component: PlantesComponent},
+  {path: 'liste_plantes', component: PlantesComponent},
   
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
