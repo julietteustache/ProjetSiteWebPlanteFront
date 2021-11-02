@@ -9,7 +9,7 @@
         <div class="col-sm-8">
             <p>Evenements</p>
         </div>
-        <div style="left:400px;top:50px;padding: 10px;"class="col-sm-8"*ngFor='let m of evenement'>
+        <div style="left:400px;top:50px;padding: 10px;"class="col-sm-8"*ngFor='let m of response'>
             
             <div class="card p-2 my-shadow">
                 <p style="text-align: left;">{{m.titre}}</p>
@@ -18,7 +18,7 @@
                     <p>{{m.description}}</p>
                 </div>
                 <div>
-                    <button type="submit">Voir plus</button>
+                    <button class="btn btn-primary" (click)="ouvreDetails(m)">Détails</button>
                 </div>
             </div>
         </div>
