@@ -13,6 +13,7 @@ import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
+import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
     EvenementComponent,
     PlantesComponent,
     EvenementSpecifiqueComponent,
-    CreerPlanteComponent
+    CreerPlanteComponent,
+    AfficherPlanteComponent
 
   ],
   imports: [

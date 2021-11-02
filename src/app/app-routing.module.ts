@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
 import { AnnonceComponent } from './annonce/annonce.component';
 
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'Evenement',component:EvenementComponent},
   {path: 'plante', component: PlantesComponent},
   {path: 'nouvellePlante', component: CreerPlanteComponent},
-  {path : 'annonce', component:AnnonceComponent}
+  {path : 'annonce', component:AnnonceComponent},
+  {path: 'afficher_plante', component:AfficherPlanteComponent}
 ];
 
 @NgModule({
