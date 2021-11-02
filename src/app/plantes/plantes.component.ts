@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlantesComponent implements OnInit {
   plantes:any;
+  idPlante:any;
 
   constructor(private http:HttpClient) { }
 
