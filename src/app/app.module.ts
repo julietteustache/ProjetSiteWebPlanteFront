@@ -9,6 +9,7 @@ import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
+import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-s
     FormulaireEventComponent,
     EvenementComponent,
     PlantesComponent,
-    EvenementSpecifiqueComponent
+    EvenementSpecifiqueComponent,
+    CreerPlanteComponent
   ],
   imports: [
     BrowserModule,
