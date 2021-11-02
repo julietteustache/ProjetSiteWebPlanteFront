@@ -12,7 +12,7 @@
 
  [class*="col-"] {
     float: left;
-    border: 1px solid red;
+   
   }
   .col-1 {width: 45%; background-color:red;}
   .col-2 {width: 45%;background-color: blue;}
@@ -59,7 +59,7 @@
     border-style: solid rgba(209, 191, 191, 0.637);
     border-radius: 5px;
     margin-right:auto;
-    padding-right: 100%;
+    width: 100%;
     padding-top :5px;
     padding-bottom: 5px;
     padding-left:10px;
