@@ -22,6 +22,7 @@ import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
 
 import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
 import { HttpClientModule } from '@angular/common/http';
+import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 
 
 
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
    
     ConnexionComponent,
     InscriptionComponent,
-    CreerPlanteComponent
+    CreerPlanteComponent,
+    QuizzScoreComponent
   ],
   imports: [
     BrowserModule,

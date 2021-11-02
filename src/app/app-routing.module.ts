@@ -5,8 +5,6 @@ import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-s
 import { AnnonceComponent } from './annonce/annonce.component';
 
 
-
-
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
 import { EvenementComponent } from './evenement/evenement.component';
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
@@ -14,13 +12,18 @@ import { PlantesComponent } from './plantes/plantes.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
   {path: 'liste_plantes', component: PlantesComponent},
   
+  // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
+  {path: 'quizz-score', component: QuizzScoreComponent},
+
   {path: 'nouvellePlante', component: CreerPlanteComponent},
   {path : 'annonce', component:AnnonceComponent},
   {path: 'afficher_plante', component:AfficherPlanteComponent}
