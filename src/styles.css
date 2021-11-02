@@ -10,10 +10,12 @@
     right :0 !important;
 }
 
+
  [class*="col-"] {
     float: left;
    
   }
+
   .col-1 {width: 45%; background-color:red;}
   .col-2 {width: 45%;background-color: blue;}
   .col-5{border : none;}

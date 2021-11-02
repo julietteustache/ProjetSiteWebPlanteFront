@@ -1,1 +1,47 @@
-<p>creer-plante works!</p>
+<div class="container">
+    <div style="margin:auto;width: 50%;">
+        <div class="card p-4 my-shadow">
+        <div><h1 class="text-secondary">Ajout d'une nouvelle plante</h1></div>
+        <form #fConnect="ngForm" (ngSubmit)="creerPlante(fConnect.value)">
+            <div class="form-group">
+                <label class="grey-text">Catégorie</label>
+                <input type="text" class="form-control" name="categorie" ngModel="">
+
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Sous-catégorie</label>
+                <input type="text" class="form-control" name="sousCategorie" ngModel="">
+
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Espèce</label>
+                <input type="text" class="form-control" name="espece" ngModel="">
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Description</label>
+                <input type="text" class="form-control" name="description" ngModel="">
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Prix (score à payer pour l'échange)</label>
+                <input type="text" class="form-control" name="prix" ngModel="">
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Calendrier</label>
+                <input type="text" class="form-control" name="calendrier" ngModel="">
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Arrosage (en jours)</label>
+                <input type="number" class="form-control" name="arrosage" ngModel="">
+            </div>
+            <div class="form-group">
+                <label class="grey-text">Exposition</label>
+                <input type="text" class="form-control" name="exposition" ngModel="">
+            </div>
+            
+            <button class="btn btn-secondary btn-block" type="submit" style="margin: auto;">Valider la création</button>
+           
+            <p class="text-center text-danger"></p>
+        </form>
+    </div>
+    </div>
+</div>
