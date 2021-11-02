@@ -17,7 +17,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ConnexionComponent } from './connexion/connexion.component';
-import { InscriptionComponent } from './inscription/inscription.component';
+import { InscriptionComponent } from './inscription1-donnees/inscription.component';
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
 
 import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';

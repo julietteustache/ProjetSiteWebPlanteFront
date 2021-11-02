@@ -13,7 +13,7 @@ import { FormulaireEventComponent } from './formulaire-event/formulaire-event.co
 import { PlantesComponent } from './plantes/plantes.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
-import { InscriptionComponent } from './inscription/inscription.component';
+import { InscriptionComponent } from './inscription1-donnees/inscription.component';
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
