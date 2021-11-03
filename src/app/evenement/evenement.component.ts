@@ -4,6 +4,7 @@ import { EvenementSpec } from '../evenement-spec';
 import { EvenementSpecifiqueComponent } from '../evenement-specifique/evenement-specifique.component';
 import { MatDialog } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'evenement',
   templateUrl: './evenement.component.html',
@@ -12,6 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class EvenementComponent implements OnInit {
   evenement:any;
   response:any;
+ 
 constructor(private http:HttpClient,private dialog: MatDialog, public servi: EvenementSpec) { }
 
   ngOnInit(): void {
@@ -32,4 +34,14 @@ constructor(private http:HttpClient,private dialog: MatDialog, public servi: Eve
     const mydial=this.dialog.open(EvenementSpecifiqueComponent);
 
     };
+
+  chercheVille(ville:any){
+    console.log(ville);
+    this.http.get('http://localhost:8085/eventville/'+ville).subscribe({
+      next:(data1)=>{this.response=data1;
+      },
+      error:(err)=>{console.log(err)}
+    })
+
+  }
   }

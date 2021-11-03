@@ -1,42 +1,87 @@
 <div id="listequestions">
 
-<!-- QUESTION 1-->
-<div id="question1">
-    <p>Qu'est-ce qu'un gourmand ?</p>
+<!-- ATTENTION : Utilisation des boutons radio --> 
+<!-- Les réponses à une même question doivent avoir le même 'name' (on peut mettre un id différent) -->
 
-<!-- Default radio -->
-<div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault1"
-    />
+<form #fConnect="ngForm" (ngSubmit)="calculscore(fConnect.value)">
+
+  <!-- QUESTION 1-->
+<div class="question">
+    <p class="titreq">Qu'est-ce qu'un gourmand ?</p>
+
+  <!-- Réponse 1_1 -->
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="q1_1" name="q1"/>
     <label class="form-check-label" for="flexRadioDefault1"> Un insecte qui s'attaque aux arbres fruitiers</label>
   </div>
   
-  <!-- Default checked radio -->
+  <!-- Réponse 1_2 -->
   <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault2"
-    />
+    <input class="form-check-input" type="radio" id="q1_2" name="q1"/>
     <label class="form-check-label" for="flexRadioDefault2"> Une branche secondaire qui se développe sur la branche principale d'une plante </label>
   </div>
 
-  <!-- Default radio -->
+  <!-- Réponse 1_3 -->
     <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault1"
-    />
+    <input class="form-check-input" type="radio" id="q1_3" name="q1"/>
     <label class="form-check-label" for="flexRadioDefault1"> Une mauvaise herbe qui pousse aux pieds d'une plante</label>
   </div>
-  
 </div>
 
+
+<!------------------------------------------------------------------------------------------------------->
+<!-- QUESTION 2-->
+<div class="question">
+    <p class="titreq">Une plante remontante…</p>
+
+  <!-- Réponse 2_1 -->
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="q2_1" name="q2"/>
+    <label class="form-check-label" for="flexRadioDefault1">Fleurit deux fois dans l'année</label>
+  </div>
+  
+  <!-- Réponse 2_2 -->
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="q2_2" name="q2"/>
+    <label class="form-check-label" for="flexRadioDefault2">Conserve ses feuilles toute l'année</label>
+  </div>
+
+  <!-- Réponse 2_3 -->
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="q2_3" name="q2"/>
+    <label class="form-check-label" for="flexRadioDefault1">Pousse en grimpant</label>
+  </div>
+</div>
+
+
+<!------------------------------------------------------------------------------------------------------->
+<!-- QUESTION 3-->
+<div class="question">
+    <p class="titreq">Que veut dire praliner une plante?</p>
+
+  <!-- Réponse 3_1 -->
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="q3_1" name="q3"/>
+    <label class="form-check-label" for="flexRadioDefault1">L'arroser avec un brumisateur</label>
+  </div>
+  
+  <!-- Réponse 3_2 -->
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="q3_2" name="q3"/>
+    <label class="form-check-label" for="flexRadioDefault2">Tremper les racine sdans un mélange de fumier, de terre et d'eau</label>
+  </div>
+
+  <!-- Réponse 3_3 -->
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="q3_3" name="q3"/>
+    <label class="form-check-label" for="flexRadioDefault1">Ajouter du sucre dans la terre pour améliorer la pousse</label>
+  </div>
+</div>
+
+
+<!------------------------------------------------------------------------------------------------------->
+<!-- BOUTON VALIDER -->
+<button type="submit" class="button1">Confirmer</button>
+
+</form>
 </div>
