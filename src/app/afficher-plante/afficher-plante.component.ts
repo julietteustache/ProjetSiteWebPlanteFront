@@ -22,6 +22,7 @@ export class AfficherPlanteComponent implements OnInit {
   prix:any;
   exposition:any;
   commentaire:any;
+  nvCom:any;
   p: Plante=new Plante();
   constructor(private http:HttpClient, public laplante:Plantespecial, private route:Router) {}
 
@@ -56,6 +57,15 @@ export class AfficherPlanteComponent implements OnInit {
     this.http.get('http://localhost:8085/getcomplante/'+this.idPlante).subscribe({
       next: (data) => {
         this.commentaire=data;
+      },
+      error: (err) => {console.log(err)}
+
+    });
+  }
+  newCom(val:any): void {
+    this.http.post('http://localhost:8085/newcom', val).subscribe({
+      next: (data) => {
+        this.nvCom=data;
       },
       error: (err) => {console.log(err)}
 
