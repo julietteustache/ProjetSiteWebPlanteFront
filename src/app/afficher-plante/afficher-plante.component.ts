@@ -4,6 +4,7 @@ import { PlantesComponent } from '../plantes/plantes.component';
 import { Plante } from '../plante';
 import { Plantespecial } from '../plantespecial';
 import { Router } from '@angular/router';
+import { UserConnect } from '../user-connect';
 
 @Component({
   selector: 'app-afficher-plante',
@@ -27,7 +28,7 @@ export class AfficherPlanteComponent implements OnInit {
 
   user = { id: 2, nom: 'Azer' };
 
-  constructor(private http: HttpClient, public laplante: Plantespecial, private route: Router) { }
+  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:UserConnect, private route: Router) { }
 
   ngOnInit(): void {
     this.p = this.laplante.plante;
