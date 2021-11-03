@@ -23,20 +23,23 @@
   .col-5{border : none;}
 
   .button1 {
-    display: inline-block;
+    /* Placement */    
+    display: block;
+    margin: 0 auto ;
+
+    /* Style */
     padding: 5px 15px;
-    font-size: 12px;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #56A632;
     border: none;
     border-radius: 40px;
-    box-shadow: 0 3px #999;
-    margin-top: 10px ;
-    
+    /* box-shadow: 0 3px #999; */    
   }
   
   .button1:hover {background-color: #3e8e41}
@@ -799,6 +802,26 @@
    
 
 
-#listequestions{
 
+/* PAGE QUIZZ */
+#listequestions{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background-color:#DCE1E9;
+  border-radius: 3px;
+  padding: 25px;
 }
+
+.question{
+  margin-bottom : 25px;
+}
+
+.titreq {
+  text-align: center;
+}
+/* FIN PAGE QUIZZ */
