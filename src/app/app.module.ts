@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { GoogleMapsModule } from '@angular/google-maps';
 import { AnnonceComponent } from './annonce/annonce.component';
 
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
@@ -25,6 +25,7 @@ import { ValidEventComponent } from './valid-event/valid-event.component';
 import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -40,6 +41,7 @@ import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
     InscriptionComponent,
     CreerPlanteComponent,
     ValidEventComponent,
+    
 
 
     CreerPlanteComponent,
@@ -49,7 +51,8 @@ import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
-    QuizzScoreComponent
+    QuizzScoreComponent,
+    NavbarComponent
   ],
   imports: [
       BrowserModule,
@@ -61,6 +64,7 @@ import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
     MatButtonModule,
    BrowserAnimationsModule,
    MatCheckboxModule,
+   GoogleMapsModule,
   
   
   ],
