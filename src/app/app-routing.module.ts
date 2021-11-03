@@ -13,6 +13,8 @@ import { PlantesComponent } from './plantes/plantes.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { ValidEventComponent } from './valid-event/valid-event.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
   {path: 'nouvellePlante', component: CreerPlanteComponent},
-  {path : 'annonce', component:AnnonceComponent}
+  {path : 'annonce', component:AnnonceComponent},
+  {path:'validevent',component:ValidEventComponent},
+  {path:'calendrier',component:CalendrierComponent}
 ];
 
 @NgModule({
