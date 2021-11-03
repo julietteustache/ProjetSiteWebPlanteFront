@@ -15,11 +15,13 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ValidEventComponent } from './valid-event/valid-event.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
   {path: 'liste_plantes', component: PlantesComponent},
+  {path: 'documentation', component: DocumentationComponent},
   
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},

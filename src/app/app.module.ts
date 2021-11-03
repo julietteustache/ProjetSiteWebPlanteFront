@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavdocComponent } from './navdoc/navdoc.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 
 
@@ -53,7 +54,8 @@ import { NavdocComponent } from './navdoc/navdoc.component';
     CreerPlanteComponent,
     QuizzScoreComponent,
     NavbarComponent,
-    NavdocComponent
+    NavdocComponent,
+    DocumentationComponent
   ],
   imports: [
       BrowserModule,
