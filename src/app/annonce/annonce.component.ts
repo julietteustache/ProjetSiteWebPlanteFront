@@ -23,8 +23,8 @@ export class AnnonceComponent implements OnInit {
   constructor(private http:HttpClient, private router : Router) { }
 
   ngOnInit()  {
-    this.recupAnnonce();
-    this.dropdownCategorie = [
+    //this.recupAnnonce();
+    /*this.dropdownCategorie = [
       { item_id: 1, item_text: 'Techniques générales' },
       { item_id: 2, item_text: 'Abres' },
       { item_id: 3, item_text: 'Fleurs' },
@@ -38,14 +38,45 @@ export class AnnonceComponent implements OnInit {
       { item_id: 4, item_text: 'Fuits et légumes' },
     ];
 
+    if(this.selectedCategorie.item_id==1) // Si on selectionne techniques générales
+    {
+      this.dropdownSousCategorie = [
+        { item_id: 1, item_text: 'Greffe' },
+        { item_id: 2, item_text: 'Bouture' },
+        
+      ];
+
+      this.selectedSousCategorie=[
+        
+          { item_id: 1, item_text: 'Greffe' },
+          { item_id: 2, item_text: 'Bouture' },
+        
+      ];
+      if(this.selectedSousCategorie.item_id==1) // si on selection greffe
+      {
+        this.dropdownEspece=[
+          { item_id: 1, item_text: 'Pommier' },
+          { item_id: 2, item_text: 'Poirier' },
+          { item_id: 3, item_text: 'Oranger' },
+        ]
+      }
+      if(this.selectedSousCategorie.item_id==2) // si on selection bouture
+      {
+        this.dropdownEspece=[
+          { item_id: 1, item_text: 'Rose' },
+          { item_id: 2, item_text: 'Tulipe' },
+          { item_id: 3, item_text: 'Bonsai' },
+        ]
+      }
+    }
+
+    if(this.selectedCategorie.item_id==2) // si on selectionne arbres
+    {
+
+    }
     
-    this.dropdownSousCategorie = [
-      { item_id: 1, item_text: 'Techniques générales' },
-      { item_id: 2, item_text: 'Abres' },
-      { item_id: 3, item_text: 'Fleurs' },
-      { item_id: 4, item_text: 'Fuits et légumes' },
      
-    ];
+   
 
 
     this.dropdownSettings = {
@@ -56,15 +87,61 @@ export class AnnonceComponent implements OnInit {
       unSelectAllText: 'UnSelect All',
       itemsShowLimit: 10,
       allowSearchFilter: true
-    };
+    };*/
    
   }
-  onItemSelect(item: any) {
-    console.log(item);
+ /* onCategorieSelect(item: any) {
+    if(item.item_id==1)
+    {
+      this.recupAnnonceByCategorie('technique');
+    }
+    if(item.item_id==2)
+    {
+      this.recupAnnonceByCategorie('arbres');
+    }
+    if(item.item_id==3)
+    {
+      this.recupAnnonceByCategorie('fleur');
+    }
+    if(item.item_id==4)
+    {
+      this.recupAnnonceByCategorie('légume');
+    }
+    
   }
-  onSelectAll(items: any) {
-    console.log(items);
+
+  onSousCategorieSelect(item: any) {
+    if(item.item_id==1)
+    {
+      this.recupAnnonceByCategorie('technique');
+    }
+    if(item.item_id==2)
+    {
+      this.recupAnnonceByCategorie('arbres');
+    }
+    if(item.item_id==3)
+    {
+      this.recupAnnonceByCategorie('fleur');
+    }
+    if(item.item_id==4)
+    {
+      this.recupAnnonceByCategorie('légume');
+    }
+    
   }
+  onSelectAll() {
+   
+  }
+
+  onDeSelect(items : any)
+  {
+
+  }
+
+  onDeSelectAll()
+  {
+
+  }*/
 
   recupAnnonce() :void{
     this.http.get('http://localhost:8085/annonce').subscribe({
@@ -74,5 +151,16 @@ export class AnnonceComponent implements OnInit {
       error : (err)=>{console.log(err)}
     })
   }
+
+  /*recupAnnonceByCategorie(item : any) {
+    this.http.get('http://localhost:8085/annonce/{item}').subscribe({
+      next:(data)=>{
+        this.annonce=data;
+      },
+      error : (err)=>{console.log(err)}
+    })
+  }*/
+
+
 
 }

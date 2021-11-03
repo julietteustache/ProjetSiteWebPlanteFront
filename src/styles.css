@@ -34,7 +34,7 @@
     border: none;
     border-radius: 40px;
     box-shadow: 0 3px #999;
-    margin-top: 150px ;
+    
     
   }
   
@@ -69,6 +69,32 @@
 
 }
 
-#listequestions{
-
+.titreAnnonce{
+  color : green;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-size: 13px;
+  
 }
+.categorie{
+  color : black;
+  text-transform: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 13px;
+}
+.donneur{
+  color : rgb(39, 172, 206);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  
+}
+.description{
+  color : black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 10px;
+  
+}
+
