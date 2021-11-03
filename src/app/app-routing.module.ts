@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
 import { AnnonceComponent } from './annonce/annonce.component';
-
-
 
 
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
@@ -15,17 +14,23 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ValidEventComponent } from './valid-event/valid-event.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
+import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'Evenement',component:EvenementComponent},
-  {path: 'plante', component: PlantesComponent},
+  {path: 'liste_plantes', component: PlantesComponent},
   
+  // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
+  {path: 'quizz-score', component: QuizzScoreComponent},
+
   {path: 'nouvellePlante', component: CreerPlanteComponent},
   {path : 'annonce', component:AnnonceComponent},
   {path:'validevent',component:ValidEventComponent},
-  {path:'calendrier',component:CalendrierComponent}
+  {path:'calendrier',component:CalendrierComponent},
+  {path: 'afficher_plante', component:AfficherPlanteComponent}
 ];
 
 @NgModule({

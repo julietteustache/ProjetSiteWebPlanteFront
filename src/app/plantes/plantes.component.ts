@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Plante } from '../plante';
+import { AfficherPlanteComponent } from '../afficher-plante/afficher-plante.component';
+import { Plantespecial } from '../plantespecial';
+
 
 @Component({
   selector: 'app-plantes',
@@ -8,8 +12,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlantesComponent implements OnInit {
   plantes:any;
+  idPlante:any;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, public laplante:Plantespecial) { }
 
   ngOnInit(): void {
     this.getPlantes()
@@ -22,7 +27,11 @@ export class PlantesComponent implements OnInit {
       },
       error: (err) => {console.log(err)}
     });
-
   }
+
+  stock(p:any): void {
+    this.laplante.plante=p;
+  }
+
 }
 

@@ -19,8 +19,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { CreerPlanteComponent } from './creer-plante/creer-plante.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { ValidEventComponent } from './valid-event/valid-event.component';
+
+import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.component';
+import { HttpClientModule } from '@angular/common/http';
+import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+
+
 
 @NgModule({
   declarations: [
@@ -33,8 +39,17 @@ import { ValidEventComponent } from './valid-event/valid-event.component';
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
-    ValidEventComponent
+    ValidEventComponent,
 
+
+    CreerPlanteComponent,
+    AfficherPlanteComponent,
+    
+   
+    ConnexionComponent,
+    InscriptionComponent,
+    CreerPlanteComponent,
+    QuizzScoreComponent
   ],
   imports: [
       BrowserModule,
@@ -46,6 +61,7 @@ import { ValidEventComponent } from './valid-event/valid-event.component';
     MatButtonModule,
    BrowserAnimationsModule,
    MatCheckboxModule,
+  
   
   ],
   providers: [],
