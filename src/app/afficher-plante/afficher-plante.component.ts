@@ -21,6 +21,7 @@ export class AfficherPlanteComponent implements OnInit {
   arrosage:any;
   prix:any;
   exposition:any;
+  commentaire:any;
   p: Plante=new Plante();
   constructor(private http:HttpClient, public laplante:Plantespecial, private route:Router) {}
 
@@ -37,6 +38,7 @@ export class AfficherPlanteComponent implements OnInit {
     this.prix=this.p.prix;
     this.exposition=this.p.exposition;
     this.recupPlante();
+    this.recupCom();
   }
 
   recupPlante(): void {
@@ -48,6 +50,15 @@ export class AfficherPlanteComponent implements OnInit {
         }
       },
       error: (err) => {console.log(err)}
+    });
+  }
+  recupCom() : void {
+    this.http.get('http://localhost:8085/getcomplante/'+this.idPlante).subscribe({
+      next: (data) => {
+        this.commentaire=data;
+      },
+      error: (err) => {console.log(err)}
+
     });
   }
 }
