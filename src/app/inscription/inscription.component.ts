@@ -18,8 +18,9 @@ export class InscriptionComponent implements OnInit {
 
   inscription(val:any): void{
     this.http.post('http://localhost:8085/inscription', val).subscribe({
-      next:(data)=>{this.user=data},
+      next:(data)=>{this.user=data
+      this.route.navigateByUrl('quizz-score')},
       error:(err)=>{console.log(err)}
     })
-}
+  }
 }
