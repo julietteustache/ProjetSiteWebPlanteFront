@@ -14,7 +14,7 @@ evenement:any;
   ngOnInit(): void {
   }
   formulaireE(val:any):void{
-    //console.log(val);
+    
     this.http.post('http://localhost:8085/insertEvent',val).subscribe({
       next:(data)=>{this.evenement=data
         this.route.navigateByUrl('Evenement');
