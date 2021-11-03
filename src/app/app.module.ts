@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AnnonceComponent } from './annonce/annonce.component';
 
@@ -53,7 +54,9 @@ import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
     MatCardModule,
     MatButtonModule,
    BrowserAnimationsModule,
-   MatCheckboxModule
+   MatCheckboxModule,
+   ReactiveFormsModule, 
+   NgMultiSelectDropDownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
