@@ -15,6 +15,9 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ValidEventComponent } from './valid-event/valid-event.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+import { ProfilComponent } from './profil/profil.component';
+import { AccueilComponent } from './accueil/accueil.component';
+
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -30,7 +33,9 @@ const routes: Routes = [
   {path : 'annonce', component:AnnonceComponent},
   {path:'validevent',component:ValidEventComponent},
   {path:'calendrier',component:CalendrierComponent},
-  {path: 'afficher_plante', component:AfficherPlanteComponent}
+  {path: 'afficher_plante', component:AfficherPlanteComponent},
+  {path:'profil',component:ProfilComponent},
+  {path:'accueil',component:AccueilComponent}
 ];
 
 @NgModule({

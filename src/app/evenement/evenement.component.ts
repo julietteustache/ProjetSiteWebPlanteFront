@@ -5,6 +5,7 @@ import { EvenementSpecifiqueComponent } from '../evenement-specifique/evenement-
 import { MatDialog } from '@angular/material/dialog';
 
 
+
 @Component({
   selector: 'evenement',
   templateUrl: './evenement.component.html',
@@ -36,12 +37,12 @@ constructor(private http:HttpClient,private dialog: MatDialog, public servi: Eve
     };
 
   chercheVille(ville:any){
-    console.log(ville);
-    this.http.get('http://localhost:8085/eventville/'+ville).subscribe({
+    
+    this.http.get('http://localhost:8085/eventville/'+ville.ville).subscribe({
       next:(data1)=>{this.response=data1;
       },
       error:(err)=>{console.log(err)}
     })
 
   }
-  }
+}

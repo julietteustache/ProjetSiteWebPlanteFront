@@ -1,14 +1,14 @@
 import { Adress } from "./adress";
 
 export class User {
-    private idUser!:number;
-    private nom!:string;
-    private prenom!:string;
-    private login!:string;
+    public idUser!:number;
+    public nom!:string;
+    public prenom!:string;
+    public login!:string;
     private mdp!:string;
-    private statue!:string;
-    private score!:number;
-    private adresse!:Adress;
+    public statue!:string;
+    public score!:number;
+    public adresse!:Adress;
 
     constructor(){}
 }
