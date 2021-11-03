@@ -3,10 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { ReactiveFormsModule } from "@angular/forms";
 import { AnnonceComponent } from './annonce/annonce.component';
-
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
 import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';

@@ -31,7 +31,6 @@ export class AfficherPlanteComponent implements OnInit {
 
   ngOnInit(): void {
     this.p = this.laplante.plante;
-
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
     this.sousCategorie = this.p.sousCategorie;
