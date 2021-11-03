@@ -10,9 +10,9 @@ import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -25,7 +25,7 @@ import { AfficherPlanteComponent } from './afficher-plante/afficher-plante.compo
 import { HttpClientModule } from '@angular/common/http';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -40,13 +40,13 @@ import { NavbarComponent } from './navbar/navbar.component';
     InscriptionComponent,
     CreerPlanteComponent,
     ValidEventComponent,
-    
+
 
 
     CreerPlanteComponent,
     AfficherPlanteComponent,
-    
-   
+
+
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
@@ -54,15 +54,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-      BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     MatDialogModule,
     MatCardModule,
     MatButtonModule,
-   BrowserAnimationsModule,
-   MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatRadioModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
