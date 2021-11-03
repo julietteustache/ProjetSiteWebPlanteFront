@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { PlantesComponent } from '../plantes/plantes.component';
 import { Plante } from '../plante';
 import { Plantespecial } from '../plantespecial';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-afficher-plante',
@@ -21,7 +22,7 @@ export class AfficherPlanteComponent implements OnInit {
   prix:any;
   exposition:any;
   p: Plante=new Plante();
-  constructor(private http:HttpClient, public laplante:Plantespecial) {}
+  constructor(private http:HttpClient, public laplante:Plantespecial, private route:Router) {}
 
   ngOnInit(): void {
     this.p=this.laplante.plante;
@@ -42,6 +43,9 @@ export class AfficherPlanteComponent implements OnInit {
     this.http.get('http://localhost:8085/plante/'+this.idPlante).subscribe({
       next: (data) => {
         this.plante=data;
+        if (this.plante==null) {
+          this.route.navigateByUrl('liste_plantes') //Pour rediriger vers la liste des plantes
+        }
       },
       error: (err) => {console.log(err)}
     });

@@ -1,6 +1,13 @@
 <div class="container">
-<p>{{categorie}}</p>
-<p>{{sousCategorie}}</p>
-<p>{{espece}}</p>
-<p>{{description}}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card p-2 myshadow">
+                <h1 style="text-align: center">{{espece|titlecase}}</h1>
+                <p>Catégorie : {{categorie|titlecase}}</p>
+                <p>Sous-catégorie : {{sousCategorie|titlecase}}</p>
+                <p>{{description}}</p>
+                <p>Si vous voulez cultiver cette plante, plantez là en {{calendrier}} ! Pour l'entretenir, arrosez là tous les {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
+            </div>
+        </div>
+    </div>
 </div>
