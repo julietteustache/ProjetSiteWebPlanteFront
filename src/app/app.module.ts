@@ -26,6 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { NavdocComponent } from './navdoc/navdoc.component';
+import { DocumentationComponent } from './documentation/documentation.component';
+
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import { MatRadioModule } from '@angular/material/radio';
     InscriptionComponent,
     CreerPlanteComponent,
     QuizzScoreComponent,
-    NavbarComponent
+    NavbarComponent,
+    NavdocComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,
