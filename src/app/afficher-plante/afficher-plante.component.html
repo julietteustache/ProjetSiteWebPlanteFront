@@ -1,30 +1,37 @@
-<div style="background-color:#DCE1E9;">
-<h1>{{espece|titlecase}}</h1>
-<p style="font-size: 14px; color: grey;">Catégorie : {{categorie|titlecase}} - Sous-catégorie : {{sousCategorie|titlecase}}</p>
-</div>
-<h4>Description</h4>
-<p>{{description}}</p>
-<h4>Entretien</h4>
-<p>Si vous voulez cultiver cette plante, plantez là en {{calendrier}} ! Pour l'entretenir, arrosez la tous les {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
-
-<form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)">
-        <div class="form-group">
-            <label class="grey-text">Commentaire</label>
-            <input type="text" class="form-control" name="commentaire" ngModel="">
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-sm-3" style="background-color: #D6FF79; height: 100%;">
+        Menu gauche
+    </div>
+    <div class="col-sm-9">
+        <div style="background-color:#DCE1E9;">
+            <h1>{{espece|titlecase}}</h1>
+            <p style="font-size: 14px; color: grey;">Catégorie : {{categorie|titlecase}} - Sous-catégorie :
+                {{sousCategorie|titlecase}}</p>
         </div>
-        <div class="form-group">
-            <label class="grey-text">Auteur</label>
-            <input type="text" class="form-control" name="auteur" ngModel="">
-        </div>
-        <button class="btn btn-secondary btn-block btn-sm" type="submit" style="width:50%">Poster</button>
-</form>
+        <h4>Description</h4>
+        <p>{{description}}</p>
+        <h4>Entretien</h4>
+        <p>Si vous voulez cultiver cette plante, plantez là en {{calendrier}} ! Pour l'entretenir, arrosez la tous
+            les
+            {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
 
-<div class="col-sm-12" *ngFor='let c of commentaire'>
-    <div class="card p-2 myshadow">
-        <p class="text-secondary">Auteur : {{c.auteur.prenom}} {{c.auteur.nom}} </p>
-        <div>
-            <p>{{c.commentaire}}</p>
+        <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)">
+            <div class="form-group">
+                <label class="grey-text">Commentaire</label>
+                <input type="text" class="form-control" name="commentaire" ngModel="">
+            </div>
+            <button class="btn btn-secondary btn-block btn-sm" type="submit" style="width:50%">Poster</button>
+        </form>
+
+        <div class="col-sm-12" *ngFor='let c of commentaire'>
+            <div class="card p-2 myshadow">
+                <p class="text-secondary">Auteur : {{c.auteur.prenom}} {{c.auteur.nom}} </p>
+                <div>
+                    <p>{{c.commentaire}}</p>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
-    <br>
 </div>

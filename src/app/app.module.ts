@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from "@angular/forms";
 import { AnnonceComponent } from './annonce/annonce.component';
-
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
 import { EvenementComponent } from './evenement/evenement.component';
 import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -28,6 +28,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 
+import { MatRadioModule } from '@angular/material/radio';
+import { NavdocComponent } from './navdoc/navdoc.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 
 
@@ -43,13 +46,13 @@ import { AccueilComponent } from './accueil/accueil.component';
     InscriptionComponent,
     CreerPlanteComponent,
     ValidEventComponent,
-    
+
 
 
     CreerPlanteComponent,
     AfficherPlanteComponent,
-    
-   
+
+
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
@@ -58,9 +61,11 @@ import { AccueilComponent } from './accueil/accueil.component';
     ProfilComponent,
     AccueilComponent,
 
+    NavdocComponent,
+    DocumentationComponent
   ],
   imports: [
-      BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -69,6 +74,15 @@ import { AccueilComponent } from './accueil/accueil.component';
     MatButtonModule,
    BrowserAnimationsModule,
    MatCheckboxModule,
+
+   ReactiveFormsModule, 
+   NgMultiSelectDropDownModule,
+
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatRadioModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

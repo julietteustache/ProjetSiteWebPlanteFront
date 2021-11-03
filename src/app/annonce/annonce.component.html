@@ -4,12 +4,14 @@
     <div class="col-5" style="  justify-content: center">
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"><button class="button1">PROPOSER UN DON</button></div>
+            <div class="col-sm-4"><button class="button1" style="margin-top: 150px">PROPOSER UN DON</button></div>
         </div>
 
+        
 
 
-        <form>
+
+     <form>
             <div class=" justify-content: center" style="margin-top: 25px">
                 <div style="width: 100%;">
 
@@ -24,7 +26,7 @@
                             </ul>
                         </div>
                         <div class="form-group buttonChoix">
-                            <a class= dropdown-toggle data-toggle=dropdown href=#>Sous-Catégorie<span
+                            <a class=dropdown-toggle data-toggle=dropdown href=#>Sous-Catégorie<span
                                     class=caret></span></a>
                             <ul class=dropdown-menu>
                                 <li><a href=#>Fruits/légumes</a></li>
@@ -37,8 +39,7 @@
 
                         </div>
                         <div class="form-group buttonChoix">
-                            <a class= dropdown-toggle data-toggle=dropdown href=#>Espèce<span
-                                    class=caret></span></a>
+                            <a class=dropdown-toggle data-toggle=dropdown href=#>Espèce<span class=caret></span></a>
                             <ul class=dropdown-menu>
                                 <li><a href=#>Fruits/légumes</a></li>
                                 <li><a href=#>Arbres</a></li>
@@ -47,8 +48,8 @@
                             </ul>
 
                         </div>
-                        <div class="form-group buttonchoix">
-                            <a class= dropdown-toggle data-toggle=dropdown href=#>Type de produit<span
+                        <div class="form-group buttonChoix">
+                            <a class=dropdown-toggle data-toggle=dropdown href=#>Type de produit<span
                                     class=caret></span></a>
                             <ul class=dropdown-menu>
                                 <li><a href=#>Fruits/légumes</a></li>
@@ -69,7 +70,8 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-4"></div>
-                            <div class="col-sm-4"><button class="button1">VALIDER</button></div>
+                            <div class="col-sm-4"><button class="button1" style=" margin-top: 25px">VALIDER</button>
+                            </div>
                         </div>
                     </form>
 
@@ -79,6 +81,47 @@
 
         </form>
 
+       
+
     </div>
+    <div class="col-5" style="float: left ">
+        <h1>My First Google Map</h1>
+
+        <div id="googleMap" style="width:400px ;height:400px"></div>
+    
+        <script>
+            function myMap() {
+                var mapProp = {
+                    center: new google.maps.LatLng(51.508742, -0.120850),
+                    zoom: 5,
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            }
+        </script>
+    
+        <script src="https://goo.gl/maps/DKaxpZ3QXabW4P3C8"></script>
+
+
+        <div >
+            
+                <div  *ngFor='let a of annonce'>
+                    <br>
+                    <div class="card  my-shadow " style="width: 100%">
+                        
+                            <p class="titreAnnonce"> Annonce {{a.idAnnonce}} - {{a.plante.prix}}pts/pièce - {{a.stock}}p</p>
+                            <p class="categorie">
+                                {{a.plante.categorie}} - {{a.plante.sousCategorie}} - {{a.type}}</p>
+                            <p class="donneur">
+                                {{a.user.prenom}} {{a.user.nom}} </p>
+                            <p class="description">
+                                {{a.description}}</p>
+                            </div>
+                    
+                </div>
+           
+        </div>
+
+    </div>
+   
 
 </body>

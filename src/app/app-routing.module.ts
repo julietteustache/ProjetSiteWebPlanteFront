@@ -18,11 +18,13 @@ import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 
+import { DocumentationComponent } from './documentation/documentation.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
-  {path:'Evenement',component:EvenementComponent},
+  {path:'evenement',component:EvenementComponent},
   {path: 'liste_plantes', component: PlantesComponent},
+  {path: 'documentation', component: DocumentationComponent},
   
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
