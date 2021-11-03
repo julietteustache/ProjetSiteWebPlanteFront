@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { AnnonceComponent } from './annonce/annonce.component';
 
 import { FormulaireEventComponent } from './formulaire-event/formulaire-event.component';
@@ -64,9 +63,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatButtonModule,
    BrowserAnimationsModule,
    MatCheckboxModule,
-   GoogleMapsModule,
-  
-  
   ],
   providers: [],
   bootstrap: [AppComponent]
