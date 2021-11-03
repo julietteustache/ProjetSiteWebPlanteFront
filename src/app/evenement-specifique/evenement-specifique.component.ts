@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { EvenementSpec } from '../evenement-spec';
 import { Evenement } from '../evenement';
+import { validateVerticalPosition } from '@angular/cdk/overlay';
+import { ValidEventComponent } from '../valid-event/valid-event.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-evenement-specifique',
@@ -15,7 +18,7 @@ participants:any;
 organisateur:any;
 adresse:any;
 m: Evenement=new Evenement(); 
-  constructor( private http: HttpClient,private servi : EvenementSpec) { }
+  constructor( private http: HttpClient,private servi : EvenementSpec,private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.m = this.servi.evenement
@@ -29,4 +32,11 @@ m: Evenement=new Evenement();
 
   }
 
+
+validation() {
+  const mydial = this.dialog.open(ValidEventComponent);
+  mydial.afterClosed().subscribe(result => {
+    this.ngOnInit();
+  })
+  };
 }
