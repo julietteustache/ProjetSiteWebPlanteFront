@@ -87,19 +87,21 @@
     </div>
     <div class="col-sm-5" style="float: left ">
 
-        <div *ngFor='let a of annonce'>
-            <br>
-            <div class="card  my-shadow " style="width: 100%">
-
-                <p class="titreAnnonce"> Annonce {{a.idAnnonce}} - {{a.plante.prix}}pts/pièce - {{a.stock}}pièces</p>
-                <p class="categorie">
-                    {{a.plante.categorie}} - {{a.plante.sousCategorie}} - {{a.type}}</p>
-                <p class="donneur">
-                    {{a.user.prenom}} {{a.user.nom}} </p>
+        <div style="margin-top: 20px;" *ngFor='let an of annonce2'>
+            
+            <div class="card  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+                <div style="background-color :#D6FF79; border-radius: 10px">
+                    <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{stock}}pièces</p>
+                    <p class="categorie">
+                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+                    <p class="donneur">
+                        {{an.user.prenom}} {{an.user.nom}} </p>
+                </div>
+               
                 <p class="description">
                     {{a.description}}</p>
                     <div style="margin-right: 5px; margin-bottom: 8px;">
-                        <button class="buttonCommander" (click)="ouvreCommande(a)">Commander?</button>
+                        <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
                     </div>
                     
             </div>

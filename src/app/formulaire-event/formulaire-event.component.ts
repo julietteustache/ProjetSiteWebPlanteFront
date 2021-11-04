@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-formulaire-event',
   templateUrl: './formulaire-event.component.html',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class FormulaireEventComponent implements OnInit {
 evenement:any;
+
   constructor(private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
