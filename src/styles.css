@@ -817,7 +817,7 @@
 .titreAnnonce{
   color : green;
   text-transform: uppercase;
-  margin-bottom: 0px;
+  margin-bottom: -5px;
   font-size: 13px;
   
 }
@@ -825,14 +825,15 @@
   color : black;
   text-transform: italic;
   margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 13px;
+  margin-bottom: -5px;
+  font-size: 11px;
+  font-style: italic;
 }
 .donneur{
-  color : rgb(39, 172, 206);
+  color : rgb(39, 172, 206, 0.3);
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 13px;
+  font-size: 11px;
   
 }
 .description{

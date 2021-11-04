@@ -19,3 +19,10 @@
 
     box-shadow: 0 3px #999;
 }
+.buttonCommander:hover {background-color: #3e8e41}
+  
+  .buttonCommander:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(1px);
+  }
