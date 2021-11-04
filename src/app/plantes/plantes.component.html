@@ -6,7 +6,7 @@
             <div class="col-sm-4" *ngFor='let p of plantes'>
                 <div class="card p-2 myshadow">
                     <p class="text-secondary">Espèce : {{p.espece}}</p>
-                    <div>
+                    <div class="case">
                         <p>{{p.description}}</p>
                     </div>
                     <button routerLink="/afficher_plante" class="btn btn-block" (click)="stock(p)">Voir plus</button>
