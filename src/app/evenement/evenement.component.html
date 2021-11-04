@@ -1,67 +1,76 @@
+<div class="container">
 
-
-<app-navbar></app-navbar>
-<body>
     <div class="row">
-    <div class="col-sm-5" style="  justify-content: center">
+        <div class="col-sm-5" style="  justify-content: center">
             <div class="col-sm-4"></div>
-            <button routerLink="/formulaireEvent" class="button1" type="button" style="margin-top:60px!important">Créer un évenement</button>
-        
+
+            <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important" (click)="verification()">Créer un
+                évenement</button>
+            <form>
+                <div class=" justify-content: center" style="margin-top: 25px">
+                    <div style="width: 100%;">
+
+                        <form #fConnect="ngForm" (ngSubmit)="chercheVille(fConnect.value)">
+
+                            <div class="input-group rounded">
+                                <input type="search" class="form-control rounded" placeholder="Recherche par ville..."
+                                    aria-label="Search" aria-describedby="search-addon" name="ville" ngModel="">
+                                <span class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4"></div>
+
+                                <button type="submit" class="button1"
+                                    style="display: inline-block!important;margin: 20px;left:0%">VALIDER</button>
+                                <button type="button" class="button1" (click)="ngOnInit()"
+                                    style="display: inline-block!important;margin:20px;padding:1%">Afficher
+                                    tout</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
 
 
+            </form>
+            <div class="card p-3">
+                <img src="assets/images/logo2.png" width="50" height="50" alt="">
+                <p>N'hésite pas à t'inscrire à des évenements, tu pourrais apprendre pleins de nouvelles techniques de
+                    jardinage. Et gagner des points ! </p>
+            </div>
+        </div>
+        <div class="col-sm-7" style="justify-content: center">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div
+                        style="text-align: center; padding: 4px; background-color: #56A632; margin-top: 54px; border-radius: 3px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);">
+                        <h1 class="g-titre">Les évévenements à venir</h1>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 10px;" *ngFor='let m of response'>
 
-        <form>
-            <div class=" justify-content: center" style="margin-top: 25px">
-                <div style="width: 100%;">
+                <div class="card p-2 my-shadow">
+                    <div class="card-header" style="background-color:#D6FF79;padding-bottom: 1px;">
+                        <h4 style="text-align: left;">
+                            {{m.titre}}</h4>
 
-                    <form #fConnect="ngForm" (ngSubmit)="chercheVille(fConnect.value)">
+                    </div>
+                    <div class="card-body" style="height:75px;overflow: hidden;text-overflow: ellipsis;">
 
-                        <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Recherche par ville..."
-                                aria-label="Search" aria-describedby="search-addon" name="ville" ngModel="">
-                            <span class="input-group-text border-0" id="search-addon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4"></div>
-                            <div class="col-sm-4"><button type="submit" class="button1" style="margin: 30px !important;">VALIDER</button></div>
-                        </div>
-                    </form>
-
+                        <p>{{m.description}}</p>
+                    </div>
+                    <div>
+                        <button class="button1" (click)="ouvreDetails(m)">Détails</button>
+                    </div>
                 </div>
             </div>
 
-
-        </form>
-       <div class="card p-3">
-           <img src="assets/images/logo2.png" width="50" height="50" alt="">
-           <p>N'hésite pas à t'inscrire à des évenements, tu pourrais apprendre pleins de nouvelles techniques de jardinage. Et gagner des points ! </p>
-       </div>
-    </div>
-    <div class="col-sm-7" style="justify-content: center">
-        <div style="text-align: center;margin: 30px;" >
-            <h1>Les évévenements à venir</h1>
-        </div>
-        <div style="margin: 10px;"*ngFor='let m of response'>
-    
-         <div class="card p-2 my-shadow">
-             <div class="card-header" style="background-color:#D6FF79;padding-bottom: 1px;">
-                <h4 style="text-align: left;">
-                    {{m.titre}}</h4>
-               
-             </div>
-             <div class="card-body" style="height:75px;overflow: hidden;text-overflow: ellipsis;">
-
-                <p>{{m.description}}</p>
-             </div>
-        <div>
-            <button class="button1" (click)="ouvreDetails(m)">Détails</button>
         </div>
     </div>
-    </div>
-    
-    </div>
-    </div>
 
-</body>
+</div>

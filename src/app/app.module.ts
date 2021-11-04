@@ -36,6 +36,7 @@ import { ModilprofilComponent } from './modilprofil/modilprofil.component';
 import { FormulaireAnnonceComponent } from './formulaire-annonce/formulaire-annonce.component';
 import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
+import { NiveauComponent } from './niveau/niveau.component';
 
 
 
@@ -72,7 +73,8 @@ import { ValidCommandeComponent } from './valid-commande/valid-commande.componen
     ModilprofilComponent,
     FormulaireAnnonceComponent,
     CommandeComponent,
-    ValidCommandeComponent
+    ValidCommandeComponent,
+    NiveauComponent
   ],
   imports: [
     BrowserModule,

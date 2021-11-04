@@ -1205,3 +1205,14 @@ ul {
     margin-bottom: 2rem;
     box-shadow: none;
 }
+
+.m-active{
+    color: seashell !important;
+}
+
+.g-titre{
+    font-size: 18px !important;
+    letter-spacing: 4px;
+    font-family: 'Noto Serif';
+    color: seashell;
+}
