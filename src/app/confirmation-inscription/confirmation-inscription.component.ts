@@ -13,6 +13,7 @@ export class ConfirmationInscriptionComponent implements OnInit {
 user:User=new User();
 score:any;
 statut:any;
+login:any;
 
   constructor(private route: Router, private uConnect:AuthService) { }
 
@@ -20,6 +21,10 @@ statut:any;
     this.user=this.uConnect.getUserConnect();
     this.score=this.user.score;
     this.statut=this.user.statut;
+    this.login=this.user.login;
+    console.log('score',this.score);
+    console.log('user',this.login);
+    console.log('statut',this.statut);
   }
 
   renvoiAccueil() {

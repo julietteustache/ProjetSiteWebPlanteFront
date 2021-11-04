@@ -32,6 +32,7 @@ export class QuizzScoreComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, private subcribeS: SubscribeService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.user=this.subcribeS.user;
   }
 
   calculscore(val: any): void {
@@ -47,12 +48,13 @@ export class QuizzScoreComponent implements OnInit {
    // console.log('score final ', score);
    // console.log('user en cour d\'inscription', this.subcribeS.user);
 
-   this.subcribeS.user.score = score;
-   this.subcribeS.user.statut = niveau;
+   this.user.score = score;
+   this.user.statut = niveau;
 
     this.http.put('http://localhost:8085/modifuser/' + this.subcribeS.user.idUser, this.subcribeS.user).subscribe({
       next: (data) => {
         this.user = data
+        localStorage.setItem('userConnect', JSON.stringify(this.user));
         //this.route.navigateByUrl('quizz_score')
         const mydialog = this.dialog.open(ConfirmationInscriptionComponent, {height:'auto', width: '800px',})
       },
