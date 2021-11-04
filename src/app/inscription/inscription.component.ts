@@ -22,7 +22,7 @@ export class InscriptionComponent implements OnInit {
       next: (data) => {
         this.user = data
         this.subscribeS.user = this.user;
-        this.route.navigateByUrl('quizz-score')
+        this.route.navigateByUrl('quizz_score')
       },
       error: (err) => { console.log(err) }
     })
