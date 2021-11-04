@@ -7,6 +7,7 @@ import { ListItem } from 'ng-multiselect-dropdown/multiselect.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Annoncespeciale } from '../annoncespeciale';
 import { CommandeComponent } from '../commande/commande.component';
+import { Annonce } from '../annonce';
 
 @Component({
   selector: 'app-annonce',
@@ -14,20 +15,31 @@ import { CommandeComponent } from '../commande/commande.component';
   styleUrls: ['./annonce.component.css']
 })
 export class AnnonceComponent implements OnInit {
-  annonce : any;
-  dropdownCategorie : any;
-  selectedCategorie : any;
-  dropdownSousCategorie : any;
-  selectedSousCategorie : any;
-  dropdownEspece : any;
-  selectedEspece : any;
-  dropdownType : any;
-  selectedType : any;
-  dropdownSettings : IDropdownSettings={};
-  constructor(private http:HttpClient, private router : Router,private dialog: MatDialog, public servi: Annoncespeciale) { }
+  
+ annonce:any;
+  a: Annonce = new Annonce;
+  idAnnonce: any;
+  description: any;
+  type: any;
+  stock: any;
+  createur: any;
+  plante: any;
+  annonce2: any;
 
-  ngOnInit()  {
+  dropdownSettings: IDropdownSettings = {};
+  constructor(private http: HttpClient, private router: Router, private dialog: MatDialog, public servi: Annoncespeciale) { }
+
+  ngOnInit() {
     this.recupAnnonce();
+    this.a = this.servi.annonce;
+    console.log('Terrain : ' + this.a.idAnnonce);
+
+    this.idAnnonce = this.a.idAnnonce;
+    this.description = this.a.description;
+    this.type = this.a.type;
+    this.createur = this.a.createur;
+    this.plante = this.a.plante;
+    this.stock = this.a.stock;
     /*this.dropdownCategorie = [
       { item_id: 1, item_text: 'Techniques générales' },
       { item_id: 2, item_text: 'Abres' },
@@ -92,78 +104,78 @@ export class AnnonceComponent implements OnInit {
       itemsShowLimit: 10,
       allowSearchFilter: true
     };*/
-   
+
   }
- /* onCategorieSelect(item: any) {
-    if(item.item_id==1)
-    {
-      this.recupAnnonceByCategorie('technique');
-    }
-    if(item.item_id==2)
-    {
-      this.recupAnnonceByCategorie('arbres');
-    }
-    if(item.item_id==3)
-    {
-      this.recupAnnonceByCategorie('fleur');
-    }
-    if(item.item_id==4)
-    {
-      this.recupAnnonceByCategorie('légume');
-    }
+  /* onCategorieSelect(item: any) {
+     if(item.item_id==1)
+     {
+       this.recupAnnonceByCategorie('technique');
+     }
+     if(item.item_id==2)
+     {
+       this.recupAnnonceByCategorie('arbres');
+     }
+     if(item.item_id==3)
+     {
+       this.recupAnnonceByCategorie('fleur');
+     }
+     if(item.item_id==4)
+     {
+       this.recupAnnonceByCategorie('légume');
+     }
+     
+   }
+ 
+   onSousCategorieSelect(item: any) {
+     if(item.item_id==1)
+     {
+       this.recupAnnonceByCategorie('technique');
+     }
+     if(item.item_id==2)
+     {
+       this.recupAnnonceByCategorie('arbres');
+     }
+     if(item.item_id==3)
+     {
+       this.recupAnnonceByCategorie('fleur');
+     }
+     if(item.item_id==4)
+     {
+       this.recupAnnonceByCategorie('légume');
+     }
+     
+   }
+   onSelectAll() {
     
-  }
+   }
+ 
+   onDeSelect(items : any)
+   {
+ 
+   }
+ 
+   onDeSelectAll()
+   {
+ 
+   }*/
 
-  onSousCategorieSelect(item: any) {
-    if(item.item_id==1)
-    {
-      this.recupAnnonceByCategorie('technique');
-    }
-    if(item.item_id==2)
-    {
-      this.recupAnnonceByCategorie('arbres');
-    }
-    if(item.item_id==3)
-    {
-      this.recupAnnonceByCategorie('fleur');
-    }
-    if(item.item_id==4)
-    {
-      this.recupAnnonceByCategorie('légume');
-    }
-    
-  }
-  onSelectAll() {
-   
-  }
-
-  onDeSelect(items : any)
-  {
-
-  }
-
-  onDeSelectAll()
-  {
-
-  }*/
-
-  recupAnnonce() :void{
+  recupAnnonce(): void {
     this.http.get('http://localhost:8085/annonce').subscribe({
-      next:(data)=>{
-        this.annonce=data;
+      next: (data) => {
+        this.annonce2 = data;
       },
-      error : (err)=>{console.log(err)}
+      error: (err) => { console.log(err) }
     })
   }
 
-  ouvreCommande(a : any){
-    
-    this.servi.annonce=a;
-   
-    const mydial=this.dialog.open(CommandeComponent);
-    console.log(a);
+  ouvrirCommande(an : any) {
+    this.servi.annonce=an;
+    const mydial = this.dialog.open(CommandeComponent);
+    mydial.afterClosed().subscribe(result => {
+      this.ngOnInit();
 
-    };
+    });
+ }
 
   /*recupAnnonceByCategorie(item : any) {
     this.http.get('http://localhost:8085/annonce/{item}').subscribe({

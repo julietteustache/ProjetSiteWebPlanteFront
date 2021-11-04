@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
+
 @Component({
   selector: 'app-formulaire-event',
   templateUrl: './formulaire-event.component.html',
@@ -10,7 +11,11 @@ import { AuthService } from '../services/auth.service';
 })
 export class FormulaireEventComponent implements OnInit {
 evenement:any;
+
+
+
   constructor(private http:HttpClient,private route:Router,public uConnect:AuthService) { }
+
 
   ngOnInit(): void {
   }
