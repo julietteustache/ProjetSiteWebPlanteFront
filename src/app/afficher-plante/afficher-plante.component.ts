@@ -29,11 +29,17 @@ export class AfficherPlanteComponent implements OnInit {
   p: Plante = new Plante();
 
   user:any;
+  idUser:any;
+  score:any;
 
   constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
     this.user=this.uConnect.getUserConnect();
+    this.idUser=this.user.idUser;
+    this.score=this.user.score;
+
+
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
@@ -75,6 +81,14 @@ export class AfficherPlanteComponent implements OnInit {
         this.nvCom = data;
         this.laplante.plante=this.p;
         this.route.navigateByUrl('afficher_plante');
+        this.score = this.score + 10;
+        this.user.score=this.score
+        this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
+          next: (data) => {
+            this.user = data;
+          },
+          error: (err) => { console.log(err) }
+        })
       },
       error: (err) => { console.log(err) }
 
