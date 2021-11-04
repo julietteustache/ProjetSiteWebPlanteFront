@@ -1,46 +1,45 @@
+<br><br><br>
+
 <!-- Formulaire de connexion-->
-<div style="margin:auto;width: 25%;"> 
-<form>
+<div style="margin:auto;width: 25%;">
+  <form #fConnect="ngForm" (ngSubmit)="connexion(fConnect.value)">
     <!-- Champs login -->
     <div class="form-outline mb-4">
-      <input type="login" id="form2Example1" class="form-control" />
+      <input type="login" id="form2Example1" name="login" ngModel="" class="form-control" />
       <label class="form-label" for="form2Example1">Login</label>
     </div>
-  
+
     <!-- Champs mot de passe -->
     <div class="form-outline mb-4">
-      <input type="password" id="form1Example2" class="form-control" />
+      <input type="password" id="form1Example2" name="mdp" ngModel="" class="form-control" />
       <label class="form-label" for="form1Example2">Mot de passe</label>
     </div>
-  
+
     <!-- 2 column grid layout for inline styling -->
     <div class="row mb-4">
       <div class="col d-flex justify-content-center">
         <!-- Checkbox pour maintenir la session ouverte -->
         <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="form1Example3"
-            checked
-          />
+          <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
           <label class="form-check-label" for="form1Example3"> Se souvenir de moi </label>
         </div>
       </div>
-  
+      <div class="text-center">
+        <p class="text-danger">{{ auth.msgErr }} </p>
+      </div>
       <div class="col">
         <!-- Mot de passe oublié -->
-        <a href="#!">Mot de passe oublié ?</a>
+        <a>Mot de passe oublié ?</a>
       </div>
     </div>
-  
+
     <!-- Bouton valider -->
     <button type="submit" class="button1">Se connecter</button>
 
     <!-- Lien pour s'inscrire -->
-  <div class="text-center">
-    <p>Pas encore membre? <a href='../inscription/inscription.component.html'>S'inscrire</a></p>
-  </div>
+    <div class="text-center">
+      <p>Pas encore membre? >S'inscrire</p>
+
+    </div>
   </form>
-  </div>
+</div>

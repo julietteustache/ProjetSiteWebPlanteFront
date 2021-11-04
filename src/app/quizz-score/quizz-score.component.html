@@ -1,17 +1,30 @@
-<div id="" class="container mt-5">
+<div id="listequestions" class="container mt-5">
 
-  <!-- ATTENTION : Utilisation des boutons radio -->
-  <!-- Les réponses à une même question doivent avoir le même 'name' (on peut mettre un id différent) -->
+   <form #fConnect="ngForm" (ngSubmit)="calculscore(fConnect.value)">
 
-  <form #fConnect="ngForm" (ngSubmit)="calculscore(fConnect.value)">
+    <!------------------------------------------------------------------------------------------------------->
+    <!-- LISTE DE QUESTIONS -->
 
+    <p class="titreq">Qu'est-ce qu'un gourmand ?</p>
     <mat-radio-group class="radio-group" name="score1" ngModel="">
       <mat-radio-button class="radio-button" *ngFor="let q of question1" [value]="q.score">
-        {{q.contenue}}
+        {{q.contenu}}
       </mat-radio-button>
     </mat-radio-group>
 
+    <p class="titreq">Une plante remontante…</p>
+    <mat-radio-group class="radio-group" name="score2" ngModel="">
+      <mat-radio-button class="radio-button" *ngFor="let q of question2" [value]="q.score">
+        {{q.contenu}}
+      </mat-radio-button>
+    </mat-radio-group>
 
+    <p class="titreq">Que veut dire praliner une plante?</p>
+    <mat-radio-group class="radio-group" name="score3" ngModel="">
+      <mat-radio-button class="radio-button" *ngFor="let q of question3" [value]="q.score">
+        {{q.contenu}}
+      </mat-radio-button>
+    </mat-radio-group>
 
     <!------------------------------------------------------------------------------------------------------->
     <!-- BOUTON VALIDER -->
