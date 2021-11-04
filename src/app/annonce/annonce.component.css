@@ -19,6 +19,9 @@
 
     box-shadow: 0 3px #999;
 }
+.card{
+    border-radius: 10px !important;
+}
 .buttonCommander:hover {background-color: #3e8e41}
   
   .buttonCommander:active {

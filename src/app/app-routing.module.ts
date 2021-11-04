@@ -20,7 +20,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
-
+import { FormulaireAnnonceComponent } from './formulaire-annonce/formulaire-annonce.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'liste_plantes', component: PlantesComponent},
   {path: 'documentation', component: DocumentationComponent},
   {path:'modifuser',component:ModilprofilComponent},
-  
+  {path : 'formulaireAnnonce', component: FormulaireAnnonceComponent},
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
