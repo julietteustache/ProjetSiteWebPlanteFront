@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 import { User } from '../user';
 import { UserConnect } from '../user-connect';
 @Component({
@@ -15,10 +16,10 @@ adresse:any;
 statue:any;
 score:any;
 
-  constructor(private uConnect:UserConnect,) { }
+  constructor(private uConnect:AuthService,) { }
 
   ngOnInit(): void {
-    this.user=this.uConnect.user;
+    this.user=this.uConnect.getUserConnect();
     this.nom=this.user.nom;
     this.prenom=this.user.prenom;
     this.login=this.user.login;
