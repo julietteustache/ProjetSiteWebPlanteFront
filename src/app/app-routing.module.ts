@@ -21,12 +21,15 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 
 import { DocumentationComponent } from './documentation/documentation.component';
+import { MessagerieComponent } from './messagerie/messagerie.component';
+import { ModilprofilComponent } from './modilprofil/modilprofil.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'evenement',component:EvenementComponent},
   {path: 'liste_plantes', component: PlantesComponent},
   {path: 'documentation', component: DocumentationComponent},
+  {path:'modifuser',component:ModilprofilComponent},
   
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
@@ -39,7 +42,8 @@ const routes: Routes = [
   {path:'calendrier',component:CalendrierComponent},
   {path: 'afficher_plante', component:AfficherPlanteComponent},
   {path:'profil',component:ProfilComponent},
-  {path:'accueil',component:AccueilComponent}
+  {path:'accueil',component:AccueilComponent},
+  {path:'messagerie',component:MessagerieComponent}
 ];
 
 @NgModule({
