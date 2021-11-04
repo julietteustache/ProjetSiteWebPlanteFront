@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Plantespecial } from '../plantespecial';
 import { Plante } from '../plante';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-modif-plante',
@@ -22,9 +23,16 @@ export class ModifPlanteComponent implements OnInit {
   exposition: any;
   p: Plante = new Plante();
 
-  constructor( private http:HttpClient, public laplante : Plantespecial, private route:Router) { }
+  user: any;
+  score: any;
+  idUser: any;
+
+  constructor(private http: HttpClient, public laplante: Plantespecial, private route: Router, private uConnect: AuthService) { }
 
   ngOnInit(): void {
+    this.user = this.uConnect.getUserConnect();
+    this.idUser = this.user.idUser;
+    this.score = this.user.score;
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
@@ -37,18 +45,26 @@ export class ModifPlanteComponent implements OnInit {
     this.exposition = this.p.exposition;
   }
 
-  modifPlante(val:any): void{
+  modifPlante(val: any): void {
     console.log(val);
-    this.http.put('http://localhost:8085/modifplante/'+this.idPlante,val).subscribe({
-      next:(data)=>{
-        this.plante=data;
-        this.laplante.plante=this.p; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
+    this.http.put('http://localhost:8085/modifplante/' + this.idPlante, val).subscribe({
+      next: (data) => {
+        this.plante = data;
+        this.laplante.plante = this.p; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
         this.route.navigateByUrl('afficher_plante');
-    },
-      error:(err)=>{console.log(err)}
-    })
-    
-    
+        this.score += 50;
+        this.user.score=this.score
+        this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
+          next: (data) => {
+            this.user = data;
+          },
+          error: (err) => { console.log(err) }
+        })
+      },
+        error: (err) => { console.log(err) }
+      })
+
+
   }
 
 
