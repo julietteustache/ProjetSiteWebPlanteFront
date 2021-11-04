@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<app-navdoc></app-navdoc>
+
+<div class="container">
+    <div style="margin:auto;width:50%;">
+        <div class="card p-4 my-shadow">
+            <div>
+                <h1 class="text-secondary">Modification de {{espece}}</h1>
+            </div>
+            <form #fConnect="ngForm" (ngSubmit)="modifPlante(fConnect.value)">
+                <div class="form-group">
+                    <label class="grey-text">Catégorie</label>
+                    <input type="text" class="form-control" name="categorie" ngModel="{{categorie}}">
+
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Sous-catégorie</label>
+                    <input type="text" class="form-control" name="sousCategorie" ngModel="{{sousCategorie}}">
+
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Espèce</label>
+                    <input type="text" class="form-control" name="espece" ngModel="{{espece}}">
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Description</label>
+                    <textarea type="text" class="form-control" name="description" ngModel="{{description}}"
+                        style="height:100px"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Prix (score à payer pour l'échange)</label>
+                    <input type="text" class="form-control" name="prix" ngModel="{{prix}}">
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Calendrier</label>
+                    <input type="text" class="form-control" name="calendrier" ngModel="{{calendrier}}">
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Arrosage (en jours)</label>
+                    <input type="number" class="form-control" name="arrosage" ngModel="{{arrosage}}">
+                </div>
+                <div class="form-group">
+                    <label class="grey-text">Exposition</label>
+                    <input type="text" class="form-control" name="exposition" ngModel="{{exposition}}">
+                </div>
+
+                <button class="button1" type="submit" style="margin: auto;">Valider la modification</button>
+
+                <p class="text-center text-danger"></p>
+            </form>
+        </div>
+    </div>
+</div>
