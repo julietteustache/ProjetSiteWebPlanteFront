@@ -52,7 +52,8 @@ export class ModifPlanteComponent implements OnInit {
         this.plante = data;
         this.laplante.plante = this.p; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
         this.route.navigateByUrl('afficher_plante');
-        this.score += 50;
+        //let score=score+50;
+        this.score = this.score+50;
         this.user.score=this.score
         this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
           next: (data) => {
