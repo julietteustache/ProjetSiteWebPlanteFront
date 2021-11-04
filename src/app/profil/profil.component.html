@@ -10,26 +10,27 @@
           <div class="col-sm-6">
               
          
-        <div class="card p-3 my-shadow" style="text-align: center;margin-top:50px">
+        <div class="card p-3 my-shadow" style="text-align: center;margin-top:50px;height: 150%;">
             <div><h1> Profil</h1></div>
             <div>{{prenom}}</div>
             <div>{{nom}}</div>
             <div>{{login}}</div>
             <div>{{adresse}}</div>
-            <button class="button1" style="margin: 50px !important;">Modifier mon profil</button>
+            <button routerLink="/modifuser" class="button1" style="margin: 50px !important;">Modifier mon profil</button>
         </div>
     </div>  
    
     <div class="col-sm-6">
         
    
-        <div class="card p-3 my-shadow" style="text-align: center;
-        margin-top:50px">
+        <div class="card p-3 my-shadow" style="text-align: center;height: 150%;
+        margin-top:50px;">
+        <div>
         <img src="assets/images/logo2.png" width="50" height="50" alt="">
             <div><h1> SCORE</h1></div>
-            <div>1000 points</div>
-            <div>Vous êtes au niveau petit pissenlit !</div>
-            
+            <div><h2>{{score}} points</h2></div>
+            <div>Vous êtes au niveau {{statue}} !</div>
+        </div>
         </div>
         
     </div>
