@@ -13,8 +13,10 @@
         <p>Si vous voulez cultiver cette plante, plantez là en {{calendrier}} ! Pour l'entretenir, arrosez la tous
             les
             {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
+        
+            <button class="btn btn-block" (click)="goModif()">Modifier la plante</button>
 
-        <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)">
+        <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 15px;">
             <div class="form-group">
                 <label class="grey-text">Commentaire</label>
                 <input type="text" class="form-control" name="commentaire" ngModel="">

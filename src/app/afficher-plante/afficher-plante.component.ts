@@ -77,4 +77,10 @@ export class AfficherPlanteComponent implements OnInit {
 
     });
   }
+
+  goModif(): void {
+    this.laplante.plante=this.p;
+    this.route.navigateByUrl('modif_plante');
+  }
+
 }

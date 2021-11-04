@@ -19,6 +19,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 
 import { DocumentationComponent } from './documentation/documentation.component';
+import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [
   {path:'calendrier',component:CalendrierComponent},
   {path: 'afficher_plante', component:AfficherPlanteComponent},
   {path:'profil',component:ProfilComponent},
-  {path:'accueil',component:AccueilComponent}
+  {path:'accueil',component:AccueilComponent},
+  {path: 'modif_plante', component:ModifPlanteComponent}
 ];
 
 @NgModule({
