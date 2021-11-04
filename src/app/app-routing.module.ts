@@ -21,6 +21,7 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 
 import { DocumentationComponent } from './documentation/documentation.component';
+import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
 import { ModilprofilComponent } from './modilprofil/modilprofil.component';
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path: 'afficher_plante', component:AfficherPlanteComponent},
   {path:'profil',component:ProfilComponent},
   {path:'accueil',component:AccueilComponent},
+  {path: 'modif_plante', component:ModifPlanteComponent},
   {path:'messagerie',component:MessagerieComponent}
 ];
 
