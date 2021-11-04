@@ -1,8 +1,35 @@
 .radio-group{
     display: inline-flex;
     flex-direction: column;
+    line-break: auto;
+}
+
+.radio-button{
+    line-break: auto;
 }
 
 .radio-button{
     margin: 5px;
 }
+
+#listequestions{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background-color:#DCE1E9;
+    border-radius: 3px;
+    padding: 25px;
+    overflow: auto;
+  }
+  
+  .question{
+    margin-bottom : 25px;
+  }
+  
+  .titreq {
+    text-align: center;
+  }

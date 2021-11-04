@@ -6,6 +6,7 @@ import { Plantespecial } from '../plantespecial';
 import { Router } from '@angular/router';
 import { UserConnect } from '../user-connect';
 import { SubscribeService } from '../services/subscribe.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-afficher-plante',
@@ -28,11 +29,17 @@ export class AfficherPlanteComponent implements OnInit {
   p: Plante = new Plante();
 
   user:any;
+  idUser:any;
+  score:any;
 
-  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:SubscribeService, private route: Router) { }
+  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
-    this.user=this.uConnect;
+    this.user=this.uConnect.getUserConnect();
+    this.idUser=this.user.idUser;
+    this.score=this.user.score;
+
+
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
@@ -72,9 +79,25 @@ export class AfficherPlanteComponent implements OnInit {
     this.http.post('http://localhost:8085/newcom', commentaire).subscribe({
       next: (data) => {
         this.nvCom = data;
+        this.laplante.plante=this.p;
+        this.route.navigateByUrl('afficher_plante');
+        this.score = this.score + 10;
+        this.user.score=this.score
+        this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
+          next: (data) => {
+            this.user = data;
+          },
+          error: (err) => { console.log(err) }
+        })
       },
       error: (err) => { console.log(err) }
 
     });
   }
+
+  goModif(): void {
+    this.laplante.plante=this.p;
+    this.route.navigateByUrl('modif_plante');
+  }
+
 }

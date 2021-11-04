@@ -6,7 +6,7 @@ export class User {
     public prenom!:string;
     public login!:string;
     private mdp!:string;
-    public statue!:string;
+    public statut!:string;
     public score!:number;
     public adresse!:Adress;
 

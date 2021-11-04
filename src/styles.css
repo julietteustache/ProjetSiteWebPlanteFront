@@ -1,6 +1,37 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 /* You can add global styles to this file, and also import other style files */
 
+h1 {
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
 .navbar-default {
     /* Couleur de fond de la barre de navigation */
     background-color: #56A632;
@@ -857,32 +888,6 @@
   
 }
 
-
-
-/* PAGE QUIZZ */
-#listequestions{
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  background-color:#DCE1E9;
-  border-radius: 3px;
-  padding: 25px;
-}
-
-.question{
-  margin-bottom : 25px;
-}
-
-.titreq {
-  text-align: center;
-}
-/* FIN PAGE QUIZZ */
-
-
 .chat-search-box {
     -webkit-border-radius: 3px 0 0 0;
     -moz-border-radius: 3px 0 0 0;
@@ -1243,4 +1248,15 @@ ul {
     border-radius: 2px;
     margin-bottom: 2rem;
     box-shadow: none;
+}
+
+.m-active{
+    color: seashell !important;
+}
+
+.g-titre{
+    font-size: 18px !important;
+    letter-spacing: 4px;
+    font-family: 'Noto Serif';
+    color: seashell;
 }

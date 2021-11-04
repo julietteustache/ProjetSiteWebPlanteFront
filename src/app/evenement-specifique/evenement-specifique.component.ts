@@ -4,7 +4,9 @@ import { EvenementSpec } from '../evenement-spec';
 import { Evenement } from '../evenement';
 import { validateVerticalPosition } from '@angular/cdk/overlay';
 import { ValidEventComponent } from '../valid-event/valid-event.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-evenement-specifique',
@@ -18,7 +20,7 @@ participants:any;
 organisateur:any;
 adresse:any;
 m: Evenement=new Evenement(); 
-  constructor( private http: HttpClient,private servi : EvenementSpec,private dialog:MatDialog) { }
+constructor( private http: HttpClient,private servi : EvenementSpec,private dialog:MatDialog, private connexion:AuthService, private route:Router,private dialogref:MatDialogRef<EvenementSpecifiqueComponent>) { }
 
   ngOnInit(): void {
     this.m = this.servi.evenement
@@ -34,9 +36,16 @@ m: Evenement=new Evenement();
 
 
 validation() {
+  if (this.connexion.isConnected()==true){
   const mydial = this.dialog.open(ValidEventComponent);
-  mydial.afterClosed().subscribe(result => {
-    this.ngOnInit();
-  })
+  }
+
+  else{
+  
+  }
   };
+
+  fermeture(){
+    this.dialogref.close()
+  }
 }
