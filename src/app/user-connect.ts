@@ -7,9 +7,6 @@ import { User } from './user';
 })
 export class UserConnect  extends User {
 
-  
-  
- 
   user: User = new User;
   constructor() { 
     super()

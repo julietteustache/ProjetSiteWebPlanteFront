@@ -4,6 +4,8 @@ import { PlantesComponent } from '../plantes/plantes.component';
 import { Plante } from '../plante';
 import { Plantespecial } from '../plantespecial';
 import { Router } from '@angular/router';
+import { UserConnect } from '../user-connect';
+import { SubscribeService } from '../services/subscribe.service';
 
 @Component({
   selector: 'app-afficher-plante',
@@ -25,11 +27,12 @@ export class AfficherPlanteComponent implements OnInit {
   nvCom: any;
   p: Plante = new Plante();
 
-  user = { id: 2, nom: 'Azer' };
+  user:any;
 
-  constructor(private http: HttpClient, public laplante: Plantespecial, private route: Router) { }
+  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:SubscribeService, private route: Router) { }
 
   ngOnInit(): void {
+    this.user=this.uConnect;
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
@@ -65,8 +68,8 @@ export class AfficherPlanteComponent implements OnInit {
     });
   }
   newCom(val: any): void {
-    // let commentaire = {commentaire: val.commentaire, user: {id: this.user.id}}
-    this.http.post('http://localhost:8085/newcom', val).subscribe({
+    let commentaire = {commentaire: val.commentaire, auteur:this.user, plante:this.p}
+    this.http.post('http://localhost:8085/newcom', commentaire).subscribe({
       next: (data) => {
         this.nvCom = data;
       },

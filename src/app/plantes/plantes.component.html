@@ -1,28 +1,25 @@
 <app-navbar></app-navbar>
 <app-navdoc></app-navdoc>
-    <div class="col-sm-9">
-        <div class="container" style="margin-top:50px !important;">
-            <div class="row">
-                <div class="col-sm-4" *ngFor='let p of plantes'>
-                    <div class="card p-2 myshadow">
-                        <p class="text-secondary">Espèce : {{p.espece}}</p>
-                        <div>
-                            <p>{{p.description}}</p>
-                        </div>
-                        <button routerLink="/afficher_plante" class="btn btn-block" (click)="stock(p)">Voir
-                            plus</button>
-
+<div class="main">
+    <div class="container" style="margin-top:50px !important;">
+        <div class="row">
+            <div class="col-sm-4" *ngFor='let p of plantes'>
+                <div class="card p-2 myshadow">
+                    <p class="text-secondary">Espèce : {{p.espece}}</p>
+                    <div class="case">
+                        <p>{{p.description}}</p>
                     </div>
-                    <br>
+                    <button routerLink="/afficher_plante" class="btn btn-block" (click)="stock(p)">Voir plus</button>
+
                 </div>
+                <br>
             </div>
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <button routerLink="/nouvellePlante" class="btn btn-secondary btn-block" type="button">Ajouter une
-                        nouvelle
-                        plante</button>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <button routerLink="/nouvellePlante" class="btn btn-secondary btn-block" type="button">Ajouter une nouvelle  plante</button>
             </div>
         </div>
     </div>
+</div>

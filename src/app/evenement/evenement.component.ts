@@ -32,8 +32,10 @@ constructor(private http:HttpClient,private dialog: MatDialog, public servi: Eve
     
     this.servi.evenement=m;
     console.log("Evenement : " + this.servi.evenement.idEvenement);
-    const mydial=this.dialog.open(EvenementSpecifiqueComponent);
-
+    const mydial=this.dialog.open(EvenementSpecifiqueComponent,{
+      height:'auto',
+      width: '800px',
+    });
     };
 
   chercheVille(ville:any){
