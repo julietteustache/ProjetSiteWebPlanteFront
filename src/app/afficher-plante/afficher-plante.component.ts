@@ -6,6 +6,7 @@ import { Plantespecial } from '../plantespecial';
 import { Router } from '@angular/router';
 import { UserConnect } from '../user-connect';
 import { SubscribeService } from '../services/subscribe.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-afficher-plante',
@@ -29,10 +30,10 @@ export class AfficherPlanteComponent implements OnInit {
 
   user:any;
 
-  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:SubscribeService, private route: Router) { }
+  constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
-    this.user=this.uConnect;
+    this.user=this.uConnect.getUserConnect();
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
