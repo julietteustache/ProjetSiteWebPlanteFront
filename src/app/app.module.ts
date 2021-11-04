@@ -38,6 +38,7 @@ import { FormulaireAnnonceComponent } from './formulaire-annonce/formulaire-anno
 import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 import { NiveauComponent } from './niveau/niveau.component';
+import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
 
 
 
@@ -76,7 +77,8 @@ import { NiveauComponent } from './niveau/niveau.component';
     FormulaireAnnonceComponent,
     CommandeComponent,
     ValidCommandeComponent,
-    NiveauComponent
+    NiveauComponent,
+    ConfirmationInscriptionComponent
   ],
   imports: [
     BrowserModule,

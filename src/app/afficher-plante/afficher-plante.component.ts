@@ -73,6 +73,8 @@ export class AfficherPlanteComponent implements OnInit {
     this.http.post('http://localhost:8085/newcom', commentaire).subscribe({
       next: (data) => {
         this.nvCom = data;
+        this.laplante.plante=this.p;
+        this.route.navigateByUrl('afficher_plante');
       },
       error: (err) => { console.log(err) }
 

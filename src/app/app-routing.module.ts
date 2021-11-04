@@ -12,9 +12,10 @@ import { PlantesComponent } from './plantes/plantes.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
+import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
 import { ValidEventComponent } from './valid-event/valid-event.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
-import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CommandeComponent } from './commande/commande.component';
@@ -35,7 +36,8 @@ const routes: Routes = [
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
-  {path: 'quizz-score', component: QuizzScoreComponent},
+  {path: 'quizz_score', component: QuizzScoreComponent},
+  {path: 'confirmation_inscription', component: ConfirmationInscriptionComponent},
   {path : 'commande', component: CommandeComponent},
   {path: 'nouvellePlante', component: CreerPlanteComponent},
   {path : 'annonce', component:AnnonceComponent},
