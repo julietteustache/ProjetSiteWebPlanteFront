@@ -44,11 +44,8 @@ const routes: Routes = [
   {path: 'afficher_plante', component:AfficherPlanteComponent},
   {path:'profil',component:ProfilComponent},
   {path:'accueil',component:AccueilComponent},
-<<<<<<< HEAD
-  {path: 'modif_plante', component:ModifPlanteComponent}
-=======
+  {path: 'modif_plante', component:ModifPlanteComponent},
   {path:'messagerie',component:MessagerieComponent}
->>>>>>> bbfbdb27a958e2882c0f64a6327261bd3a17cbc8
 ];
 
 @NgModule({
