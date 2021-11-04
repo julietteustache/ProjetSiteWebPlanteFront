@@ -4,6 +4,10 @@ import { ThisReceiver } from '@angular/compiler';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Router } from '@angular/router';
 import { ListItem } from 'ng-multiselect-dropdown/multiselect.model';
+import { MatDialog } from '@angular/material/dialog';
+import { Annoncespeciale } from '../annoncespeciale';
+import { CommandeComponent } from '../commande/commande.component';
+
 @Component({
   selector: 'app-annonce',
   templateUrl: './annonce.component.html',
@@ -20,10 +24,10 @@ export class AnnonceComponent implements OnInit {
   dropdownType : any;
   selectedType : any;
   dropdownSettings : IDropdownSettings={};
-  constructor(private http:HttpClient, private router : Router) { }
+  constructor(private http:HttpClient, private router : Router,private dialog: MatDialog, public servi: Annoncespeciale) { }
 
   ngOnInit()  {
-    //this.recupAnnonce();
+    this.recupAnnonce();
     /*this.dropdownCategorie = [
       { item_id: 1, item_text: 'Techniques générales' },
       { item_id: 2, item_text: 'Abres' },
@@ -151,6 +155,15 @@ export class AnnonceComponent implements OnInit {
       error : (err)=>{console.log(err)}
     })
   }
+
+  ouvreCommande(a : any){
+    
+    this.servi.annonce=a;
+   
+    const mydial=this.dialog.open(CommandeComponent);
+    console.log(a);
+
+    };
 
   /*recupAnnonceByCategorie(item : any) {
     this.http.get('http://localhost:8085/annonce/{item}').subscribe({
