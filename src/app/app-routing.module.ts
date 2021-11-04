@@ -17,21 +17,26 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 import { QuizzScoreComponent } from './quizz-score/quizz-score.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CommandeComponent } from './commande/commande.component';
+import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 
 import { DocumentationComponent } from './documentation/documentation.component';
 import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
+import { MessagerieComponent } from './messagerie/messagerie.component';
+import { ModilprofilComponent } from './modilprofil/modilprofil.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
   {path:'evenement',component:EvenementComponent},
   {path: 'liste_plantes', component: PlantesComponent},
   {path: 'documentation', component: DocumentationComponent},
+  {path:'modifuser',component:ModilprofilComponent},
   
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
   {path: 'quizz-score', component: QuizzScoreComponent},
-
+  {path : 'commande', component: CommandeComponent},
   {path: 'nouvellePlante', component: CreerPlanteComponent},
   {path : 'annonce', component:AnnonceComponent},
   {path:'validevent',component:ValidEventComponent},
@@ -39,7 +44,11 @@ const routes: Routes = [
   {path: 'afficher_plante', component:AfficherPlanteComponent},
   {path:'profil',component:ProfilComponent},
   {path:'accueil',component:AccueilComponent},
+<<<<<<< HEAD
   {path: 'modif_plante', component:ModifPlanteComponent}
+=======
+  {path:'messagerie',component:MessagerieComponent}
+>>>>>>> bbfbdb27a958e2882c0f64a6327261bd3a17cbc8
 ];
 
 @NgModule({

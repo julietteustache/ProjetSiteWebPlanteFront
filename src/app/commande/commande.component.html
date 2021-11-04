@@ -1,0 +1,32 @@
+<!--<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title> Annonce {{a.idAnnonce}} - {{a.plante.prix}}pts/pièce - {{a.stock}}pièces </mat-card-title>
+ 
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            {{a.plante.categorie}} - {{a.plante.sousCategorie}} - {{a.type}}
+        </p>
+        <p>{{a.createur.prenom}} {{a.createur.nom}}</p>
+        <p>{{a.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="validation()">Commander</button>
+        
+    </mat-card-actions>
+</mat-card>-->
+<div class="card  my-shadow " style="width: 100%">
+
+    <p class="titreAnnonce"> Annonce {{a.idAnnonce}} - {{a.plante.prix}}pts/pièce - {{a.stock}}pièces</p>
+    <p class="categorie">
+        {{a.plante.categorie}} - {{a.plante.sousCategorie}} - {{a.type}}</p>
+    <p class="donneur">
+        {{a.createur.prenom}} {{a.createur.nom}} </p>
+    <p class="description">
+        {{a.description}}</p>
+        <div style="margin-right: 5px; margin-bottom: 8px;">
+            <button mat-button (click)="validation()">Commander</button> 
+              </div>
+        
+</div>

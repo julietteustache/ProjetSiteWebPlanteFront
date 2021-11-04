@@ -12,6 +12,9 @@ nom:any;
 prenom:any;
 login:any;
 adresse:any;
+statue:any;
+score:any;
+
   constructor(private uConnect:UserConnect,) { }
 
   ngOnInit(): void {
@@ -20,6 +23,9 @@ adresse:any;
     this.prenom=this.user.prenom;
     this.login=this.user.login;
     this.adresse=this.user.adresse;
+    this.statue=this.user.statue;
+    this.score=this.user.score;
+
   }
 
 }
