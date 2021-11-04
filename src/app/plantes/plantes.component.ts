@@ -30,7 +30,7 @@ export class PlantesComponent implements OnInit {
   }
 
   stock(p:any): void {
-    this.laplante.plante=p;
+    this.laplante.setPlante(p);
   }
 
 }

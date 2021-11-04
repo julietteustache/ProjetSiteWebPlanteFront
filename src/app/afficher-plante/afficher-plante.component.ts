@@ -40,7 +40,7 @@ export class AfficherPlanteComponent implements OnInit {
     this.score=this.user.score;
 
 
-    this.p = this.laplante.plante;
+    this.p = this.laplante.getPlante();
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
     this.sousCategorie = this.p.sousCategorie;
@@ -82,10 +82,12 @@ export class AfficherPlanteComponent implements OnInit {
         this.laplante.plante=this.p;
         this.route.navigateByUrl('afficher_plante');
         this.score = this.score + 10;
-        this.user.score=this.score
+        this.user.score=this.score;
+        localStorage.setItem('userConnect', JSON.stringify(this.user));
         this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
           next: (data) => {
             this.user = data;
+            this.recupCom();
           },
           error: (err) => { console.log(err) }
         })
