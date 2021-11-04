@@ -1,0 +1,17 @@
+.sidenav {
+    height: 100%; 
+    width: 250px;
+    position: fixed;
+  }
+
+.sidenav a{
+    color:black;
+}
+
+.main {
+      margin-left: 250px;
+}
+
+.sidenav a:hover{
+    color:#56A632;
+}

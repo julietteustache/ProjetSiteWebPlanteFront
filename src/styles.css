@@ -12,6 +12,11 @@
     right :0 !important;
 }
 
+.case{
+    height:150px;
+    overflow: hidden;
+}
+
 
  [class*="col-"] {
     float: left;
