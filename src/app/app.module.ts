@@ -33,6 +33,9 @@ import { NavdocComponent } from './navdoc/navdoc.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
 import { ModilprofilComponent } from './modilprofil/modilprofil.component';
+import { FormulaireAnnonceComponent } from './formulaire-annonce/formulaire-annonce.component';
+import { CommandeComponent } from './commande/commande.component';
+import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 
 
 
@@ -66,7 +69,10 @@ import { ModilprofilComponent } from './modilprofil/modilprofil.component';
     NavdocComponent,
     DocumentationComponent,
     MessagerieComponent,
-    ModilprofilComponent
+    ModilprofilComponent,
+    FormulaireAnnonceComponent,
+    CommandeComponent,
+    ValidCommandeComponent
   ],
   imports: [
     BrowserModule,
