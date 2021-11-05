@@ -40,6 +40,10 @@ import { ValidCommandeComponent } from './valid-commande/valid-commande.componen
 import { NiveauComponent } from './niveau/niveau.component';
 import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
+import { TulipeSuccesComponent } from './tulipe-succes/tulipe-succes.component';
+import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
+import { CheneSuccesComponent } from './chene-succes/chene-succes.component';
+import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.component';
 
 
 
@@ -80,7 +84,11 @@ import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
     ValidCommandeComponent,
     NiveauComponent,
     ConfirmationInscriptionComponent,
-    NavbarDecoComponent
+    NavbarDecoComponent,
+    TulipeSuccesComponent,
+    RoseSuccesComponent,
+    CheneSuccesComponent,
+    OlivierSuccesComponent
   ],
   imports: [
     BrowserModule,
