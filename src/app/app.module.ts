@@ -42,6 +42,7 @@ import { ConfirmationInscriptionComponent } from './confirmation-inscription/con
 import { TechniquesComponent } from './techniques/techniques.component';
 import { AfficherTechniqueComponent } from './afficher-technique/afficher-technique.component';
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
+import { CreerTechniqueComponent } from './creer-technique/creer-technique.component';
 
 
 
@@ -84,7 +85,8 @@ import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
     ConfirmationInscriptionComponent,
     TechniquesComponent,
     AfficherTechniqueComponent,
-    NavbarDecoComponent
+    NavbarDecoComponent,
+    CreerTechniqueComponent
   ],
   imports: [
     BrowserModule,
