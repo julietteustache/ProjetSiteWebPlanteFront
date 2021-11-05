@@ -24,12 +24,17 @@ m: any;
 u:any;
 Nb:any;
 score:any;
+idUser:any;
 constructor( private http: HttpClient,private servi : EvenementSpec,private dialog:MatDialog, private connexion:AuthService, private route:Router,private dialogref:MatDialogRef<EvenementSpecifiqueComponent>) { }
 
   ngOnInit(): void {
-    this.m = this.servi.evenement
+    
+    this.m = this.servi.evenement;
+    this.Nb=this.m.nbParticipants;
     console.log('Terrain : ' +  this.m.idEvenement);
-
+    this.u=this.connexion.getUserConnect;
+    this.idUser = this.u.idUser;
+    this.score=this.u.score;
     this.titre = this.m.titre;
     this.description = this.m.description;
     this.participants = this.m.NbParticipants;
@@ -41,19 +46,20 @@ constructor( private http: HttpClient,private servi : EvenementSpec,private dial
 
 validation() {
   if (this.connexion.isConnected()==true){
-    this.u=this.connexion.getUserConnect;
-    this.m = this.servi.evenement
-    this.Nb=this.m.NbParticipants-1;
+    
+    
+    this.Nb=this.Nb-1;
     this.score=this.score+100;
     this.u.score=this.score;
-    console.log(this.score);
-    this.http.put('http://localhost:8085/event/'+this.Nb,this.m).subscribe({
+    this.m.nbParticipants=this.Nb;
+    console.log(this.u);
+    this.http.put('http://localhost:8085/event/'+this.m.idEvenement,this.m).subscribe({
       next:(data)=>{this.m=data;
         
       },
       error:(err)=>{console.log(err)}
     })
-    this.http.put('http://localhost:8085/score/'+this.score,this.u).subscribe({
+    this.http.put('http://localhost:8085/modifuser/'+this.idUser,this.u).subscribe({
       
       next:(data)=>{this.u=data;
       },
