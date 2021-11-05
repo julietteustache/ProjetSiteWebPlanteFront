@@ -1,0 +1,32 @@
+
+<app-navdoc></app-navdoc>
+<div class="main">
+    <div style="background-color:#DCE1E9; padding:10px">
+        <h1>{{nom|titlecase}}</h1>
+    </div>
+    <div style="padding:10px">
+        <img src='../../assets/images/roses_garden.jpg' style="float: right;max-height: 250px; max-width: 250px;">
+        <h4>Description</h4>
+        <p>{{description}}</p>
+
+        <button class="button1" (click)="goModif()" style="width:50%">Modifier la technique</button>
+    </div><br><br><br>
+    <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
+        <h4>Commentaires</h4><br>
+        <div class="form-group">
+            <label class="grey-text"><i>Commentaire</i></label>
+            <textarea class="form-control" name="commentaire" ngModel="" style="height: 100px;"></textarea>
+        </div>
+        <button class="button1" type="submit" style="width:30%">Poster</button>
+    </form>
+
+    <div class="col-sm-12" *ngFor='let c of commentaire'>
+        <div class="card p-2 myshadow">
+            <p class="text-secondary">Auteur : {{c.auteur.prenom}} {{c.auteur.nom}} </p>
+            <div>
+                <p>{{c.commentaire}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>

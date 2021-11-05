@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmationInscriptionComponent } from '../confirmation-inscription/confirmation-inscription.component';
 import { SubscribeService } from '../services/subscribe.service';
@@ -29,9 +29,11 @@ export class QuizzScoreComponent implements OnInit {
     { id: 2, contenu: 'Tremper les racines dans un mélange de fumier, de terre et d\'eau', score: 100 },
     { id: 3, contenu: 'Ajouter du sucre dans la terre pour améliorer la pousse', score: 0 }];
   
-  constructor(private http: HttpClient, private route: Router, private subcribeS: SubscribeService, private dialog: MatDialog) { }
+  constructor(private http: HttpClient, private route: Router, private subcribeS: SubscribeService, 
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.user=this.subcribeS.user;
   }
 
   calculscore(val: any): void {
@@ -47,12 +49,13 @@ export class QuizzScoreComponent implements OnInit {
    // console.log('score final ', score);
    // console.log('user en cour d\'inscription', this.subcribeS.user);
 
-   this.subcribeS.user.score = score;
-   this.subcribeS.user.statut = niveau;
+   this.user.score = score;
+   this.user.statut = niveau;
 
     this.http.put('http://localhost:8085/modifuser/' + this.subcribeS.user.idUser, this.subcribeS.user).subscribe({
       next: (data) => {
         this.user = data
+        localStorage.setItem('userConnect', JSON.stringify(this.user));
         //this.route.navigateByUrl('quizz_score')
         const mydialog = this.dialog.open(ConfirmationInscriptionComponent, {height:'auto', width: '800px',})
       },

@@ -1,0 +1,27 @@
+<app-navdoc></app-navdoc>
+<div class="main">
+    <div class="container" style="margin-top:50px !important; margin-bottom: 50px !important;">
+        <div class="row">
+            <div class="col-sm-4" *ngFor='let t of techniques'>
+                <div class="card p-2 my-shadow"
+                    style="border-radius:25px;border:solid 3px #D38B5D;">
+                    <div style="color:#D38B5D;font-style: italic; text-align: center;">
+                        <h4> {{t.nom|titlecase}}</h4>
+                    </div>
+                    <div class="case">
+                        <p>{{t.description}}</p>
+                    </div>
+                    <button routerLink="/afficher_technique" class="button1" (click)="stock(t)">Voir plus</button>
+
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <button routerLink="/nouvelleTechnique" class="button1" type="button">Ajouter une nouvelle technique</button>
+            </div>
+        </div>
+    </div>
+</div>

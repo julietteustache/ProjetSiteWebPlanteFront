@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../user';
@@ -13,16 +14,22 @@ export class ConfirmationInscriptionComponent implements OnInit {
 user:User=new User();
 score:any;
 statut:any;
+login:any;
 
-  constructor(private route: Router, private uConnect:AuthService) { }
+  constructor(private route: Router, private uConnect:AuthService, private dialogref:MatDialogRef<ConfirmationInscriptionComponent>) { }
 
   ngOnInit(): void {
     this.user=this.uConnect.getUserConnect();
     this.score=this.user.score;
     this.statut=this.user.statut;
+    this.login=this.user.login;
+    console.log('score',this.score);
+    console.log('user',this.login);
+    console.log('statut',this.statut);
   }
 
   renvoiAccueil() {
-    this.route.navigateByUrl('accueil')
+    this.route.navigateByUrl('accueil');
+    this.dialogref.close();
   }
 }

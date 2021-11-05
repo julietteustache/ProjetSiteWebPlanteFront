@@ -1,4 +1,7 @@
-.mainbody {
+.main {
     margin-left: 250px !important;
     width:100%-250px !important;
+    background-image: url('../../assets/images/jardin.jfif');
+    border: 0.010px solid black;
+    height:100% !important;
 }
