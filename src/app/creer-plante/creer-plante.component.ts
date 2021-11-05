@@ -18,7 +18,9 @@ export class CreerPlanteComponent implements OnInit {
   creerPlante(val:any): void{
     //console.log(val);
     this.http.post('http://localhost:8085/creerplante', val).subscribe({
-      next:(data)=>{this.plante=data},
+      next:(data)=>{this.plante=data;
+      this.route.navigateByUrl('liste_plantes');
+    },
       error:(err)=>{console.log(err)}
     })
   }

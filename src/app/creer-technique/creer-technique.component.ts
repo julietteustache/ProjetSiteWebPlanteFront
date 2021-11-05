@@ -18,7 +18,8 @@ export class CreerTechniqueComponent implements OnInit {
 
   creerTechnique(val:any): void{
     this.http.post('http://localhost:8085/creertechnique', val).subscribe({
-      next:(data)=>{this.technique=data},
+      next:(data)=>{this.technique=data;
+        this.route.navigateByUrl('techniques');},
       error:(err)=>{console.log(err)}
     })
   }

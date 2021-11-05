@@ -46,19 +46,19 @@ export class ModifPlanteComponent implements OnInit {
   }
 
   modifPlante(val: any): void {
-    console.log("test1"+this.user);
+    //console.log("test1"+this.user);
     this.http.put('http://localhost:8085/modifplante/' + this.idPlante, val).subscribe({
       next: (data) => {
-        console.log("test2"+this.user);
+        //console.log("test2"+this.user);
         this.plante = data;
         this.stock(this.plante);
-        this.laplante.plante = this.p; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
+        this.laplante.plante = this.plante; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
         this.route.navigateByUrl('afficher_plante');
         this.score = this.score+50;
         this.user.score=this.score;
-        console.log("test3"+this.user);
+        //console.log("test3"+this.user);
         localStorage.setItem('userConnect', JSON.stringify(this.user));
-        console.log(this.user);
+        //console.log(this.user);
         this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
           next: (data) => {
             this.user = data;
