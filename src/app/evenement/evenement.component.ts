@@ -26,6 +26,7 @@ score:any;
   recupEvent():void{
     this.http.get('http://localhost:8085/event').subscribe({
       next:(data)=>{this.response=data;
+        console.log(this.response)
       },
       error:(err)=>{console.log(err)}
     })
