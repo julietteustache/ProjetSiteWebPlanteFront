@@ -39,6 +39,8 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 import { NiveauComponent } from './niveau/niveau.component';
 import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
+import { TechniquesComponent } from './techniques/techniques.component';
+import { AfficherTechniqueComponent } from './afficher-technique/afficher-technique.component';
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 import { TulipeSuccesComponent } from './tulipe-succes/tulipe-succes.component';
 import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
@@ -88,7 +90,10 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     TulipeSuccesComponent,
     RoseSuccesComponent,
     CheneSuccesComponent,
-    OlivierSuccesComponent
+    OlivierSuccesComponent,
+    TechniquesComponent,
+    AfficherTechniqueComponent,
+    NavbarDecoComponent
   ],
   imports: [
     BrowserModule,

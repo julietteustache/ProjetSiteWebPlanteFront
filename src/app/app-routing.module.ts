@@ -25,6 +25,8 @@ import { DocumentationComponent } from './documentation/documentation.component'
 import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
 import { ModilprofilComponent } from './modilprofil/modilprofil.component';
+import { TechniquesComponent } from './techniques/techniques.component';
+import { AfficherTechniqueComponent } from './afficher-technique/afficher-technique.component';
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 
 const routes: Routes = [
@@ -50,7 +52,9 @@ const routes: Routes = [
   {path:'profil',component:ProfilComponent},
   {path:'accueil',component:AccueilComponent},
   {path: 'modif_plante', component:ModifPlanteComponent},
-  {path:'messagerie',component:MessagerieComponent}
+  {path:'messagerie',component:MessagerieComponent},
+  {path: 'techniques', component:TechniquesComponent},
+  {path: 'afficher_technique', component:AfficherTechniqueComponent}
 ];
 
 @NgModule({
