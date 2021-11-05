@@ -25,6 +25,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
 import { ModifPlanteComponent } from './modif-plante/modif-plante.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
 import { ModilprofilComponent } from './modilprofil/modilprofil.component';
+import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -33,6 +34,8 @@ const routes: Routes = [
   {path: 'documentation', component: DocumentationComponent},
   {path:'modifuser',component:ModilprofilComponent},
   {path : 'formulaireAnnonce', component: FormulaireAnnonceComponent},
+  {path: 'menudeco', component: NavbarDecoComponent},
+
   // INSCRIPTION ET CONNEXION
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
