@@ -1,0 +1,7 @@
+.main {
+    margin-left: 250px !important;
+    width:100%-250px !important;
+    height:100% !important;
+    background-image: url('../../assets/images/bouturage.jpg');
+    border: 0.010px solid black;
+}

@@ -39,6 +39,8 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 import { NiveauComponent } from './niveau/niveau.component';
 import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
+import { TechniquesComponent } from './techniques/techniques.component';
+import { AfficherTechniqueComponent } from './afficher-technique/afficher-technique.component';
 
 
 
@@ -78,7 +80,9 @@ import { ConfirmationInscriptionComponent } from './confirmation-inscription/con
     CommandeComponent,
     ValidCommandeComponent,
     NiveauComponent,
-    ConfirmationInscriptionComponent
+    ConfirmationInscriptionComponent,
+    TechniquesComponent,
+    AfficherTechniqueComponent
   ],
   imports: [
     BrowserModule,
