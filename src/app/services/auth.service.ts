@@ -34,8 +34,17 @@ export class AuthService {
     }
   }
 
+  isNotConnected(): boolean {
+    if(this.getUserConnect() != null){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+  
   canActive() {
-    if(!this.isConnected()) {this.route.navigateByUrl('connexion'); this.msgErr = 'veuillez vous conncter';}
+    if(!this.isConnected()) {this.route.navigateByUrl('connexion'); this.msgErr = 'Veuillez vous connecter';}
   }
 
   redirectToHomeIfConnect() {

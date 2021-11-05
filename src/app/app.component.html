@@ -1,4 +1,11 @@
-<app-navbar></app-navbar>
+<div *ngIf="this.auth.isConnected()">
+    <app-navbar></app-navbar>
+</div>
+
+<div *ngIf="this.auth.isNotConnected()">
+    <app-navbar-deco></app-navbar-deco>
+</div>
+
 <router-outlet></router-outlet>
 
 

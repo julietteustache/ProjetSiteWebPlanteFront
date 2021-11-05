@@ -39,6 +39,7 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 import { NiveauComponent } from './niveau/niveau.component';
 import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
+import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 
 
 
@@ -78,7 +79,8 @@ import { ConfirmationInscriptionComponent } from './confirmation-inscription/con
     CommandeComponent,
     ValidCommandeComponent,
     NiveauComponent,
-    ConfirmationInscriptionComponent
+    ConfirmationInscriptionComponent,
+    NavbarDecoComponent
   ],
   imports: [
     BrowserModule,
