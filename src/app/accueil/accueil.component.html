@@ -14,37 +14,43 @@
               
          
         <div class="card p-3 my-shadow" style="text-align:justify;margin:30px;width: 100%;">
-            <div>
+        <div style="margin: 10px;">
         <div class="col-sm-6">
+            <div style="text-align: center!important;color: #56A632;"><h3>Bienvenue ! </h3><br></div>
             Bienvenue sur cette application de partage de plantes et de connaissances pour amateur et jardinier confirmé
             Pour pouvoir devenir un maître du jardinage tout en s'amusant, participer à la vie de la communauté vous permettra 
-            de gagner des points. Ces points vous permettront d'obtenir des plantes partagées par les autres utilisateurs. Les actions qui vous rapporte des points sont : 
+            de gagner des points. Ces points vous permettront d'obtenir des plantes partagées par les autres utilisateurs et de monter de niveau. Les actions qui vous rapporte des points sont :
+            <br> <br>
+            <div style="padding-left: 50px;">
             <li>Donner une plante</li> 
             <li>Participer à un événement</li>
             <li>Organiser un atelier pour partager vos connaissances</li>
             <li>Participer à la vie de la communauté en postant des commentaires</li>
             <li>Modifier et créer de nouvelles fiches de plantes</li>
+        </div>
+            <br>
             La voie est longue vers le titre de maître jardinier. Vous ne pourrez pas faire tous cela dès le début
             Il vous faudra gagner des points et atteindre le grade suprême ! 
         </div>
         <div class=" col-sm-6">
+            <div style="text-align: center!important;color: #56A632;"><h3>Les niveaux<br><br></h3></div>
             <div>
-            <img src="assets/images/logo2.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Petit pissenlit </div>Avant de devenir un grand arbre, il faut commencer par pousser. Vous pouvez obtenir des plantes et participer à un évenement.
+            <img src="assets/images/cactus.png" width="60" height="80" alt="" style="float: left;">
+            <div style="color:#56A632">Petit cactus </div>Avant de devenir un grand arbre, il faut commencer par pousser. Vous pouvez obtenir des plantes et participer à un évenement.
             </div>
             <div>
-                <img src="assets/images/logo2.png" width="60" height="60" alt="" style="float: left;">
+                <img src="assets/images/tulipe.png" width="60" height="60" alt="" style="float: left;">
             <div style="color:#56A632">Primevère hivernale</div>L'hiver est passé, vous pouvez maintenant modifier des fiches plantes en plus.
             </div>
             <div>
-            <img src="assets/images/logo2.png" width="60" height="60" alt="" style="float: left;"> 
+            <img src="assets/images/rose.png" width="60" height="60" alt="" style="float: left;"> 
             <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous ne pouvez pas faire de nouvelles choses mais progressez.
             </div>
             <div>
-            <img src="assets/images/logo2.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez faire plus de choses.
+            <img src="assets/images/chene.png" width="60" height="60" alt="" style="float: left;">
+            <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez quasiment tous faire sauf modifier des fiches.
             </div>
-            <img src="assets/images/logo2.png" width="60" height="60" alt="" style="float: left;">
+            <img src="assets/images/olivier.png" width="60" height="60" alt="" style="float: left;">
             <div style="color: #56A632">Olivier centenaire</div>
             <p> Grand maître du jardinage, tu peux partager tous ton savoir avec la communauté.</p>
         </div>
@@ -66,11 +72,11 @@
        <h4>Derniers événements</h4>
     </div>
         <div *ngFor='let m of liste'>
-            <div class="card p-2">
-             <strong><p>{{m.titre}}</p></strong>
+            
+             <strong><p style="color: #56A632;">{{m.titre}}</p></strong>
              <p>{{m.description}}</p>
             <hr>
-            </div>
+            
         </div>
     
     </div>   
@@ -82,13 +88,12 @@
                 <h4>Dernières annonces</h4>
             </div>
             <div *ngFor='let a of listeA'>
-                <div class="card p-2 ">
                 <div>
-                 <strong><p style="display: inline-block;">Type: {{a.type}}</p><p style="display: inline-block;text-align: right !important;" >Quantité: {{a.stock}}</p></strong>
+                 <strong><p style="display: inline-block;color: #56A632;">Type: {{a.type}}</p><p style="display: inline-block;text-align: right !important;" >Quantité: {{a.stock}}</p></strong>
                 </div>
                  <p>{{a.description}}</p>
                 <hr>
-            </div>
+           
         </div>
     </div>
    </div>
@@ -98,11 +103,11 @@
                 <h4>Quelques plantes</h4>
             </div>
             <div *ngFor='let p of listeP'>
-                <div class="card p-2">
-                 <strong><p>{{p.espece}}</p></strong>
+                
+                 <strong><p style="color: #56A632;">{{p.espece}}</p></strong>
                  <p>{{p.description}}</p>
                  <hr>
-                </div>
+               
             </div>
         </div>
     </div>

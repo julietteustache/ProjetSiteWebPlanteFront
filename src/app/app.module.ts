@@ -43,6 +43,10 @@ import { TechniquesComponent } from './techniques/techniques.component';
 import { AfficherTechniqueComponent } from './afficher-technique/afficher-technique.component';
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 import { CreerTechniqueComponent } from './creer-technique/creer-technique.component';
+import { TulipeSuccesComponent } from './tulipe-succes/tulipe-succes.component';
+import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
+import { CheneSuccesComponent } from './chene-succes/chene-succes.component';
+import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.component';
 
 
 
@@ -83,6 +87,11 @@ import { CreerTechniqueComponent } from './creer-technique/creer-technique.compo
     ValidCommandeComponent,
     NiveauComponent,
     ConfirmationInscriptionComponent,
+    NavbarDecoComponent,
+    TulipeSuccesComponent,
+    RoseSuccesComponent,
+    CheneSuccesComponent,
+    OlivierSuccesComponent,
     TechniquesComponent,
     AfficherTechniqueComponent,
     NavbarDecoComponent,
