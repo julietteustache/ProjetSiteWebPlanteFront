@@ -39,13 +39,13 @@ export class AfficherPlanteComponent implements OnInit {
     this.idUser=this.user.idUser;
     this.score=this.user.score;
 
-<<<<<<< HEAD
+
     
     this.p = this.laplante.plante;
-=======
+
 
     this.p = this.laplante.getPlante();
->>>>>>> a4a6d3b5b94884600cfa87f97e076fc730195476
+
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;
     this.sousCategorie = this.p.sousCategorie;
