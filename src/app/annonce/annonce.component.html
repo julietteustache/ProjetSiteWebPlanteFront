@@ -87,11 +87,11 @@
     </div>
     <div class="col-sm-5" style="float: left ">
 
-        <div style="margin-top: 20px;" *ngFor='let an of annonce2'>
+        <div style="margin-top: 20px;" *ngFor='let an of response'>
             
             <div class="card  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
                 <div style="background-color :#D6FF79; border-radius: 10px">
-                    <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{stock}}pièces</p>
+                    <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces</p>
                     <p class="categorie">
                         {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
                     <p class="donneur">
@@ -99,7 +99,7 @@
                 </div>
                
                 <p class="description">
-                    {{a.description}}</p>
+                    {{an.description}}</p>
                     <div style="margin-right: 5px; margin-bottom: 8px;">
                         <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
                     </div>

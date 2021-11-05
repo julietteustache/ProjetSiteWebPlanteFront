@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Annoncespeciale } from '../annoncespeciale';
 import { CommandeComponent } from '../commande/commande.component';
 import { Annonce } from '../annonce';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-annonce',
@@ -16,30 +17,13 @@ import { Annonce } from '../annonce';
 })
 export class AnnonceComponent implements OnInit {
   
- annonce:any;
-  a: Annonce = new Annonce;
-  idAnnonce: any;
-  description: any;
-  type: any;
-  stock: any;
-  createur: any;
-  plante: any;
-  annonce2: any;
-
-  dropdownSettings: IDropdownSettings = {};
-  constructor(private http: HttpClient, private router: Router, private dialog: MatDialog, public servi: Annoncespeciale) { }
+  annonce:any;
+  response:any;
+  constructor(private http: HttpClient, private router: Router, private dialog: MatDialog, public servi: Annoncespeciale,public connexion:AuthService) { }
 
   ngOnInit() {
     this.recupAnnonce();
-    this.a = this.servi.annonce;
-    console.log('Terrain : ' + this.a.idAnnonce);
-
-    this.idAnnonce = this.a.idAnnonce;
-    this.description = this.a.description;
-    this.type = this.a.type;
-    this.createur = this.a.createur;
-    this.plante = this.a.plante;
-    this.stock = this.a.stock;
+    
     /*this.dropdownCategorie = [
       { item_id: 1, item_text: 'Techniques générales' },
       { item_id: 2, item_text: 'Abres' },
@@ -162,7 +146,7 @@ export class AnnonceComponent implements OnInit {
   recupAnnonce(): void {
     this.http.get('http://localhost:8085/annonce').subscribe({
       next: (data) => {
-        this.annonce2 = data;
+        this.response = data;
       },
       error: (err) => { console.log(err) }
     })
@@ -170,12 +154,13 @@ export class AnnonceComponent implements OnInit {
 
   ouvrirCommande(an : any) {
     this.servi.annonce=an;
-    const mydial = this.dialog.open(CommandeComponent);
-    mydial.afterClosed().subscribe(result => {
-      this.ngOnInit();
-
+    const mydial=this.dialog.open(CommandeComponent,{
+      height:'auto',
+      width: '800px',
     });
+   
  }
+ 
 
   /*recupAnnonceByCategorie(item : any) {
     this.http.get('http://localhost:8085/annonce/{item}').subscribe({

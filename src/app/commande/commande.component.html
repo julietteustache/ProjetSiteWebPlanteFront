@@ -1,18 +1,28 @@
 <mat-card class="example-card" style="width: 750px;height:auto;">
     <mat-card-header style="background-color: #D6FF79;">
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title> Annonce {{a.idAnnonce}} - {{a.plante.prix}}pts/pièce - {{a.stock}}pièces </mat-card-title>
+        <mat-card-title> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces </mat-card-title>
  
     </mat-card-header>
     <mat-card-content style="padding: 10px;margin-top: 50px;">
         <p>
-            {{a.plante.categorie}} - {{a.plante.sousCategorie}} - {{a.type}}
+            {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}
         </p>
-        <p>{{a.createur.prenom}} {{a.createur.nom}}</p>
-        <p>{{a.description}}</p>
+        <p>{{an.user.prenom}} {{an.user.nom}}</p>
+        <p>{{an.description}}</p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button (click)="miseAjour()">dfgd</button>
+        <form #fConnect="ngForm" (ngSubmit)="miseAjour(fConnect.value)">
+        <div class="form-group">
+            <label class="grey-text">Quantité souhaitée</label>
+            <input type="number" min= "1" max= {{an.stock}} class="form-control" name="stock"  ngModel=""  >
+            
+        </div>
+       <!--<button mat-button (click)="miseAjour(quantite)">Confirmer</button> -->
+        
+        <button class="btn btn-secondary btn-block" type="submit" style="margin: auto;">Confirmer</button>
+        <p class="text-center text-danger">{{msg}}</p>
+    </form>
     </mat-card-actions>
 </mat-card>
 

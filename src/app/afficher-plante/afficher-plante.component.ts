@@ -39,7 +39,7 @@ export class AfficherPlanteComponent implements OnInit {
     this.idUser=this.user.idUser;
     this.score=this.user.score;
 
-
+    
     this.p = this.laplante.plante;
     this.idPlante = this.p.idPlante;
     this.categorie = this.p.categorie;

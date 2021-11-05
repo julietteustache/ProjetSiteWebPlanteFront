@@ -39,8 +39,8 @@ import { CommandeComponent } from './commande/commande.component';
 import { ValidCommandeComponent } from './valid-commande/valid-commande.component';
 import { NiveauComponent } from './niveau/niveau.component';
 import { ConfirmationInscriptionComponent } from './confirmation-inscription/confirmation-inscription.component';
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -88,16 +88,17 @@ import { ConfirmationInscriptionComponent } from './confirmation-inscription/con
     MatDialogModule,
     MatCardModule,
     MatButtonModule,
-   BrowserAnimationsModule,
-   MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
 
-   ReactiveFormsModule, 
-   NgMultiSelectDropDownModule,
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule,
 
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatRadioModule
-
+    MatRadioModule,
+    MatFormFieldModule,
+    MatSelectModule
 
   ],
   providers: [],
