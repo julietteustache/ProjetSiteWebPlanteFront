@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmationInscriptionComponent } from '../confirmation-inscription/confirmation-inscription.component';
 import { SubscribeService } from '../services/subscribe.service';
@@ -29,7 +29,8 @@ export class QuizzScoreComponent implements OnInit {
     { id: 2, contenu: 'Tremper les racines dans un mélange de fumier, de terre et d\'eau', score: 100 },
     { id: 3, contenu: 'Ajouter du sucre dans la terre pour améliorer la pousse', score: 0 }];
   
-  constructor(private http: HttpClient, private route: Router, private subcribeS: SubscribeService, private dialog: MatDialog) { }
+  constructor(private http: HttpClient, private route: Router, private subcribeS: SubscribeService, 
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.user=this.subcribeS.user;
