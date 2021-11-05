@@ -6,7 +6,7 @@
           
               
          
-        <div class="card p-3 my-shadow" style="text-align:justify;margin:50px;width: 100%;">
+        <div class="card p-3 my-shadow" style="text-align:justify;margin:50px;width: 100%;border-radius:25px;border:solid 3px #D38B5D;">
             <div>
         <div class="col-sm-6">
             Bienvenue sur cette application de partage de plantes et de connaissances pour amateur et jardinier confirmé
@@ -46,13 +46,35 @@
         </div>
           
    <div class="col-sm-4">
-     <div class="card p-3 my-shadow" style="text-align: center;"></div>   
+     <div class="card p-3 my-shadow" style="text-align: center;">
+        <div *ngFor='let m of liste'>
+            <div class="card p-2 my-shadow">
+             <p>{{m.titre}}</p>
+             <p>{{m.description}}</p>
+            </div>
+        </div>
+    
+    </div>   
    </div>
    <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: center;"></div>
+        <div class="card p-3 my-shadow" style="text-align: center;">
+            <div *ngFor='let a of listeA'>
+                <div class="card p-2 my-shadow">
+                 <p>{{a.type}}</p>
+                 <p>{{a.description}}</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: center;"></div>
+        <div class="card p-3 my-shadow" style="text-align: center;">
+            <div *ngFor='let p of listeP'>
+                <div class="card p-2 my-shadow">
+                 <p>{{p.espece}}</p>
+                 <p>{{p.description}}</p>
+                </div>
+            </div>
+        </div>
     </div>
   
     </div>
