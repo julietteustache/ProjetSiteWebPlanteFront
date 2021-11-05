@@ -1,12 +1,19 @@
 
-
+    <div>
+        <img src="assets/images/head2.jpg" width="1500" height="250" alt="">
+    </div>
 <div class="container">
+
+    <div style="text-align: center;color: #56A632;margin-top: 20px;">
+        <strong><h2>Comment ça marche ?</h2></strong><hr>
+    </div>
+    
     <div class="row" >
         
           
               
          
-        <div class="card p-3 my-shadow" style="text-align:justify;margin:50px;width: 100%;border-radius:25px;border:solid 3px #D38B5D;">
+        <div class="card p-3 my-shadow" style="text-align:justify;margin:30px;width: 100%;">
             <div>
         <div class="col-sm-6">
             Bienvenue sur cette application de partage de plantes et de connaissances pour amateur et jardinier confirmé
@@ -44,38 +51,61 @@
         </div>
         
         </div>
-          
+        </div>
+<div style="text-align: center;color: #56A632;">
+    <strong><h2>Les dernières activités</h2></strong><hr>
+</div>
+
+<div class="row">
+    
+</div>
+<div style="text-align: justify;">     
    <div class="col-sm-4">
-     <div class="card p-3 my-shadow" style="text-align: center;">
+     <div class="card p-3 my-shadow" style="text-align: left;">
+       <div class="card-header" style="background-color: #56A632;color: white !important;text-align: center !important;">
+       <h4>Derniers événements</h4>
+    </div>
         <div *ngFor='let m of liste'>
-            <div class="card p-2 my-shadow">
-             <p>{{m.titre}}</p>
+            <div class="card p-2">
+             <strong><p>{{m.titre}}</p></strong>
              <p>{{m.description}}</p>
+            <hr>
             </div>
         </div>
     
     </div>   
    </div>
+  
    <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: center;">
+        <div class="card p-3 my-shadow" style="text-align: left;">
+            <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
+                <h4>Dernières annonces</h4>
+            </div>
             <div *ngFor='let a of listeA'>
-                <div class="card p-2 my-shadow">
-                 <p>{{a.type}}</p>
+                <div class="card p-2 ">
+                <div>
+                 <strong><p style="display: inline-block;">Type: {{a.type}}</p><p style="display: inline-block;text-align: right !important;" >Quantité: {{a.stock}}</p></strong>
+                </div>
                  <p>{{a.description}}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+   </div>
+    <div class="col-sm-4">
+        <div class="card p-3 my-shadow" style="text-align: left;">
+            <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
+                <h4>Quelques plantes</h4>
+            </div>
+            <div *ngFor='let p of listeP'>
+                <div class="card p-2">
+                 <strong><p>{{p.espece}}</p></strong>
+                 <p>{{p.description}}</p>
+                 <hr>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: center;">
-            <div *ngFor='let p of listeP'>
-                <div class="card p-2 my-shadow">
-                 <p>{{p.espece}}</p>
-                 <p>{{p.description}}</p>
-                </div>
-            </div>
-        </div>
+</div>
     </div>
   
-    </div>
-    </div>
