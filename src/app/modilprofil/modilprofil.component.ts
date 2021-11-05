@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Adress } from '../adress';
+import { AuthService } from '../services/auth.service';
 import { User } from '../user';
 import { UserConnect } from '../user-connect';
 
@@ -18,8 +19,8 @@ login:any;
 rue:any;
 cp:any;
 ville:any;
-adresse:Adress=new Adress
-constructor(private uConnect:UserConnect,private http:HttpClient,private route:Router) { }
+adresse:Adress=new Adress;
+constructor(private uConnect:AuthService,private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
     this.u=this.uConnect.user;

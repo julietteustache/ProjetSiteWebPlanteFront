@@ -7,6 +7,7 @@ import { ValidEventComponent } from '../valid-event/valid-event.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { User } from '../user';
 
 @Component({
   selector: 'app-evenement-specifique',
@@ -19,7 +20,10 @@ description:any;
 participants:any;
 organisateur:any;
 adresse:any;
-m: Evenement=new Evenement(); 
+m: any; 
+u:any;
+Nb:any;
+score:any;
 constructor( private http: HttpClient,private servi : EvenementSpec,private dialog:MatDialog, private connexion:AuthService, private route:Router,private dialogref:MatDialogRef<EvenementSpecifiqueComponent>) { }
 
   ngOnInit(): void {
@@ -37,7 +41,26 @@ constructor( private http: HttpClient,private servi : EvenementSpec,private dial
 
 validation() {
   if (this.connexion.isConnected()==true){
-  const mydial = this.dialog.open(ValidEventComponent);
+    this.u=this.connexion.getUserConnect;
+    this.m = this.servi.evenement
+    this.Nb=this.m.NbParticipants-1;
+    this.score=this.score+100;
+    this.u.score=this.score;
+    console.log(this.score);
+    this.http.put('http://localhost:8085/event/'+this.Nb,this.m).subscribe({
+      next:(data)=>{this.m=data;
+        
+      },
+      error:(err)=>{console.log(err)}
+    })
+    this.http.put('http://localhost:8085/score/'+this.score,this.u).subscribe({
+      
+      next:(data)=>{this.u=data;
+      },
+      error:(err)=>{console.log(err)}
+    })
+  this.dialogref.close()
+    
   }
 
   else{

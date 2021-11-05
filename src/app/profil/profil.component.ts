@@ -30,9 +30,9 @@ ville:any;
     this.rue=this.adresse.rue;
     this.cp=this.adresse.cp;
     this.ville=this.adresse.ville;
-    this.statut=this.statut;
+    this.statut=this.user.statut;
     this.score=this.user.score;
-
+    console.log(this.user.score)
   }
 
 }
