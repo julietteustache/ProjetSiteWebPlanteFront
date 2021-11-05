@@ -11,19 +11,31 @@
               
          
         <div class="card p-3 my-shadow" style="text-align: center;margin-top:50px;height: 500px;">
-            <div><h1> Profil</h1></div>
+            <div style="margin: 10px;"><h2> Profil</h2></div>  
+        <div class=row>     
+        <div class="col-sm-6">
+            <strong>PRENOM</strong>
             <div>{{prenom}}</div>
             <br>
+            <strong>NOM</strong>
             <div>{{nom}}</div>
             <br>
+            <strong>LOGIN</strong>
             <div>{{login}}</div>
             <br>
+        </div>
+        <div class="col-sm-6">
+            <STRong>RUE</STRong>
             <div>{{rue}}</div>
             <br>
+            <strong>CODE POSTAL</strong>
             <div>{{cp}}</div>
             <br>
+            <strong>VILLE</strong>
             <div>{{ville}}</div>
             <br>
+        </div>
+    </div>
             <button routerLink="/modifuser" class="button1" style="margin: 50px !important;">Modifier mon profil</button>
         </div>
     </div>  
@@ -32,11 +44,11 @@
         
    
         <div class="card p-3 my-shadow" style="text-align: center;height: 500px;
-        margin-top:50px;vertical-align: middle;">
+        margin-top:50px;">
         <div>
         <img src="assets/images/logo2.png" width="50" height="50" alt="">
-            <div><h1> SCORE</h1></div>
-            <div><h2>{{score}} points</h2></div>
+            <div><h2 > SCORE</h2></div>
+            <div><h3>{{score}} points</h3></div>
             <div>Vous êtes au niveau {{statut}} !</div>
         </div>
         </div>

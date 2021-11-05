@@ -44,7 +44,8 @@ validation() {
     this.u=this.connexion.getUserConnect;
     this.m = this.servi.evenement
     this.Nb=this.m.NbParticipants-1;
-    this.score=this.u.score+100;
+    this.score=this.score+100;
+    this.u.score=this.score;
     console.log(this.score);
     this.http.put('http://localhost:8085/event/'+this.Nb,this.m).subscribe({
       next:(data)=>{this.m=data;
