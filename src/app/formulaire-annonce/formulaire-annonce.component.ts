@@ -46,6 +46,7 @@ export class FormulaireAnnonceComponent implements OnInit {
 
     this.createur = this.uConnect.getUserConnect();
     this.recupPlante();
+    this.recupType();
 
 
     // this.p=this.recupPlante();
