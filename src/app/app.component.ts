@@ -31,7 +31,7 @@ export class AppComponent {
   this.test4=true;
   this.score=this.u.score;
   if (this.score=50 && this.test1==true){
-    const mydialog=this.dialog.open(TulipeSuccesComponent);
+    //nconst mydialog=this.dialog.open(TulipeSuccesComponent);
     this.test1=false;
   }
   else if (this.score=500 && this.test2==true){

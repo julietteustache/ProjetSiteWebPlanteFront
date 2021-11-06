@@ -11,7 +11,7 @@ import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatCardModule } from '@angular/material/card';
+import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -66,13 +66,8 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
     InscriptionComponent,
     CreerPlanteComponent,
     ValidEventComponent,
-
-
-
     CreerPlanteComponent,
     AfficherPlanteComponent,
-
-
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
@@ -80,7 +75,6 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
     NavbarComponent,
     ProfilComponent,
     AccueilComponent,
-
     NavdocComponent,
     DocumentationComponent,
     ModifPlanteComponent,
@@ -112,16 +106,13 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
     MatButtonModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-
     ReactiveFormsModule,
     NgMultiSelectDropDownModule,
-
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatRadioModule,
     MatFormFieldModule,
     MatSelectModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
