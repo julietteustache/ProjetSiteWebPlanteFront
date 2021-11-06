@@ -13,8 +13,8 @@
                     N'hésitez pas, cela vous rapportera quelques points ! ;)
                 </p>
             </div>
-            <form method="post">
-                <input type="file" value="assets/images" (change)="onFileSelected($event)">
+            <form>
+                <input type="file" (change)="onFileSelected($event)">
                 <br>
                 <button class="button1" type="submit" (click)="onUpload()">Valider</button>
             </form>

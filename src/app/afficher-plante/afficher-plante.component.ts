@@ -32,6 +32,8 @@ export class AfficherPlanteComponent implements OnInit {
   idUser:any;
   score:any;
 
+  mediaUrl:any;
+
   constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
@@ -105,6 +107,14 @@ export class AfficherPlanteComponent implements OnInit {
   goModif(): void {
     this.laplante.plante=this.p;
     this.route.navigateByUrl('modif_plante');
+  }
+
+  onFileSelected(event:any){
+    const reader=new FileReader();
+    reader.readAsDataURL(event.target.file[0]);
+    reader.onload=(event2) => {
+      this.mediaUrl=reader.result;
+    };
   }
 
 }

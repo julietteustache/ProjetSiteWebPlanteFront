@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavdocComponent implements OnInit {
   selectedFile:any;
+  mediaUrl:any;
 
 
   constructor(private http:HttpClient ) { }
@@ -16,8 +17,11 @@ export class NavdocComponent implements OnInit {
   }
 
   onFileSelected(event:any){
-    this.selectedFile = <File> event.target.files[0];
-    console.log(this.selectedFile.name);
+    const reader=new FileReader();
+    reader.readAsDataURL(event.target.file[0]);
+    reader.onload=(event2) => {
+      this.mediaUrl=reader.result;
+    };
   }
 
   onUpload(){

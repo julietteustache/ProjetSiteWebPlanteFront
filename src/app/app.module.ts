@@ -51,6 +51,7 @@ import { TulipeSuccesComponent } from './tulipe-succes/tulipe-succes.component';
 import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
 import { CheneSuccesComponent } from './chene-succes/chene-succes.component';
 import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.component';
+import { ModifTechniqueComponent } from './modif-technique/modif-technique.component';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     TechniquesComponent,
     AfficherTechniqueComponent,
     NavbarDecoComponent,
-    CreerTechniqueComponent
+    CreerTechniqueComponent,
+    ModifTechniqueComponent
   ],
   imports: [
     BrowserModule,
