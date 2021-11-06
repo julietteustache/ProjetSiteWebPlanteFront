@@ -17,6 +17,7 @@ export class ModifTechniqueComponent implements OnInit {
   idTechnique:any;
   nom:any;
   description:any;
+  image:any;
 
   t: Technique=new Technique();
 
@@ -37,10 +38,17 @@ export class ModifTechniqueComponent implements OnInit {
     this.idTechnique=this.t.idTechnique;
     this.nom=this.t.nom;
     this.description=this.t.description;
+    this.image=this.t.image;
   }
 
   modifTechnique(val: any): void {
     //console.log("test1"+this.user);
+    if (this.mediaUrl!=null) {
+      val.image=window.btoa(this.mediaUrl);
+    }
+    else {
+      val.image=this.image;
+    }
     this.http.put('http://localhost:8085/modiftechnique/' + this.idTechnique, val).subscribe({
       next: (data) => {
         //console.log("test2"+this.user);
@@ -68,6 +76,14 @@ export class ModifTechniqueComponent implements OnInit {
   
   stock(t:any): void {
     this.latechnique.setTechnique(t);
+  }
+
+  onFileChanged(event:any):any{
+    const reader=new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload=(event2) => {
+      this.mediaUrl=reader.result;
+    };
   }
 
 

@@ -21,6 +21,8 @@ export class ModifPlanteComponent implements OnInit {
   arrosage: any;
   prix: any;
   exposition: any;
+  image:any;
+
   p: Plante = new Plante();
 
   user: any;
@@ -45,13 +47,19 @@ export class ModifPlanteComponent implements OnInit {
     this.arrosage = this.p.arrosage;
     this.prix = this.p.prix;
     this.exposition = this.p.exposition;
+    this.image=this.p.image;
   }
 
   modifPlante(val: any): void {
-    //console.log("test1"+this.user);
+    console.log("test1 :"+this.mediaUrl);
+    if (this.mediaUrl!=null) {
+      val.image=window.btoa(this.mediaUrl);
+    }
+    else {
+      val.image=this.image;
+    }
     this.http.put('http://localhost:8085/modifplante/' + this.idPlante, val).subscribe({
       next: (data) => {
-        //console.log("test2"+this.user);
         this.plante = data;
         this.stock(this.plante);
         this.laplante.plante = this.plante; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
@@ -77,7 +85,13 @@ export class ModifPlanteComponent implements OnInit {
   stock(p:any): void {
     this.laplante.setPlante(p);
   }
-
+  onFileChanged(event:any):any{
+    const reader=new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload=(event2) => {
+      this.mediaUrl=reader.result;
+    };
+  }
 
 
 }

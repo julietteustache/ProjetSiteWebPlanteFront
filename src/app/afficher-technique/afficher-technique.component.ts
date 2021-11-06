@@ -90,4 +90,17 @@ export class AfficherTechniqueComponent implements OnInit {
     this.route.navigateByUrl('modif_technique');
   }
 
+  changeFormatMedia(media:any):any{
+    return window.atob(media);
+  }
+
+  mediaExist(media:any) : boolean {
+    if (media!=null) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }

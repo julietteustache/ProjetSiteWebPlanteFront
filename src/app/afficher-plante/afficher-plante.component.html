@@ -1,4 +1,3 @@
-
 <app-navdoc></app-navdoc>
 <div class="main">
     <div style="background-color:#DCE1E9; padding:10px">
@@ -7,7 +6,9 @@
             {{sousCategorie|titlecase}}</p>
     </div>
     <div style="padding:10px">
-        <img src='../../assets/images/roses_garden.jpg' style="float: right;max-height: 250px; max-width: 250px;">
+        <div *ngIf="mediaExist(p.image)">
+            <img [src]="changeFormatMedia(p.image)" style="float: right;max-height: 250px; max-width: 250px;">
+        </div>
         <h4>Description</h4>
         <p>{{description}}</p>
         <h4>Entretien</h4>
@@ -16,11 +17,6 @@
             {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
 
         <button class="button1" (click)="goModif()" style="width:50%">Modifier la plante</button>
-        <form>
-            <input type="file" (change)="onFileSelected($event)" style="display:none" #AjoutImage>
-            <br>
-            <button class="button1" type="submit" (click)=AjoutImage.click()>Valider</button>
-        </form>
     </div><br><br><br>
     <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
         <h4>Commentaires</h4><br>

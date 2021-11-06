@@ -5,7 +5,9 @@
         <h1>{{nom|titlecase}}</h1>
     </div>
     <div style="padding:10px">
-        <img src='../../assets/images/roses_garden.jpg' style="float: right;max-height: 250px; max-width: 250px;">
+        <div *ngIf="mediaExist(t.image)">
+            <img [src]="changeFormatMedia(t.image)" style="float: right;max-height: 250px; max-width: 250px;">
+        </div>
         <h4>Description</h4>
         <p>{{description}}</p>
 

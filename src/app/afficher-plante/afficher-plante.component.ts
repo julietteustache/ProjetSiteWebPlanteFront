@@ -108,13 +108,22 @@ export class AfficherPlanteComponent implements OnInit {
     this.laplante.plante=this.p;
     this.route.navigateByUrl('modif_plante');
   }
-
-  onFileSelected(event:any){
-    const reader=new FileReader();
-    reader.readAsDataURL(event.target.file[0]);
-    reader.onload=(event2) => {
-      this.mediaUrl=reader.result;
-    };
+  changeFormatMedia(media:any):any{
+    return window.atob(media);
   }
 
+  mediaExist(media:any) : boolean {
+    if (media!=null) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+
 }
+
+
+
