@@ -31,15 +31,21 @@ export class AfficherPlanteComponent implements OnInit {
   user:any;
   idUser:any;
   score:any;
+  statut:any;
 
   mediaUrl:any;
+
+  msg:any;
 
   constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
+    this.msg="";
+
     this.user=this.uConnect.getUserConnect();
     this.idUser=this.user.idUser;
     this.score=this.user.score;
+    this.statut=this.user.statut;
 
 
     
@@ -105,8 +111,14 @@ export class AfficherPlanteComponent implements OnInit {
   }
 
   goModif(): void {
-    this.laplante.plante=this.p;
-    this.route.navigateByUrl('modif_plante');
+    if (this.statut==="Petit cactus") {
+      this.msg="Votre niveau n'est pas assez élevé";
+    }
+    else {
+      this.laplante.plante=this.p;
+      this.route.navigateByUrl('modif_plante');
+    }
+    
   }
   changeFormatMedia(media:any):any{
     return window.atob(media);

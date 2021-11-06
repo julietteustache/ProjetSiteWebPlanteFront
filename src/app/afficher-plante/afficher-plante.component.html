@@ -15,8 +15,10 @@
         <p>Si vous voulez cultiver cette plante, plantez là en {{calendrier}} ! Pour l'entretenir, arrosez la tous
             les
             {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
-
-        <button class="button1" (click)="goModif()" style="width:50%">Modifier la plante</button>
+        <div style="width:50%;margin:0 auto;">
+            <button class="button1" (click)="goModif()">Modifier la plante</button>
+            <p style="color:red;text-align:center">{{msg}}</p>
+        </div>
     </div><br><br><br>
     <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
         <h4>Commentaires</h4><br>

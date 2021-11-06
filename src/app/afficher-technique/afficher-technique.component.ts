@@ -18,6 +18,7 @@ export class AfficherTechniqueComponent implements OnInit {
   user:any;
   idUser:any;
   score:any;
+  statut:any;
 
   t:Technique=new Technique();
   idTechnique:any;
@@ -27,13 +28,18 @@ export class AfficherTechniqueComponent implements OnInit {
   nvCom:any;
   commentaire:any;
 
+  msg:any;
+
 
   constructor(private http:HttpClient, private route:Router, private uConnect:AuthService, public latechnique:Techniquespecial) { }
 
   ngOnInit(): void {
+    this.msg="";
+
     this.user=this.uConnect.getUserConnect();
     this.idUser=this.user.idUser;
     this.score=this.user.score;
+    this.statut=this.user.statut;
 
     this.t=this.latechnique.getTechnique();
     this.idTechnique=this.t.idTechnique;
@@ -86,8 +92,13 @@ export class AfficherTechniqueComponent implements OnInit {
   }
 
   goModif(): void {
-    this.latechnique.technique=this.t;
-    this.route.navigateByUrl('modif_technique');
+    if (this.statut==="Petit cactus") {
+      this.msg="Votre niveau n'est pas assez élevé";
+    }
+    else {
+      this.latechnique.technique=this.t;
+      this.route.navigateByUrl('modif_technique');
+    }
   }
 
   changeFormatMedia(media:any):any{
