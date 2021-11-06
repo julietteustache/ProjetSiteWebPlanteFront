@@ -27,6 +27,8 @@ export class ModifPlanteComponent implements OnInit {
   score: any;
   idUser: any;
 
+  mediaUrl:any;
+
   constructor(private http: HttpClient, public laplante: Plantespecial, private route: Router, private uConnect: AuthService) { }
 
   ngOnInit(): void {
@@ -75,6 +77,7 @@ export class ModifPlanteComponent implements OnInit {
   stock(p:any): void {
     this.laplante.setPlante(p);
   }
+
 
 
 }

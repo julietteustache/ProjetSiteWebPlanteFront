@@ -24,6 +24,8 @@ export class ModifTechniqueComponent implements OnInit {
   score:any;
   idUser:any;
 
+  mediaUrl:any;
+
   constructor(private http:HttpClient, private route:Router, public latechnique:Techniquespecial, private uConnect:AuthService) { }
 
   ngOnInit(): void {
@@ -67,5 +69,6 @@ export class ModifTechniqueComponent implements OnInit {
   stock(t:any): void {
     this.latechnique.setTechnique(t);
   }
+
 
 }

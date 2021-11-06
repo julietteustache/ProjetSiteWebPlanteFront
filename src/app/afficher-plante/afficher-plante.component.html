@@ -16,6 +16,11 @@
             {{arrosage}} jours ! Son exposition favorite est {{exposition}}</p>
 
         <button class="button1" (click)="goModif()" style="width:50%">Modifier la plante</button>
+        <form>
+            <input type="file" (change)="onFileSelected($event)" style="display:none" #AjoutImage>
+            <br>
+            <button class="button1" type="submit" (click)=AjoutImage.click()>Valider</button>
+        </form>
     </div><br><br><br>
     <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
         <h4>Commentaires</h4><br>
