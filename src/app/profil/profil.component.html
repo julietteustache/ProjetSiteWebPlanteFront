@@ -55,6 +55,64 @@
         
     </div>
     </div>
+    <div style="text-align: center;color: #56A632;margin-top: 20px;">
+        <strong><h2>Mes niveaux</h2></strong><hr>
+    </div>
+
+    <div class="row" style="margin: 50px;">
+     <div class="col-sm-1">
+         
+     </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <img src="assets/images/cactus.png" width="50" height="50" alt="">
+                <p>Petit cactus</p>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <div *ngIf="this.user.statut=='intermédiaire'||this.user.statut=='avancé'||this.user.statut=='expert'||this.user.statut=='maitre'">
+                    <img src="assets/images/tulipe.png" width="50" height="50" alt="">
+                    <p>Tulipe printanière</p>
+                </div>               
+                <div *ngIf="this.user.statut=='débutant'">
+                    <img src="assets/images/tulipenoir.png" width="50" height="50" alt="">
+                    <p>Tulipe prinatnière</p>
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <div *ngIf="this.user.statut=='avancé'||this.user.statut=='expert'||this.user.statut=='maitre'">
+                    <img src="assets/images/rose.png" width="50" height="50" alt="">
+                    <p>Buisson ardent</p>
+                </div>               
+                <div *ngIf="this.user.statut=='intermédiaire'||this.user.statut=='débutant'">
+                    <img src="assets/images/rosenoir.png" width="50" height="50" alt="">
+                    <p>Buisson ardent</p>
+                </div>
+                
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <div *ngIf="this.user.statut=='expert'||this.user.statut=='maitre'">
+                    <img src="assets/images/chene.png" width="50" height="50" alt="">
+                    <p>Grand chêne</p>
+                </div>               
+                <div *ngIf="this.user.statut=='avancé'||this.user.statut=='intermédiaire'||this.user.statut=='débutant'">
+                    <img src="assets/images/chenenoir.png" width="50" height="50" alt="">
+                    <p>Grand chêne</p>
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <div *ngIf="this.user.statut=='maitre'">
+                    <img src="assets/images/olivier.png" width="50" height="50" alt="">
+                    <p>Olivier centenaire</p>
+                </div>               
+                <div *ngIf="this.user.statut=='expert'||this.user.statut=='avancé'||this.user.statut=='intermédiaire'||this.user.statut=='débutant'">
+                    <img src="assets/images/oliviernoir.png" width="50" height="50" alt="">
+                    <p>Olivier centenaire</p>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                
+            </div>
+        </div>
+ 
     </div>
 
 
