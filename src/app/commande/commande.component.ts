@@ -121,10 +121,7 @@ export class CommandeComponent implements OnInit {
           error: (err) => { console.log(err) }
         })
       }
-      /*else if(this.quantite<=1) {
-        
-      }*/
-
+      
     }
     else{
       this.msg="Vous n'avez pas assez de points!"
