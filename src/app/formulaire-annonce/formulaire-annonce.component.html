@@ -9,7 +9,7 @@
                     <mat-form-field>
                         <mat-label>Selectionner une plante</mat-label>
 
-                        <mat-select ngModel="" name="espece" required>
+                        <mat-select ngModel="" name="plante" required>
                             <mat-option *ngFor="let p of plante" [value]="p">
                                 {{ p.espece }}
                             </mat-option>
@@ -17,6 +17,7 @@
                     </mat-form-field>
 
                 </div>
+                <!--
                 <div class="form-group">
                     <mat-form-field>
                         <mat-label>Selectionner un type</mat-label>
@@ -27,10 +28,15 @@
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
+                </div>-->
+                <div class="form-group">
+                    <label class="grey-text">Type (graine, greffe ou bouture)</label>
+                    <input type="text" class="form-control" name="type" ngModel="">
+
                 </div>
                 <div class="form-group">
                     <label class="grey-text">Quantité</label>
-                    <input type="text" class="form-control" name="stock" ngModel="">
+                    <input type="number" class="form-control" name="stock" ngModel="">
 
                 </div>
                 <div class="form-group">

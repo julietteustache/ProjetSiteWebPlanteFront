@@ -89,14 +89,16 @@ export class FormulaireAnnonceComponent implements OnInit {
 
 
   formulaireAnnonce(val: any): void {
-    //let annonce = {annonce: val.annonce, user:this.createur, plante :this.p}
-   
-
-    this.http.post('http://localhost:8085/new_annonce/' + this.createur, val).subscribe({
+    let annonce = {description: val.description, stock:val.stock, type:val.type, user:this.createur, plante :val.plante}
+    console.log(val.plante);
+    console.log(annonce);
+    this.http.post('http://localhost:8085/new_annonce', annonce).subscribe({
       next: (data) => {
+        console.log("test");
         this.an = data;
         console.log(this.p);
         console.log(this.createur);
+        console.log(this.an);
 
         //this.route.navigateByUrl('annonce');
       },
