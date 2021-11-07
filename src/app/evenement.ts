@@ -6,6 +6,8 @@ export class Evenement {
     public titre!:string;
     public description!:string;
     public NbParticipants!:number;
+    public date!:string;
+    public heure!:string;
     public organisateur!:User;
     public adresse!:Adress;
 
