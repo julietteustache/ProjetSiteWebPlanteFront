@@ -23,7 +23,7 @@ adresse:Adress=new Adress;
 constructor(private uConnect:AuthService,private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
-    this.u=this.uConnect.user;
+    this.u=this.uConnect.getUserConnect();
     this.nom=this.u.nom;
     this.prenom=this.u.prenom;
     this.login=this.u.login;

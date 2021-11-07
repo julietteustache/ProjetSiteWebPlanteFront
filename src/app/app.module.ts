@@ -11,7 +11,7 @@ import { PlantesComponent } from './plantes/plantes.component';
 import { FormsModule } from '@angular/forms';
 import { EvenementSpecifiqueComponent } from './evenement-specifique/evenement-specifique.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatCardModule } from '@angular/material/card';
+import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -51,6 +51,10 @@ import { TulipeSuccesComponent } from './tulipe-succes/tulipe-succes.component';
 import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
 import { CheneSuccesComponent } from './chene-succes/chene-succes.component';
 import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.component';
+import { ModifTechniqueComponent } from './modif-technique/modif-technique.component';
+import { MsgRecusComponent } from './msg-recus/msg-recus.component';
+import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
+import { NvMsgComponent } from './nv-msg/nv-msg.component';
 
 
 @NgModule({
@@ -65,13 +69,8 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     InscriptionComponent,
     CreerPlanteComponent,
     ValidEventComponent,
-
-
-
     CreerPlanteComponent,
     AfficherPlanteComponent,
-
-
     ConnexionComponent,
     InscriptionComponent,
     CreerPlanteComponent,
@@ -79,7 +78,6 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     NavbarComponent,
     ProfilComponent,
     AccueilComponent,
-
     NavdocComponent,
     DocumentationComponent,
     ModifPlanteComponent,
@@ -98,7 +96,11 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     TechniquesComponent,
     AfficherTechniqueComponent,
     NavbarDecoComponent,
-    CreerTechniqueComponent
+    CreerTechniqueComponent,
+    ModifTechniqueComponent,
+    MsgRecusComponent,
+    MsgEnvoyesComponent,
+    NvMsgComponent
   ],
   imports: [
     BrowserModule,
@@ -110,16 +112,13 @@ import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.componen
     MatButtonModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-
     ReactiveFormsModule,
     NgMultiSelectDropDownModule,
-
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatRadioModule,
     MatFormFieldModule,
     MatSelectModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

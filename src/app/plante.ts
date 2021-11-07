@@ -1,3 +1,5 @@
+import { Byte } from "@angular/compiler/src/util";
+
 export class Plante {
         public idPlante!:number;
         public categorie!:string;
@@ -8,6 +10,7 @@ export class Plante {
         public calendrier!:string;
         public arrosage!:number;
         public exposition!:string;
+        public image!:Byte;
     
         constructor(){}
     }

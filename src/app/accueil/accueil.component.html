@@ -27,6 +27,7 @@
             <li>Organiser un atelier pour partager vos connaissances</li>
             <li>Participer à la vie de la communauté en postant des commentaires</li>
             <li>Modifier et créer de nouvelles fiches de plantes</li>
+            <li>Modifier et créer de nouvelles fiches techniques</li>
         </div>
             <br>
             La voie est longue vers le titre de maître jardinier. Vous ne pourrez pas faire tous cela dès le début
@@ -40,15 +41,15 @@
             </div>
             <div>
                 <img src="assets/images/tulipe.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Primevère hivernale</div>L'hiver est passé, vous pouvez maintenant modifier des fiches plantes en plus.
+            <div style="color:#56A632">Tulipe printanière</div>L'hiver est passé, vous pouvez maintenant modifier des fiches plantes en plus.
             </div>
             <div>
             <img src="assets/images/rose.png" width="60" height="60" alt="" style="float: left;"> 
-            <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous ne pouvez pas faire de nouvelles choses mais progressez.
+            <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous pouvez créer de nouvelles fiches plantes.
             </div>
             <div>
             <img src="assets/images/chene.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez quasiment tous faire sauf modifier des fiches.
+            <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez créer des évenements et partager.
             </div>
             <img src="assets/images/olivier.png" width="60" height="60" alt="" style="float: left;">
             <div style="color: #56A632">Olivier centenaire</div>
@@ -67,45 +68,59 @@
 </div>
 <div style="text-align: justify;">     
    <div class="col-sm-4">
-     <div class="card p-3 my-shadow" style="text-align: left;">
+     <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;
+        cursor: pointer;" routerLink="/evenement">
        <div class="card-header" style="background-color: #56A632;color: white !important;text-align: center !important;">
        <h4>Derniers événements</h4>
     </div>
         <div *ngFor='let m of liste'>
-            
-             <strong><p style="color: #56A632;">{{m.titre}}</p></strong>
-             <p>{{m.description}}</p>
+            <div>
+             <strong>
+            <p style="color: #56A632;float: left;">{{m.titre}}</p>
+            <p style="color: #56A632;float: right;">{{m.date}}</p>
+        </strong>
+        </div>
+             <p style="text-align: justify;float: left;">{{m.description}}</p>
             <hr>
-            
+        
         </div>
     
     </div>   
    </div>
   
    <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: left;">
+        <div class="card p-3 my-shadow [data-clickable=true]" style="cursor: pointer;" routerLink="/annonce">
             <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
                 <h4>Dernières annonces</h4>
             </div>
             <div *ngFor='let a of listeA'>
-                <div>
-                 <strong><p style="display: inline-block;color: #56A632;">Type: {{a.type}}</p><p style="display: inline-block;text-align: right !important;" >Quantité: {{a.stock}}</p></strong>
+                <div >
+                 <strong>
+                     <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
+                     <p style="color: #56A632;float: right;" >Quantité: {{a.stock}}</p>
+                    </strong>
                 </div>
-                 <p>{{a.description}}</p>
-                <hr>
-           
+                <div>
+                 <p style="text-align: justify;float: left;">{{a.description}}</p>
+                
+            </div>
+            <hr>
         </div>
     </div>
    </div>
     <div class="col-sm-4">
-        <div class="card p-3 my-shadow" style="text-align: left;">
+        <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;cursor: pointer;" routerLink="/documentation">
             <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
                 <h4>Quelques plantes</h4>
             </div>
             <div *ngFor='let p of listeP'>
-                
-                 <strong><p style="color: #56A632;">{{p.espece}}</p></strong>
-                 <p>{{p.description}}</p>
+                <div>
+                 <strong>
+                    <p style="color: #56A632;float: left;">{{p.espece}}</p>
+                    <p style="color: #56A632;float: right;">{{p.categorie}}</p>
+                </strong>
+            </div>
+                 <p style="text-align: justify;float:left">{{p.description}}</p>
                  <hr>
                
             </div>

@@ -1,15 +1,19 @@
-
 <app-navdoc></app-navdoc>
 <div class="main">
     <div style="background-color:#DCE1E9; padding:10px">
         <h1>{{nom|titlecase}}</h1>
     </div>
     <div style="padding:10px">
-        <img src='../../assets/images/roses_garden.jpg' style="float: right;max-height: 250px; max-width: 250px;">
+        <div *ngIf="mediaExist(t.image)">
+            <img [src]="changeFormatMedia(t.image)" style="float: right;max-height: 250px; max-width: 250px;">
+        </div>
         <h4>Description</h4>
         <p>{{description}}</p>
 
-        <button class="button1" (click)="goModif()" style="width:50%">Modifier la technique</button>
+        <div style="width:50%;margin:0 auto;">
+            <button class="button1" (click)="goModif()">Modifier la technique</button>
+            <p style="color:red;text-align:center">{{msg}}</p>
+        </div>
     </div><br><br><br>
     <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
         <h4>Commentaires</h4><br>
