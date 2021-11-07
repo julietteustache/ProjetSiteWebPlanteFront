@@ -52,6 +52,9 @@ import { RoseSuccesComponent } from './rose-succes/rose-succes.component';
 import { CheneSuccesComponent } from './chene-succes/chene-succes.component';
 import { OlivierSuccesComponent } from './olivier-succes/olivier-succes.component';
 import { ModifTechniqueComponent } from './modif-technique/modif-technique.component';
+import { MsgRecusComponent } from './msg-recus/msg-recus.component';
+import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
+import { NvMsgComponent } from './nv-msg/nv-msg.component';
 
 
 @NgModule({
@@ -94,7 +97,10 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
     AfficherTechniqueComponent,
     NavbarDecoComponent,
     CreerTechniqueComponent,
-    ModifTechniqueComponent
+    ModifTechniqueComponent,
+    MsgRecusComponent,
+    MsgEnvoyesComponent,
+    NvMsgComponent
   ],
   imports: [
     BrowserModule,
