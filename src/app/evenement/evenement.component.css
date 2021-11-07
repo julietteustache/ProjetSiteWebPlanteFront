@@ -1,0 +1,13 @@
+.titrevent {
+    font-size: 1.75rem;
+    text-align: center;
+    color:#56A632;
+}
+
+p {
+    text-align: justify;
+}
+
+.p-3 {
+    padding: 16px!important;
+}
