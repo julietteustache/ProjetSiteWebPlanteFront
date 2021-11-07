@@ -30,6 +30,9 @@ import { AfficherTechniqueComponent } from './afficher-technique/afficher-techni
 import { NavbarDecoComponent } from './navbar-deco/navbar-deco.component';
 import { CreerTechniqueComponent } from './creer-technique/creer-technique.component';
 import { ModifTechniqueComponent } from './modif-technique/modif-technique.component';
+import { MsgRecusComponent } from './msg-recus/msg-recus.component';
+import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
+import { NvMsgComponent } from './nv-msg/nv-msg.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -58,7 +61,10 @@ const routes: Routes = [
   {path: 'techniques', component:TechniquesComponent},
   {path: 'afficher_technique', component:AfficherTechniqueComponent},
   {path: 'nouvelleTechnique', component:CreerTechniqueComponent},
-  {path: 'modif_technique', component:ModifTechniqueComponent}
+  {path: 'modif_technique', component:ModifTechniqueComponent},
+  {path: 'msg_recus', component:MsgRecusComponent},
+  {path: 'msg_envoyes', component:MsgEnvoyesComponent},
+  {path: 'nv_msg', component:NvMsgComponent}
 ];
 
 @NgModule({

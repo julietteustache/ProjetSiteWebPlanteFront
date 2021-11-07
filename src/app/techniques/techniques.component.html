@@ -20,7 +20,8 @@
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <button routerLink="/nouvelleTechnique" class="button1" type="button">Ajouter une nouvelle technique</button>
+                <button (click)="goCreer()" class="button1" type="button">Ajouter une nouvelle technique</button>
+                <p style="color:red;text-align:center">{{msg}}</p>
             </div>
         </div>
     </div>
