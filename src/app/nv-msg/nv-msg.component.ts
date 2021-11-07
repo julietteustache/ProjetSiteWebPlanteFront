@@ -12,17 +12,21 @@ export class NvMsgComponent implements OnInit {
   user: any;
   idUser: any;
 
+
   destinataire:any;
 
   notification:any;
 
   nouveauMsg:any;
 
+  autoriser:any;
+
   constructor(private http:HttpClient, private route:Router, private uConnect:AuthService) { }
 
   ngOnInit(): void {
     this.user=this.uConnect.getUserConnect();
     this.idUser=this.user.idUser;
+    this.autoriser=false;
   }
 
   /*
@@ -41,6 +45,23 @@ export class NvMsgComponent implements OnInit {
       error: (err) => { console.log(err) }
     })
     
+  }
+
+  findUser(val:any): void {
+    this.http.get('http://localhost:8085/user/'+val.nom+"/"+val.prenom).subscribe({
+      next: (data) => {
+        this.destinataire = data;
+        console.log(this.destinataire);
+        if(this.destinataire==null) {
+          this.notification="Utilisateur non trouvé, veuillez réessayer"
+        }
+        else {
+          this.autoriser=true;
+        }
+      },
+      error: (err) => { console.log(err) }
+
+    });
   }
 
 }

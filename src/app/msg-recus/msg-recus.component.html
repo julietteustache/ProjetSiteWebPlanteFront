@@ -1,6 +1,11 @@
 <div class="container">
+    <div style="text-align: center;">
+        <h2>Messages reçus</h2>
+        <p class="grey-text" style="font-style: italic;">Pour envoyer un nouveau message, cliquez sur l'icône de profil en haut à droite</p>
+        <br><br>
+    </div>
 <div class="col-sm-12" *ngFor='let m of messages'>
-    <div class="card p-2 my-shadow">
+    <div class="card p-2 my-shadow" style="border-radius:25px;border:solid 3px #D38B5D; margin-bottom: 5px !important;">
         <p class="text-secondary">Expéditeur : {{m.expediteur.prenom}} {{m.expediteur.nom}}</p>
         <p class="text-secondary" style="text-align:right">Date : {{m.date}} </p>
         <div>
