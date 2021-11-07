@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <button routerLink="/formulaireAnnonce" class="button1" type="button" style="margin-top: 150px">PROPOSER
-                    UN DON</button>
+                <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important" (click)="verification()">Prososer un
+                    don</button>
             </div>
         </div>
 

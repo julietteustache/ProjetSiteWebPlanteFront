@@ -9,6 +9,7 @@ import { Annoncespeciale } from '../annoncespeciale';
 import { CommandeComponent } from '../commande/commande.component';
 import { Annonce } from '../annonce';
 import { AuthService } from '../services/auth.service';
+import { NiveauComponent } from '../niveau/niveau.component';
 
 @Component({
   selector: 'app-annonce',
@@ -170,6 +171,19 @@ export class AnnonceComponent implements OnInit {
       error : (err)=>{console.log(err)}
     })
   }*/
+
+  verification(){
+    if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score>=1000){
+      this.router.navigateByUrl('formulaireAnnonce')
+    }
+    else if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score<1000){
+      const mydial1=this.dialog.open(NiveauComponent)
+    }
+    else if (this.connexion.isConnected()==false && this.connexion.getUserConnect().score<1000){
+
+    }
+    else{}
+  }
 
 
 
