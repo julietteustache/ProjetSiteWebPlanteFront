@@ -1,7 +1,6 @@
 <div>
     <img src="assets/images/head2.jpg" width="100%" alt="banière">
 </div>
-
 <div class="container">
 
     <div style="text-align: center;color: #56A632;margin-top: 20px;">
@@ -42,70 +41,157 @@
                     <div style="text-align: center!important;color: #56A632;">
                         <h3>Les niveaux<br><br></h3>
                     </div>
-
-                    <div class="blocniveau">
-                        <img src="assets/images/cactus.png" width="60" height="80" alt=""
-                            style="float: left; margin-right: 10px;">
+                    <div>
+                        <img src="assets/images/cactus.png" width="60" height="80" alt="" style="float: left;">
                         <div style="color:#56A632">Petit cactus </div>Avant de devenir un grand arbre, il faut commencer
                         par pousser. Vous pouvez obtenir des plantes et participer à un évenement.
                     </div>
-
-                    <div class="blocniveau">
-                        <img src="assets/images/tulipe.png" width="60" height="60" alt=""
-                            style="float: left; margin-right: 10px;">
+                    <div>
+                        <img src="assets/images/tulipe.png" width="60" height="60" alt="" style="float: left;">
                         <div style="color:#56A632">Tulipe printanière</div>L'hiver est passé, vous pouvez maintenant
                         modifier des fiches plantes en plus.
                     </div>
-
-                    <div class="blocniveau">
-                        <img src="assets/images/rose.png" width="60" height="60" alt=""
-                            style="float: left; margin-right: 10px;">
+                    <div>
+                        <img src="assets/images/rose.png" width="60" height="60" alt="" style="float: left;">
                         <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous pouvez créer de
                         nouvelles fiches plantes.
                     </div>
-
-                    <div class="blocniveau">
-                        <img src="assets/images/chene.png" width="60" height="60" alt=""
-                            style="float: left; margin-right: 10px;">
+                    <div>
+                        <img src="assets/images/chene.png" width="60" height="60" alt="" style="float: left;">
                         <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez créer des
                         évenements et partager.
                     </div>
+                    <img src="assets/images/olivier.png" width="60" height="60" alt="" style="float: left;">
+                    <div style="color: #56A632">Olivier centenaire</div>
+                    <p> Grand maître du jardinage, tu peux partager tous ton savoir avec la communauté.</p>
+                </div>
+            </div>
 
-                    <div class="blocniveau">
-                        <img src="assets/images/olivier.png" width="60" height="60" alt=""
-                            style="float: left; margin-right: 10px;">
-                        <div style="color: #56A632">Olivier centenaire</div>
-                        <p> Grand maître du jardinage, tu peux partager tout ton savoir avec la communauté.</p>
+        </div>
+    </div>
+
+
+    <div class="">
+        <div class="card mdb-color text-center z-depth-2" style="background-color: #56A632 !important;">
+            <div class="card-body">
+                <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3" style="color: seashell !important;">
+                    <strong>Les dernières activités</strong>
+                </h3>
+                <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
+                    suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure
+                    reprehenderit
+                    qui in ea voluptate non proident velit esse quam. </p>
+                <br><br>
+
+
+            </div>
+        </div>
+        <div class="container" style="margin-top: -90px;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card mdb-color text-center z-depth-2 [data-clickable=true] max-length" style="background-color: white !important;  cursor: pointer;" routerLink='/evenement'>
+                        <div class="card-body">
+                            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"
+                                style="color: #D38B5D !important;"><strong>Derniers
+                                    événements</strong></h3>
+                            <div class="white-text mb-0">
+                                <div *ngFor='let m of liste'>
+                                    <div>
+                                        <strong>
+                                            <p style="color: #56A632;float: left;">{{m.titre}}</p>
+                                            <p style="color: #56A632;float: right;">{{m.date}}</p>
+                                        </strong>
+                                    </div>
+                                    <p style="text-align: justify;float: left; color: darkgray; letter-spacing: 2px;">
+                                        {{m.description}}</p>
+
+                                        <strong style="color: darkgray; letter-spacing: 2px;">............</strong>
+                                        <br><br>
+                                 
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-4">
+                    <div class="card mdb-color text-center z-depth-2 [data-clickable=true] max-length" style="background-color: white !important;  cursor: pointer;" routerLink='/annonce'>
+                        <div class="card-body">
+                            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"
+                                style="color: #D38B5D !important;"><strong>Dernières
+                                    annonces</strong></h3>
+                            <div class="white-text mb-0">
+                                <div *ngFor='let a of listeA'>
+                                    <div>
+                                        <strong>
+                                            <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
+                                            <p style="color: #56A632;float: right;">Quantité: {{a.stock}}</p>
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <br>
+                                        <p
+                                            style=" color: darkgrey; letter-spacing: 2px;">
+                                            {{a.description}}</p>
+                                            <strong style="color: darkgray; letter-spacing: 2px;">............</strong>
+                                            <br><br>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card mdb-color text-center z-depth-2 [data-clickable=true] max-length" style="background-color: white !important; cursor: pointer;" routerLink='/documentation' >
+                        <div class="card-body">
+                            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"
+                                style="color: #D38B5D !important;"><strong> ♀ Quelques
+                                    plantes</strong></h3>
+                            <div class="white-text mb-0">
+                                <div *ngFor='let p of listeP'>
+                                    <div>
+                                        <strong>
+                                            <p style="color: #56A632;float: left;">{{p.espece}}</p>
+                                            <p style="color: #56A632;float: right;">{{p.categorie}}</p>
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p style="text-align: justify;float:left; color: darkgray; letter-spacing: 2px;">
+                                            {{p.description}}</p> <br>
+                                            <strong style="color: darkgray; letter-spacing: 2px;">.........................</strong>
+                                            <br>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div style="text-align: center!important; color: #56A632;">
+    <!-- <div style="text-align: center;color: #56A632;">
         <strong>
             <h2>Les dernières activités</h2>
         </strong>
         <hr>
-    </div>
-
-    <div class="row">
-
     </div>
     <div style="text-align: justify;">
         <div class="col-sm-4">
             <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;
         cursor: pointer;" routerLink="/evenement">
                 <div class="card-header"
-                    style="background-color: #714955;color: white !important;text-align: center !important;">
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
                     <h4>Derniers événements</h4>
                 </div>
                 <div *ngFor='let m of liste'>
                     <div>
                         <strong>
-                            <p style="color: #0C361D;float: left;">{{m.titre}}</p>
-                            <p style="color: #0C361D;float: right;">{{m.date}}</p>
+                            <p style="color: #56A632;float: left;">{{m.titre}}</p>
+                            <p style="color: #56A632;float: right;">{{m.date}}</p>
                         </strong>
                     </div>
                     <p style="text-align: justify;float: left;">{{m.description}}</p>
@@ -119,14 +205,14 @@
         <div class="col-sm-4">
             <div class="card p-3 my-shadow [data-clickable=true]" style="cursor: pointer;" routerLink="/annonce">
                 <div class="card-header"
-                    style="background-color: #714955;color: white !important;text-align: center !important;">
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
                     <h4>Dernières annonces</h4>
                 </div>
                 <div *ngFor='let a of listeA'>
                     <div>
                         <strong>
-                            <p style="color: #0C361D;float: left;">Type: {{a.type}}</p>
-                            <p style="color: #0C361D;float: right;">Quantité: {{a.stock}}</p>
+                            <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
+                            <p style="color: #56A632;float: right;">Quantité: {{a.stock}}</p>
                         </strong>
                     </div>
                     <div>
@@ -141,14 +227,14 @@
             <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;cursor: pointer;"
                 routerLink="/documentation">
                 <div class="card-header"
-                    style="background-color: #714955;color: white !important;text-align: center !important;">
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
                     <h4>Quelques plantes</h4>
                 </div>
                 <div *ngFor='let p of listeP'>
                     <div>
                         <strong>
-                            <p style="color: #0C361D;float: left;">{{p.espece}}</p>
-                            <p style="color: #0C361D;float: right;">{{p.categorie}}</p>
+                            <p style="color: #56A632;float: left;">{{p.espece}}</p>
+                            <p style="color: #56A632;float: right;">{{p.categorie}}</p>
                         </strong>
                     </div>
                     <p style="text-align: justify;float:left">{{p.description}}</p>
@@ -157,5 +243,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
