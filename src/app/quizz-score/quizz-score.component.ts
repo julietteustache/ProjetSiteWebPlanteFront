@@ -56,10 +56,10 @@ export class QuizzScoreComponent implements OnInit {
 
     let score = val.score1 + val.score2 + val.score3;
     let niveau = 'Petit cactus';
-    if (score > 100) {niveau = 'Tulipe printanière'}
-    else if (score > 500) {niveau = 'Buisson ardent'}
-    else if (score > 1000) {niveau = 'Grand chêne'}
-    else if (score > 5000) {niveau = 'Olivier centenaire'}
+    if (score >= 100) {niveau = 'Tulipe printanière'}
+    else if (score >= 500) {niveau = 'Buisson ardent'}
+    else if (score >= 1000) {niveau = 'Grand chêne'}
+    else if (score >= 5000) {niveau = 'Olivier centenaire'}
 
    // console.log('score final ', score);
    // console.log('user en cour d\'inscription', this.subcribeS.user);

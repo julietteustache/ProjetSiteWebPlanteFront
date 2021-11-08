@@ -87,7 +87,7 @@ export class AuthService {
         error: (err) => { console.log(err) }
       })
     }
-    else if (u.score>=10000){
+    else if (u.score>=5000){
       u.statut='Olivier centenaire';
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({

@@ -173,13 +173,13 @@ export class AnnonceComponent implements OnInit {
   }*/
 
   verification(){
-    if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score>=1000){
+    if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score>=500){
       this.router.navigateByUrl('formulaireAnnonce')
     }
-    else if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score<1000){
+    else if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score<500){
       const mydial1=this.dialog.open(NiveauComponent)
     }
-    else if (this.connexion.isConnected()==false && this.connexion.getUserConnect().score<1000){
+    else if (this.connexion.isConnected()==false && this.connexion.getUserConnect().score<500){
 
     }
     else{}
