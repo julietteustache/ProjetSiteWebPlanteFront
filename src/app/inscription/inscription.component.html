@@ -1,6 +1,10 @@
-<br><br><br>
-<div>
-<form style="margin:auto;width: 25%;" #fConnect="ngForm" (ngSubmit)="inscription(fConnect.value)">
+<div class="main">
+  <h3 class="titrebloc">Inscrivez vous maintenant !</h3>
+  <hr>
+  <h3 class="titrebloc2">Etape 1 sur 2</h3>
+  <p class="texte">Renseignez les champs ci-dessous pour créer votre compte. 
+    Vous pourrez ensuite répondre à un quizz pour tester votre niveau de départ !</p>
+<form #fConnect="ngForm" (ngSubmit)="inscription(fConnect.value)">
      <!-- Login -->
      <div class="form-outline mb-4">
         <input name="login" type="text" class="form-control" ngModel="">
@@ -30,7 +34,11 @@
     </div>
   
     <!-- Bouton valider -->
-    <button type="submit" class="button1" style="width: 50%">Confirmer</button>
+    <button type="submit" class="button1" style="width: 50%">Continuer</button>
 
   </form>
+  <p class="texte">
+    <br>
+    <a>Vous avez déjà un compte ? </a><a href="connexion">Se connecter</a>
+  </p>
 </div>
