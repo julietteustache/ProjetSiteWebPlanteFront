@@ -12,6 +12,7 @@ import { AuthService } from '../services/auth.service';
 export class InscriptionComponent implements OnInit {
   msg: any;
   user: any;
+  adresse: any;
 
   constructor(private http: HttpClient, private route: Router, private subscribeS: SubscribeService, public auth: AuthService) { }
 
@@ -19,14 +20,26 @@ export class InscriptionComponent implements OnInit {
   }
 
   inscription(val: any): void {
-    this.http.post('http://localhost:8085/inscription', val).subscribe({
+    let adresseform = { ville: val.ville, cp: val.cp, rue: val.rue }
+    this.http.post('http://localhost:8085/nv_adresse', adresseform).subscribe({
       next: (data) => {
-        this.user = data
-        this.subscribeS.user = this.user;
-        this.auth.setUserInSession(this.user)
-        this.route.navigateByUrl('quizz_score')
+        this.adresse = data;
+        //console.log(this.adresse);
+        console.log('adresse : ' + this.adresse);
+        let userform = { nom: val.nom, prenom: val.prenom, login: val.login, mdp: val.mdp, adresse: this.adresse }
+        this.http.post('http://localhost:8085/inscription', userform).subscribe({
+          next: (data) => {
+            this.user = data;
+            this.subscribeS.user = this.user;
+            this.auth.setUserInSession(this.user);
+            this.route.navigateByUrl('quizz_score');
+          },
+          error: (err) => { console.log(err) }
+        })
+
       },
       error: (err) => { console.log(err) }
     })
+
   }
 }

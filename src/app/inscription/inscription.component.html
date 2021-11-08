@@ -2,15 +2,15 @@
   <h3 class="titrebloc">Inscrivez vous maintenant !</h3>
   <hr>
   <h3 class="titrebloc2">Etape 1 sur 2</h3>
-  <p class="texte">Renseignez les champs ci-dessous pour créer votre compte. 
+  <p class="texte">Renseignez les champs ci-dessous pour créer votre compte.
     Vous pourrez ensuite répondre à un quizz pour tester votre niveau de départ !</p>
-<form #fConnect="ngForm" (ngSubmit)="inscription(fConnect.value)">
-     <!-- Login -->
-     <div class="form-outline mb-4">
-        <input name="login" type="text" class="form-control" ngModel="">
-        <label class="form-label" for="form3Example3">Login</label>
-      </div>
-    
+  <form #fConnect="ngForm" (ngSubmit)="inscription(fConnect.value)">
+    <!-- Login -->
+    <div class="form-outline mb-4">
+      <input name="login" type="text" class="form-control" ngModel="">
+      <label class="form-label" for="form3Example3">Login</label>
+    </div>
+
     <!-- Prénom + Nom -->
     <div class="row mb-4">
       <div class="col">
@@ -26,13 +26,30 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Mot de passe -->
     <div class="form-outline mb-4">
       <input name="mdp" type="password" class="form-control" ngModel="">
       <label class="form-label" for="form3Example4">Mot de passe</label>
     </div>
-  
+
+    <!-- Adresse-->
+    <div class="form-outline">
+      <input name="rue" type="text" class="form-control" ngModel="">
+      <label class="form-check-label" for="form3Example1">Rue</label>
+    </div><br>
+
+    <div class="form-outline">
+      <input name="cp" type="text" class="form-control" ngModel="">
+      <label class="form-label" for="form3Example2">Code Postal</label>
+    </div><br>
+
+
+    <div class="form-outline">
+      <input name="ville" type="text" class="form-control" ngModel="">
+      <label class="form-label" for="form3Example2">Ville</label>
+    </div><br>
+
     <!-- Bouton valider -->
     <button type="submit" class="button1" style="width: 50%">Continuer</button>
 

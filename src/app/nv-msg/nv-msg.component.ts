@@ -39,8 +39,7 @@ export class NvMsgComponent implements OnInit {
     this.http.post('http://localhost:8085/nvMsg', message).subscribe({
       next: (data) => {
         this.nouveauMsg = data;
-        console.log(this.nouveauMsg);
-        //this.route.navigateByUrl('msg_envoyes');
+        this.route.navigateByUrl('msg_envoyes');
       },
       error: (err) => { console.log(err) }
     })
