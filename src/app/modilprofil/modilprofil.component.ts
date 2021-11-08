@@ -38,7 +38,6 @@ modifUser(val:any){
   this.http.post('http://localhost:8085/modifuser/'+this.u.iduser,val).subscribe({
     next:(data)=>{this.u=data
       this.route.navigateByUrl('profil');
-
     },
 
     error:(err)=>{console.log(err)}
