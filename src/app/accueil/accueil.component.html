@@ -98,14 +98,14 @@
             <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;
         cursor: pointer;" routerLink="/evenement">
                 <div class="card-header"
-                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    style="background-color: #714955;color: white !important;text-align: center !important;">
                     <h4>Derniers événements</h4>
                 </div>
                 <div *ngFor='let m of liste'>
                     <div>
                         <strong>
-                            <p style="color: #56A632;float: left;">{{m.titre}}</p>
-                            <p style="color: #56A632;float: right;">{{m.date}}</p>
+                            <p style="color: #0C361D;float: left;">{{m.titre}}</p>
+                            <p style="color: #0C361D;float: right;">{{m.date}}</p>
                         </strong>
                     </div>
                     <p style="text-align: justify;float: left;">{{m.description}}</p>
@@ -119,14 +119,14 @@
         <div class="col-sm-4">
             <div class="card p-3 my-shadow [data-clickable=true]" style="cursor: pointer;" routerLink="/annonce">
                 <div class="card-header"
-                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    style="background-color: #714955;color: white !important;text-align: center !important;">
                     <h4>Dernières annonces</h4>
                 </div>
                 <div *ngFor='let a of listeA'>
                     <div>
                         <strong>
-                            <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
-                            <p style="color: #56A632;float: right;">Quantité: {{a.stock}}</p>
+                            <p style="color: #0C361D;float: left;">Type: {{a.type}}</p>
+                            <p style="color: #0C361D;float: right;">Quantité: {{a.stock}}</p>
                         </strong>
                     </div>
                     <div>
@@ -141,14 +141,14 @@
             <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;cursor: pointer;"
                 routerLink="/documentation">
                 <div class="card-header"
-                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    style="background-color: #714955;color: white !important;text-align: center !important;">
                     <h4>Quelques plantes</h4>
                 </div>
                 <div *ngFor='let p of listeP'>
                     <div>
                         <strong>
-                            <p style="color: #56A632;float: left;">{{p.espece}}</p>
-                            <p style="color: #56A632;float: right;">{{p.categorie}}</p>
+                            <p style="color: #0C361D;float: left;">{{p.espece}}</p>
+                            <p style="color: #0C361D;float: right;">{{p.categorie}}</p>
                         </strong>
                     </div>
                     <p style="text-align: justify;float:left">{{p.description}}</p>

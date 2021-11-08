@@ -1,16 +1,25 @@
 <app-navdoc></app-navdoc>
 <div class="main">
-    <div class="container" style="margin-top:50px !important; margin-bottom: 50px !important;">
+    <div class="blocnoir">
+        <div class="imagetitre"></div>
+        <div class="titrepage">
+            <h1>Techniques générales</h1>
+            <p>Retrouvez ici l'ensemble des techniques générales de jardinage qui pourront vous servir 
+                pour n'importe quelle plante du site. <br>
+                Pour ajouter une nouvelle technique, cliquez sur le bouton ci-dessous.
+            </p>
+            <button (click)="goCreer()" class="bouton" type="button">Ajouter une nouvelle technique</button><p style="color:red;text-align:center">{{msg}}</p>
+        </div>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-sm-4" *ngFor='let t of techniques'>
-                <div class="card p-2 my-shadow"
-                    style="border-radius:25px;border:solid 3px #D38B5D;">
-                    <div style="color:#D38B5D;font-style: italic; text-align: center;">
-                        <h4> {{t.nom|titlecase}}</h4>
-                    </div>
+                <div class="card p-2 my-shadow">
+                    <h4 class="titrebloc"> {{t.nom|titlecase}}</h4><hr>
                     <div class="case">
                         <p>{{t.description}}</p>
                     </div>
+                    <br>
                     <button routerLink="/afficher_technique" class="button1" (click)="stock(t)">Voir plus</button>
 
                 </div>
