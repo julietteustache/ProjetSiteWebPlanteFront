@@ -46,6 +46,7 @@
 
 .m-active{
     color:#D38B5D!important;
+    font-weight: bold;
 }
 
 .dropdown-menu{
@@ -1265,4 +1266,11 @@ ul {
     letter-spacing: 4px;
     font-family: 'Noto Serif';
     color: seashell;
+}
+
+
+.max-length {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 530px;
 }
