@@ -23,7 +23,7 @@ export class CreerPlanteComponent implements OnInit {
   }
 
   creerPlante(val: any): void {
-    if (this.statut === "Petit cactus" || this.statut === "Primevère hivernale") {
+    if (this.statut === "Petit cactus") {
       this.msg = "Votre niveau n'est pas assez élevé";
     }
     else {

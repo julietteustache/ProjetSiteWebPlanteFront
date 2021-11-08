@@ -67,68 +67,88 @@ export class CommandeComponent implements OnInit {
     };*/
 
   miseAjour(val: any) {
-    if (this.uConnect.isConnected()==true){
-      if(this.user.score>this.an.plante.prix)
+    
+      if(this.user.score>=this.an.plante.prix)
       {
         console.log('prixV1', this.an.plante.prix)
           console.log('scoreV1', this.user.score)
           console.log('quantite', this.quantite)
           
         if (this.quantite >= 1 ) {
-          console.log('prixV1', this.an.plante.prix)
-          console.log('scoreV1', this.user.score)
-          console.log('stock', val.stock)
+          console.log('prixV2', this.an.plante.prix)
+          console.log('scoreV2', this.user.score)
+          console.log('stock2', val.stock)
           this.quantite = this.quantite - val.stock;
           console.log('an ', this.an);
-          console.log('stock ', this.quantite);
+          console.log('stock3 ', this.quantite);
           this.http.put('http://localhost:8085/annonce/' + this.quantite, this.an).subscribe({
             next: (data) => {
               this.a = data;
               this.dialogref.close();
               this.dialogref1.close();
               // window.location.reload();
-              this.ngOnInit();
+    
     
             },
             
             error: (err) => { console.log(err) }
           });
-          if(this.quantite<1){
-            this.http.delete('http://localhost:8085/annonce/' + this.idAnnonce).subscribe({
-            next: (data) => {
-              this.a = data;
-              this.dialogref.close();
-              this.dialogref1.close();
-              //window.location.reload();
-            },
-            error: (err) => { console.log(err) }
-          })
-              
-          }
-          console.log(this.quantite);
   
-          this.newScore = this.user.score - (this.an.plante.prix)*(this.quantite-1);
+          this.newScore = this.user.score - (this.an.plante.prix)*(val.stock);
+          console.log('quantite', val.score)
+          console.log('prix ', (this.an.plante.prix)*(val.stock))
+          console.log('user', this.user.score);
           this.user.score = this.newScore;
-          console.log('score ', this.newScore);
+          
+          console.log('newscore ', this.newScore);
           localStorage.setItem('userConnect' , JSON.stringify(this.user));
           this.http.put('http://localhost:8085/modifuser/' + this.user.idUser, this.user).subscribe({
             next: (data1) => {
               console.log(data1)
               this.user=data1;
               this.ngOnInit();
+              this.uConnect.gestionScore(this.user)
+        
             },
             error: (err) => { console.log(err) }
           })
         }
+
+        if(this.quantite<1){
+          this.http.delete('http://localhost:8085/annonce/' + this.idAnnonce).subscribe({
+          next: (data) => {
+            this.a = data;
+            this.dialogref.close();
+            this.dialogref1.close();
+          
+            //window.location.reload();
+          },
+          error: (err) => { console.log(err) }
+        })
+            
+        
+        
+          
         
       }
+        
       else{
         this.msg="Vous n'avez pas assez de points!"
       }
   
-    };
+
+    ;
+    this.ngOnInit();
 
     }
+    else{
+
+    }
+    ;
+
+
+    }
+  
 
     
    
@@ -136,7 +156,7 @@ export class CommandeComponent implements OnInit {
       this.dialogref.close()
     }
 
-
+  
 
 
 }
