@@ -1,30 +1,68 @@
-<div id="listequestions" class="container mt-5">
+<div class="main">
+  <h3 class="titrebloc">Testez vos connaissances !</h3>
+  <hr>
+  <h3 class="titrebloc2">Etape 2 sur 2</h3>
+  <p class="texte">Répondez aux questions ci-dessous pour déterminer votre niveau de départ.</p>
 
-   <form #fConnect="ngForm" (ngSubmit)="calculscore(fConnect.value)">
+  <form #fConnect="ngForm" (ngSubmit)="calculscore(fConnect.value)">
 
-    <!------------------------------------------------------------------------------------------------------->
-    <!-- LISTE DE QUESTIONS -->
-
-    <p class="titreq">Qu'est-ce qu'un gourmand ?</p>
+  <!------------------------------------------------------------------------------------------------------->
+  <!-- LISTE DE QUESTIONS -->
+  <div class="blocquestion">
+    <h3 class="titrebloc2">Qu'est-ce qu'un gourmand ?</h3>
     <mat-radio-group class="radio-group" name="score1" ngModel="">
       <mat-radio-button class="radio-button" *ngFor="let q of question1" [value]="q.score">
         {{q.contenu}}
       </mat-radio-button>
     </mat-radio-group>
+  </div>
 
-    <p class="titreq">Une plante remontante…</p>
+  <div class="blocquestion">
+    <h3 class="titrebloc2">Une plante remontante…</h3>
     <mat-radio-group class="radio-group" name="score2" ngModel="">
       <mat-radio-button class="radio-button" *ngFor="let q of question2" [value]="q.score">
         {{q.contenu}}
       </mat-radio-button>
     </mat-radio-group>
+  </div>
 
-    <p class="titreq">Que veut dire praliner une plante?</p>
+    <div class="blocquestion">
+    <h3 class="titrebloc2">Que veut dire praliner une plante?</h3>
     <mat-radio-group class="radio-group" name="score3" ngModel="">
       <mat-radio-button class="radio-button" *ngFor="let q of question3" [value]="q.score">
         {{q.contenu}}
       </mat-radio-button>
     </mat-radio-group>
+  </div>
+
+  <div class="blocquestion">
+    <h3 class="titrebloc2">Quel est le meilleur moment pour effectuer une greffe?</h3>
+    <mat-radio-group class="radio-group" name="score4" ngModel="">
+      <mat-radio-button class="radio-button" *ngFor="let q of question4" [value]="q.score">
+        {{q.contenu}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="blocquestion">
+    <h3 class="titrebloc2">Qu’est-ce qu’une adventice?</h3>
+    <mat-radio-group class="radio-group" name="score5" ngModel="">
+      <mat-radio-button class="radio-button" *ngFor="let q of question5" [value]="q.score">
+        {{q.contenu}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="blocquestion">
+    <h3 class="titrebloc2">Que veut dire rabattre?</h3>
+    <mat-radio-group class="radio-group" name="score6" ngModel="">
+      <mat-radio-button class="radio-button" *ngFor="let q of question6" [value]="q.score">
+        {{q.contenu}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  
 
     <!------------------------------------------------------------------------------------------------------->
     <!-- BOUTON VALIDER -->

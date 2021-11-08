@@ -12,24 +12,47 @@
     margin: 5px;
 }
 
-#listequestions{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    background-color:#DCE1E9;
-    border-radius: 3px;
-    padding: 25px;
-    overflow: auto;
+.main{ 
+  margin-top:70px!important;
+  width: 50%!important;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  
+  
+  overflow: auto;
   }
   
-  .question{
-    margin-bottom : 25px;
-  }
+.blocquestion {
+  background-color:#DCE1E9;
+  border-radius: 3px;
+  padding: 25px;
+  margin-bottom: 35px;
+}
+
+.question{
+  margin-bottom : 25px;
+}
   
-  .titreq {
-    text-align: center;
-  }
+.titreq {
+  text-align: center;
+}
+  
+.titrebloc {
+  font-size: 1.75rem;
+  text-align: center;
+  color:#56A632;
+}
+
+.titrebloc2 {
+  font-size: 1.2rem!important;
+  text-align: center;
+  color: black;
+}
+
+.texte {
+  text-align: center!important;
+}

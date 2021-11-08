@@ -124,20 +124,29 @@ export class CommandeComponent implements OnInit {
           error: (err) => { console.log(err) }
         })
             
-        }
+        
         
           
         
-        }
+      }
         
       else{
         this.msg="Vous n'avez pas assez de points!"
       }
   
+
     ;
     this.ngOnInit();
 
     }
+    else{
+
+    }
+    ;
+
+
+    }
+  
 
     
    
@@ -145,7 +154,7 @@ export class CommandeComponent implements OnInit {
       this.dialogref.close()
     }
 
-
+  
 
 
 }

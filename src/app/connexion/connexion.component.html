@@ -1,7 +1,9 @@
-<br><br><br>
+<div class="main">
+  <h3 class="titrebloc">Connexion</h3>
+  <hr>
+  <p class="texte">Connectez-vous pour accéder à votre compte et profiter des différentes fonctionnalités du site.</p><br>
 
 <!-- Formulaire de connexion-->
-<div style="margin:auto;width: 25%;">
   <form #fConnect="ngForm" (ngSubmit)="connexion(fConnect.value)">
     <!-- Champs login -->
     <div class="form-outline mb-4">
@@ -35,11 +37,11 @@
 
     <!-- Bouton valider -->
     <button type="submit" class="button1">Se connecter</button>
+  </form>
 
     <!-- Lien pour s'inscrire -->
-    <div class="text-center">
-      <p>Pas encore membre? >S'inscrire</p>
-
-    </div>
-  </form>
+    <p class="texte">
+      <br><a>Pas encore membre ? </a><a href="inscription">Inscrivez-vous !</a>
+      </p>
+  
 </div>

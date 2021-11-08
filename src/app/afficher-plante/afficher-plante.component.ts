@@ -37,6 +37,8 @@ export class AfficherPlanteComponent implements OnInit {
 
   msg:any;
 
+  
+
   constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
@@ -46,6 +48,8 @@ export class AfficherPlanteComponent implements OnInit {
     this.idUser=this.user.idUser;
     this.score=this.user.score;
     this.statut=this.user.statut;
+
+
 
 
     
