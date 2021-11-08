@@ -2,6 +2,73 @@
     margin-left: 250px !important;
     width:100%-250px !important;
     height:100% !important;
-    background-image: url('../../assets/images/bouturage.jpg');
-    border: 0.010px solid black;
 }
+
+.blocnoir {
+    height:250px;
+    background-color:black;
+}
+
+.imagetitre {
+    background-image: linear-gradient(90deg, rgba(113, 73, 85, 0.9), rgba(113, 73, 85, 0.2)), url('../../assets/images/bouturage.jpg');
+    height:-webkit-fill-available;
+    filter:brightness(80%)
+}
+
+.titrepage {
+    position:relative;
+    bottom: 210px;
+    color:white;
+    padding-left: 32px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+
+
+.container {
+    margin-top:50px !important; 
+    margin-bottom: 50px !important;
+}
+
+.p-2 {
+    padding: 32px!important;
+}
+
+.titrebloc {
+    color:#D38B5D; 
+    text-align: center;
+}
+
+.case {
+    text-align: justify;
+}
+
+.bouton {
+    /* Placement 
+    display: block;
+    margin:0 auto ; */ 
+
+    /* Style */
+    padding: 5px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    color: rgb(36, 36, 36);
+    background-color: #DCE1E9;
+    border: none;
+    border-radius: 40px;
+
+    /* box-shadow: 0 3px #999; */
+    
+    
+
+    /* box-shadow: 0 3px #999; */    
+
+  }
