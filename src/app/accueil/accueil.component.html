@@ -1,131 +1,161 @@
+<div>
+    <img src="assets/images/head2.jpg" width="100%" alt="banière">
+</div>
 
-    <div>
-        <img src="assets/images/head2.jpg" width="1500" height="250" alt="">
-    </div>
 <div class="container">
 
     <div style="text-align: center;color: #56A632;margin-top: 20px;">
-        <strong><h2>Comment ça marche ?</h2></strong><hr>
-    </div>
-    
-    <div class="row" >
-        
-          
-              
-         
-        <div class="card p-3 my-shadow" style="text-align:justify;margin:30px;width: 100%;">
-        <div style="margin: 10px;">
-        <div class="col-sm-6">
-            <div style="text-align: center!important;color: #56A632;"><h3>Bienvenue ! </h3><br></div>
-            Bienvenue sur cette application de partage de plantes et de connaissances pour amateur et jardinier confirmé
-            Pour pouvoir devenir un maître du jardinage tout en s'amusant, participer à la vie de la communauté vous permettra 
-            de gagner des points. Ces points vous permettront d'obtenir des plantes partagées par les autres utilisateurs et de monter de niveau. Les actions qui vous rapporte des points sont :
-            <br> <br>
-            <div style="padding-left: 50px;">
-            <li>Donner une plante</li> 
-            <li>Participer à un événement</li>
-            <li>Organiser un atelier pour partager vos connaissances</li>
-            <li>Participer à la vie de la communauté en postant des commentaires</li>
-            <li>Modifier et créer de nouvelles fiches de plantes</li>
-            <li>Modifier et créer de nouvelles fiches techniques</li>
-        </div>
-            <br>
-            La voie est longue vers le titre de maître jardinier. Vous ne pourrez pas faire tous cela dès le début
-            Il vous faudra gagner des points et atteindre le grade suprême ! 
-        </div>
-        <div class=" col-sm-6">
-            <div style="text-align: center!important;color: #56A632;"><h3>Les niveaux<br><br></h3></div>
-            <div>
-            <img src="assets/images/cactus.png" width="60" height="80" alt="" style="float: left;">
-            <div style="color:#56A632">Petit cactus </div>Avant de devenir un grand arbre, il faut commencer par pousser. Vous pouvez obtenir des plantes et participer à un évenement.
-            </div>
-            <div>
-                <img src="assets/images/tulipe.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Tulipe printanière</div>L'hiver est passé, vous pouvez maintenant modifier des fiches plantes en plus.
-            </div>
-            <div>
-            <img src="assets/images/rose.png" width="60" height="60" alt="" style="float: left;"> 
-            <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous pouvez créer de nouvelles fiches plantes.
-            </div>
-            <div>
-            <img src="assets/images/chene.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez créer des évenements et partager.
-            </div>
-            <img src="assets/images/olivier.png" width="60" height="60" alt="" style="float: left;">
-            <div style="color: #56A632">Olivier centenaire</div>
-            <p> Grand maître du jardinage, tu peux partager tous ton savoir avec la communauté.</p>
-        </div>
-        </div>
-        
-        </div>
-        </div>
-<div style="text-align: center;color: #56A632;">
-    <strong><h2>Les dernières activités</h2></strong><hr>
-</div>
-
-<div class="row">
-    
-</div>
-<div style="text-align: justify;">     
-   <div class="col-sm-4">
-     <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;
-        cursor: pointer;" routerLink="/evenement">
-       <div class="card-header" style="background-color: #56A632;color: white !important;text-align: center !important;">
-       <h4>Derniers événements</h4>
-    </div>
-        <div *ngFor='let m of liste'>
-            <div>
-             <strong>
-            <p style="color: #56A632;float: left;">{{m.titre}}</p>
-            <p style="color: #56A632;float: right;">{{m.date}}</p>
+        <strong>
+            <h2>Comment ça marche ?</h2>
         </strong>
-        </div>
-             <p style="text-align: justify;float: left;">{{m.description}}</p>
-            <hr>
-        
-        </div>
-    
-    </div>   
-   </div>
-  
-   <div class="col-sm-4">
-        <div class="card p-3 my-shadow [data-clickable=true]" style="cursor: pointer;" routerLink="/annonce">
-            <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
-                <h4>Dernières annonces</h4>
-            </div>
-            <div *ngFor='let a of listeA'>
-                <div >
-                 <strong>
-                     <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
-                     <p style="color: #56A632;float: right;" >Quantité: {{a.stock}}</p>
-                    </strong>
+        <hr>
+    </div>
+
+    <div class="row">
+        <div class="card p-3 my-shadow" style="text-align:justify;margin:30px;width: 100%;">
+            <div style="margin: 10px;">
+                <div class="col-sm-6">
+                    <div style="text-align: center!important;color: #56A632;">
+                        <h3>Bienvenue ! </h3><br>
+                    </div>
+                    Bienvenue sur cette application de partage de plantes et de connaissances pour amateur et jardinier
+                    confirmé
+                    Pour pouvoir devenir un maître du jardinage tout en s'amusant, participer à la vie de la communauté
+                    vous permettra
+                    de gagner des points. Ces points vous permettront d'obtenir des plantes partagées par les autres
+                    utilisateurs et de monter de niveau. Les actions qui vous rapporte des points sont :
+                    <br> <br>
+                    <div style="padding-left: 50px;">
+                        <li>Donner une plante</li>
+                        <li>Participer à un événement</li>
+                        <li>Organiser un atelier pour partager vos connaissances</li>
+                        <li>Participer à la vie de la communauté en postant des commentaires</li>
+                        <li>Modifier et créer de nouvelles fiches de plantes</li>
+                        <li>Modifier et créer de nouvelles fiches techniques</li>
+                    </div>
+                    <br>
+                    La voie est longue vers le titre de maître jardinier. Vous ne pourrez pas faire tous cela dès le
+                    début
+                    Il vous faudra gagner des points et atteindre le grade suprême !
                 </div>
-                <div>
-                 <p style="text-align: justify;float: left;">{{a.description}}</p>
-                
+                <div class=" col-sm-6">
+                    <div style="text-align: center!important;color: #56A632;">
+                        <h3>Les niveaux<br><br></h3>
+                    </div>
+
+                    <div class="blocniveau">
+                        <img src="assets/images/cactus.png" width="60" height="80" alt=""
+                            style="float: left; margin-right: 10px;">
+                        <div style="color:#56A632">Petit cactus </div>Avant de devenir un grand arbre, il faut commencer
+                        par pousser. Vous pouvez obtenir des plantes et participer à un évenement.
+                    </div>
+
+                    <div class="blocniveau">
+                        <img src="assets/images/tulipe.png" width="60" height="60" alt=""
+                            style="float: left; margin-right: 10px;">
+                        <div style="color:#56A632">Tulipe printanière</div>L'hiver est passé, vous pouvez maintenant
+                        modifier des fiches plantes en plus.
+                    </div>
+
+                    <div class="blocniveau">
+                        <img src="assets/images/rose.png" width="60" height="60" alt=""
+                            style="float: left; margin-right: 10px;">
+                        <div style="color:#56A632">Buisson ardent </div> S'accrocher, c'est la clé. Vous pouvez créer de
+                        nouvelles fiches plantes.
+                    </div>
+
+                    <div class="blocniveau">
+                        <img src="assets/images/chene.png" width="60" height="60" alt=""
+                            style="float: left; margin-right: 10px;">
+                        <div style="color:#56A632">Grand chêne </div> La patience est une vertu. Vous pouvez créer des
+                        évenements et partager.
+                    </div>
+
+                    <div class="blocniveau">
+                        <img src="assets/images/olivier.png" width="60" height="60" alt=""
+                            style="float: left; margin-right: 10px;">
+                        <div style="color: #56A632">Olivier centenaire</div>
+                        <p> Grand maître du jardinage, tu peux partager tout ton savoir avec la communauté.</p>
+                    </div>
+                </div>
+
             </div>
-            <hr>
         </div>
     </div>
-   </div>
-    <div class="col-sm-4">
-        <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;cursor: pointer;" routerLink="/documentation">
-            <div class="card-header"  style="background-color: #56A632;color: white !important;text-align: center !important;">
-                <h4>Quelques plantes</h4>
+
+    <div style="text-align: center!important; color: #56A632;">
+        <strong>
+            <h2>Les dernières activités</h2>
+        </strong>
+        <hr>
+    </div>
+
+    <div class="row">
+
+    </div>
+    <div style="text-align: justify;">
+        <div class="col-sm-4">
+            <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;
+        cursor: pointer;" routerLink="/evenement">
+                <div class="card-header"
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    <h4>Derniers événements</h4>
+                </div>
+                <div *ngFor='let m of liste'>
+                    <div>
+                        <strong>
+                            <p style="color: #56A632;float: left;">{{m.titre}}</p>
+                            <p style="color: #56A632;float: right;">{{m.date}}</p>
+                        </strong>
+                    </div>
+                    <p style="text-align: justify;float: left;">{{m.description}}</p>
+                    <hr>
+
+                </div>
+
             </div>
-            <div *ngFor='let p of listeP'>
-                <div>
-                 <strong>
-                    <p style="color: #56A632;float: left;">{{p.espece}}</p>
-                    <p style="color: #56A632;float: right;">{{p.categorie}}</p>
-                </strong>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card p-3 my-shadow [data-clickable=true]" style="cursor: pointer;" routerLink="/annonce">
+                <div class="card-header"
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    <h4>Dernières annonces</h4>
+                </div>
+                <div *ngFor='let a of listeA'>
+                    <div>
+                        <strong>
+                            <p style="color: #56A632;float: left;">Type: {{a.type}}</p>
+                            <p style="color: #56A632;float: right;">Quantité: {{a.stock}}</p>
+                        </strong>
+                    </div>
+                    <div>
+                        <p style="text-align: justify;float: left;">{{a.description}}</p>
+
+                    </div>
+                    <hr>
+                </div>
             </div>
-                 <p style="text-align: justify;float:left">{{p.description}}</p>
-                 <hr>
-               
+        </div>
+        <div class="col-sm-4">
+            <div class="card p-3 my-shadow [data-clickable=true]" style="text-align: left;cursor: pointer;"
+                routerLink="/documentation">
+                <div class="card-header"
+                    style="background-color: #56A632;color: white !important;text-align: center !important;">
+                    <h4>Quelques plantes</h4>
+                </div>
+                <div *ngFor='let p of listeP'>
+                    <div>
+                        <strong>
+                            <p style="color: #56A632;float: left;">{{p.espece}}</p>
+                            <p style="color: #56A632;float: right;">{{p.categorie}}</p>
+                        </strong>
+                    </div>
+                    <p style="text-align: justify;float:left">{{p.description}}</p>
+                    <hr>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-    </div>
-  

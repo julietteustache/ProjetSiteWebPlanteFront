@@ -1,18 +1,35 @@
 .main {
+    position:absolute;
+    top: 62px;
     margin-left: 250px !important;
-    width:100%-250px !important;
-    background-image: url('../../assets/images/jardin.jfif');
+    width:-webkit-fill-available;
     height:100% !important;
-    
+}
+
+.blocnoir {
+    height:200px;
+    background-color:black;
 }
 
 .imagetitre {
+    background-image: url('../../assets/images/jardin.jfif');
+    height:200px;
+    filter:brightness(50%)
+}
 
+.titrepage {
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 4rem;
+    color:white;
+    
+    position:absolute;
+    top:110px;
+    padding-left: 32px;
 }
 
 .p-2 {
     width:90% !important;
-    height:600px;
     margin:0 auto !important; 
     background-color:rgb(255, 255, 255);
     padding: 32px!important;
@@ -23,3 +40,4 @@
     text-align: center;
     color:#56A632;
 }
+

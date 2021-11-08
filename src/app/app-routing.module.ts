@@ -64,7 +64,8 @@ const routes: Routes = [
   {path: 'modif_technique', component:ModifTechniqueComponent},
   {path: 'msg_recus', component:MsgRecusComponent},
   {path: 'msg_envoyes', component:MsgEnvoyesComponent},
-  {path: 'nv_msg', component:NvMsgComponent}
+  {path: 'nv_msg', component:NvMsgComponent},
+  {path: '', redirectTo: 'accueil', pathMatch: 'full'}
 ];
 
 @NgModule({
