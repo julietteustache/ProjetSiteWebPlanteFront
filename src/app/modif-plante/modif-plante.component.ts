@@ -73,6 +73,7 @@ export class ModifPlanteComponent implements OnInit {
         this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
           next: (data) => {
             this.user = data;
+            this.uConnect.gestionScore(this.user)
           },
           error: (err) => { console.log(err) }
         })

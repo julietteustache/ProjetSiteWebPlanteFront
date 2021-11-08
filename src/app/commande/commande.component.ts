@@ -116,6 +116,7 @@ export class CommandeComponent implements OnInit {
               console.log(data1)
               this.user=data1;
               this.ngOnInit();
+              this.uConnect.gestionScore(this.user)
             },
             error: (err) => { console.log(err) }
           })
