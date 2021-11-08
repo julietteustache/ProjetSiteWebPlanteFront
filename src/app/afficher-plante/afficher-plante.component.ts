@@ -37,12 +37,16 @@ export class AfficherPlanteComponent implements OnInit {
 
   msg:any;
 
+  comField:any;
+
+
   
 
   constructor(private http: HttpClient, public laplante: Plantespecial, private uConnect:AuthService, private route: Router) { }
 
   ngOnInit(): void {
     this.msg="";
+    this.comField="Entrez votre commentaire";
 
     this.user=this.uConnect.getUserConnect();
     this.idUser=this.user.idUser;
@@ -104,6 +108,7 @@ export class AfficherPlanteComponent implements OnInit {
         this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
           next: (data) => {
             this.user = data;
+            this.comField="";
             this.recupCom();
             this.uConnect.gestionScore(this.user);
           },
