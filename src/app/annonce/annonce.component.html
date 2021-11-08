@@ -114,8 +114,13 @@
 
 
             </form>
+            <br>
+            <div class="card p-3" >
+                <img src="assets/images/logo2.png" width="50" height="50" alt="">
+                <p>Si tu veux profiter de ses dons et faire de ton chez toi un véritable havre de paix, n'hésites pas à t'inscrire! Tu pourras alors non seulement accéder à ces dons mais également avoir accès à des tutos ou encore participer à des événements! </p>
+            </div>
         </div>
-        <div class="col-sm-7" style="justify-content: center">
+       <!-- <div class="col-sm-7" style="justify-content: center">
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
@@ -124,7 +129,8 @@
                         <h1 class="g-titre">Les annonces du moment</h1>
                     </div>
 
-    </div>
+    </div>-->
+   
     <div class="col-sm-1">
         <p></p>
     </div>
@@ -140,14 +146,22 @@
                 <div style="background-color :#D6FF79; border-radius: 10px">
                     <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces</p>
                     <p class="categorie">
-                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.plante.espece}}</p>
                     <p class="donneur">
                         {{an.user.prenom}} {{an.user.nom}} </p>
-
+                
                 </div>
+                <p class="description">
+                    {{an.description}}</p>
+                    <div>
+                        <button style="margin : 10px" class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
+                    </div>
+            
             </div>
-            <div style="margin: 10px;" *ngFor='let an of response'>
-                <!--<div class="card p-2  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+          
+                
+           <!-- <div style="margin: 10px;" *ngFor='let an of response'>
+                <div class="card p-2  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
                     <div style="background-color :#D6FF79; border-radius: 10px">
                         <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce -
                             {{an.stock}}pièces</p>
@@ -163,7 +177,7 @@
                         <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
                     </div>
 
-                </div>-->
+                </div>
 
                 <div class="card  my-shadow" style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
                     <div class="card-header" style="background-color:#D6FF79;padding-bottom: 1px;">
@@ -179,12 +193,11 @@
                         <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>
 
 
 
-</div>
 </div>
