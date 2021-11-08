@@ -1,3 +1,4 @@
+
 <!--<body>
 
 <div class="container">
@@ -86,28 +87,41 @@
         <div class="col-sm-5" style="  justify-content: center">
             <div class="col-sm-4"></div>
 
-            <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important" (click)="verification()">Proposer un don</button>
+            <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important; " (click)="verification()">Proposer un don</button>
+            
             <form>
-                <div class=" justify-content: center" style="margin-top: 25px">
+                <div class=" justify-content: center" style="margin-top: 200px">
                     <div style="width: 100%;">
 
                         <form #fConnect="ngForm" (ngSubmit)="rechercheEspece(fConnect.value)">
 
                             <div class="input-group rounded">
-                                <input type="search" class="form-control rounded" placeholder="Recherche par nom..."
+                                <input type="search" class="form-control rounded" ng-keyup="$event.keyCode == 13" placeholder="Recherche par nom..."
                                     aria-label="Search" aria-describedby="search-addon" name="espece" ngModel="">
                                 <span class="input-group-text border-0" id="search-addon">
                                     <i class="fas fa-search"></i>
                                 </span>
                             </div>
-                         <div class="row">
-                                <div class="col-sm-4"></div>
-                                <button type="button" class="button1" (click)="ngOnInit()"
-                                    style="display: inline-block!important;margin:20px;padding:1%">Afficher
-                                    tout</button>
-                            </div>
 
                         </form>
+                        <br>
+                      <!--  <form #fConnect="ngForm" (ngSubmit)="recupType(fConnect.value)">
+
+                            <div class="input-group rounded">
+                                <input type="search" class="form-control rounded" ng-keyup="$event.keyCode == 13" placeholder="Recherche par type..."
+                                    aria-label="Search" aria-describedby="search-addon" name="type" ngModel="">
+                                <span class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+
+                        </form>-->
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <button type="button" class="button1" (click)="ngOnInit()"
+                                style="display: inline-block!important;margin:20px;padding:1%">Afficher
+                                tout</button>
+                        </div>
 
                     </div>
                 </div>
