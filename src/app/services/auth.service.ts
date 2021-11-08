@@ -56,7 +56,8 @@ export class AuthService {
   gestionScore(){
     
     if (this.getUserConnect().score>=50 && this.getUserConnect().score<100){
-      this.getUserConnect().statut='intermédiaire';
+      this.getUserConnect().statut="intermédiaire";
+      console.log(this.getUserConnect().statut)
       localStorage.setItem('userConnect', JSON.stringify(this.getUserConnect()));
       this.http.put('http://localhost:8085/modifuser/' + this.getUserConnect().idUser, this.getUserConnect()).subscribe({
             next: (data) => {
