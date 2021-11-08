@@ -51,7 +51,7 @@ export class PlantesComponent implements OnInit {
 
   goCreer(): void {
     console.log(this.statut)
-    if (this.statut === "Petit cactus" || this.statut === "Tulipe printanière") {
+    if (this.statut === "Petit cactus") {
       this.msg = "Votre niveau n'est pas assez élevé";
     }
     else {

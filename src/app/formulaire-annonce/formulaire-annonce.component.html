@@ -30,26 +30,8 @@
                     </mat-form-field>
                 </div>-->
                 <div class="form-group">
-                    <mat-form-field>
-                        <mat-label>Selectionner un type</mat-label>
-
-                        <mat-select ngModel="" name="type" required>
-                            <mat-option>
-                               Graine
-                            </mat-option>
-                            <mat-option>
-                                Greffe
-                             </mat-option>
-                             <mat-option>
-                                Bouture
-                             </mat-option>
-                             <mat-option>
-                                Plante
-                             </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-
-
+                    <label class="grey-text">Type (graine, plante, bouture ou greffe</label>
+                    <input type="text" class="form-control" name="type" ngModel="">
                 </div>
                 <div class="form-group">
                     <label class="grey-text">Quantité</label>
