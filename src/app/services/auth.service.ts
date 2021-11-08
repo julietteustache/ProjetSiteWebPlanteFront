@@ -53,13 +53,13 @@ export class AuthService {
       this.route.navigateByUrl('accueil');
     }
   }
-  gestionScore(){
+  gestionScore(u:any){
     
-    if (this.getUserConnect().score>=50 && this.getUserConnect().score<100){
-      this.getUserConnect().statut="intermédiaire";
-      console.log(this.getUserConnect().statut)
-      localStorage.setItem('userConnect', JSON.stringify(this.getUserConnect()));
-      this.http.put('http://localhost:8085/modifuser/' + this.getUserConnect().idUser, this.getUserConnect()).subscribe({
+    if (u.score>=100 && u.score<500){
+      this.getUserConnect().statut="Tulipe printanière";
+      console.log(u.statut)
+      localStorage.setItem('userConnect', JSON.stringify(u));
+      this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
             next: (data) => {
               this.setUserInSession(data);
               
@@ -67,30 +67,30 @@ export class AuthService {
             error: (err) => { console.log(err) }
           })
     }
-    else if (this.getUserConnect().score>=100 && this.getUserConnect().score<500){
-      this.getUserConnect().statut='avancé';
-      localStorage.setItem('userConnect', JSON.stringify(this.getUserConnect()));
-      this.http.put('http://localhost:8085/modifuser/' + this.getUserConnect().idUser, this.getUserConnect()).subscribe({
+    else if (u.score>=500 && u.score<1000){
+      u.statut='Buisson ardent';
+      localStorage.setItem('userConnect', JSON.stringify(u));
+      this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
         next: (data) => {
           this.setUserInSession(data);
         },
         error: (err) => { console.log(err) }
       })
     }
-    else if (this.getUserConnect().score>=500 && this.getUserConnect().score<1000){
-      this.getUserConnect().statut='expert';
-      localStorage.setItem('userConnect', JSON.stringify(this.getUserConnect()));
-      this.http.put('http://localhost:8085/modifuser/' + this.getUserConnect().idUser, this.getUserConnect()).subscribe({
+    else if (u.score>=1000 && u.score<5000){
+      u.statut='Grand chêne';
+      localStorage.setItem('userConnect', JSON.stringify(u));
+      this.http.put('http://localhost:8085/modifuser/' + u.idUser,u).subscribe({
         next: (data) => {
           this.setUserInSession(data);
         },
         error: (err) => { console.log(err) }
       })
     }
-    else if (this.getUserConnect().score>=1000){
-      this.getUserConnect().statut='maitre';
-      localStorage.setItem('userConnect', JSON.stringify(this.getUserConnect()));
-      this.http.put('http://localhost:8085/modifuser/' + this.getUserConnect().idUser, this.getUserConnect()).subscribe({
+    else if (u.score>=5000){
+      u.statut='Olivier centenaire';
+      localStorage.setItem('userConnect', JSON.stringify(u));
+      this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
         next: (data) => {
           this.setUserInSession(data);
         },
