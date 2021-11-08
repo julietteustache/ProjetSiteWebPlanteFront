@@ -184,6 +184,15 @@ export class AnnonceComponent implements OnInit {
     }
     else{}
   }
+  rechercheEspece(espece:any){
+    
+    this.http.get('http://localhost:8085/annonce_espece/'+espece.espece).subscribe({
+      next:(data1)=>{this.response=data1;
+      },
+      error:(err)=>{console.log(err)}
+    })
+
+  }
 
 
 

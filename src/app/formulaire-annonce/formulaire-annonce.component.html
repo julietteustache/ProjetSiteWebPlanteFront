@@ -4,12 +4,12 @@
 <div>
     <div style="margin:auto;width: 40%;align-items: center;">
         <div class="card p-4 my-shadow">
-            <form #fConnect="ngForm" (ngSubmit)="formulaireAnnonce(fConnect.value)">
+            <form #fConnect="ngForm" (ngSubmit)="formulaire(fConnect.value)">
                 <div class="form-group">
                     <mat-form-field>
                         <mat-label>Selectionner une plante</mat-label>
 
-                        <mat-select ngModel="" name="espece" required>
+                        <mat-select ngModel="" name="plante" required>
                             <mat-option *ngFor="let p of plante" [value]="p">
                                 {{ p.espece }}
                             </mat-option>
@@ -17,6 +17,7 @@
                     </mat-form-field>
 
                 </div>
+                <!--
                 <div class="form-group">
                     <mat-form-field>
                         <mat-label>Selectionner un type</mat-label>
@@ -27,10 +28,29 @@
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
+                </div>-->
+                <div class="form-group">
+                    <mat-form-field>
+                        <mat-label>Selectionner un type</mat-label>
+
+                        <mat-select ngModel="" name="type" required>
+                            <mat-option>
+                               Graine
+                            </mat-option>
+                            <mat-option>
+                                Greffe
+                             </mat-option>
+                             <mat-option>
+                                Bouture
+                             </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
                 </div>
                 <div class="form-group">
                     <label class="grey-text">Quantité</label>
-                    <input type="text" class="form-control" name="stock" ngModel="">
+                    <input type="number" class="form-control" name="stock" ngModel="">
 
                 </div>
                 <div class="form-group">
