@@ -1,4 +1,4 @@
-<mat-card class="example-card" style="width: 750px;height:auto;">
+<!--<mat-card class="example-card" style="width: 750px;height:auto;">
     <mat-card-header style="background-color: #D6FF79;">
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces </mat-card-title>
@@ -18,11 +18,48 @@
             <input type="number" min= "1" max= {{an.stock}} class="form-control" name="stock"  ngModel=""  >
             
         </div>
-       <!--<button mat-button (click)="miseAjour(quantite)">Confirmer</button> -->
+       <button mat-button (click)="miseAjour(quantite)">Confirmer</button> 
         
         <button class="btn btn-secondary btn-block" type="submit" style="margin: auto;">Confirmer</button>
         <p class="text-center text-danger">{{msg}}</p>
     </form>
     </mat-card-actions>
+</mat-card>-->
+<mat-card class="example-card" style="width: auto;height:auto;">
+    <mat-card-header style="background-color: #D6FF79;">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title >
+            <p class="titreAnnonce">Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces </p>
+            <p class="categorie"> {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+            <p class="donneur">{{an.user.prenom}} {{an.user.nom}}</p>
+        </mat-card-title>
+
+    </mat-card-header>
+   
+    <mat-card-content style="padding: 10px;margin-top: 50px;">
+        <p>
+        {{description}}
+        </p>
+        
+    </mat-card-content>
+    <mat-card-footer>
+
+    <mat-card-actions>
+            <form #fConnect="ngForm" (ngSubmit)="miseAjour(fConnect.value)">
+            <div class="form-group">
+                <label class="grey-text" style="margin : 10px">Quantité souhaitée</label>
+                <input type="number" style="margin-left : 10px; margin-right: 10px;" min= "1" max= {{an.stock}} class="form-control" name="stock"  ngModel=""  >
+                
+            </div>
+           <button mat-button (click)="miseAjour(quantite)" class="button1" type="button" style="display: inline-block!important;margin-left: 250px;" >Confirmer</button> 
+            <button mat-button (click)="fermeture()" class="button1" style="display: inline-block!important;" >Retour</button>
+
+            <p class="text-center text-danger">{{msg}}</p>
+        </form>
+        
+    </mat-card-actions>
+</mat-card-footer>
+
 </mat-card>
+
 

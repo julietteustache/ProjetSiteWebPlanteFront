@@ -1,116 +1,203 @@
+<!--<body>
 
-<body>
+<div class="container">
+    
+
+<div class="row">
+    
+
+
     <div class="col-sm-5" style="  justify-content: center">
         <div class="row">
-            <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important" (click)="verification()">Prososer un
+                <button [disabled]="!connexion.isConnected()" class="button1" type="button"
+                    style="margin-top:60px!important" (click)="verification()">Prososer un
                     don</button>
             </div>
         </div>
 
-        <form>
-            <div class=" justify-content: center" style="margin-top: 25px">
-                <div style="width: 100%;">
+        <div class=" justify-content: center" style="margin-top: 25px">
+            <div style="width: 100%;">
+                <form #fConnect="ngForm" (ngSubmit)="rechercheEspece(fConnect.value)">
+                    <div class="input-group rounded">
+                        <input type="search" ng-keyup="$event.keyCode == 13" class="form-control rounded"
+                            placeholder="Recherche" aria-label="Search" aria-describedby="search-addon" name="espece"
+                            ngModel="">
+                        <span class="input-group-text border-0" id="search-addon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <button type="button" class="button1" (click)="ngOnInit()"
+                            style="display: inline-block!important;margin:20px;padding:1%">Afficher
+                            tout</button>
+                    </div>
 
-                    <form>
-                        <div class="form-group buttonChoix">
-                            <a class=dropdown-toggle data-toggle=dropdown href=#>Catégorie<span class=caret></span></a>
-                            <ul class=dropdown-menu>
-                                <li><a href=#>Fruits/légumes</a></li>
-                                <li><a href=#>Arbres</a></li>
-                                <li><a href=#>Techniques générales</a></li>
-                                <li><a href=#>Fleurs</a></li>
-                            </ul>
-                        </div>
-                        <div class="form-group buttonChoix">
-                            <a class=dropdown-toggle data-toggle=dropdown href=#>Sous-Catégorie<span
-                                    class=caret></span></a>
-                            <ul class=dropdown-menu>
-                                <li><a href=#>Fruits/légumes</a></li>
-                                <li><a href=#>Arbres</a></li>
-                                <li><a href=#>Techniques générales</a></li>
-                                <li><a href=#>Fleurs</a></li>
-                            </ul>
+                </form>
 
-
-
-                        </div>
-                        <div class="form-group buttonChoix">
-                            <a class=dropdown-toggle data-toggle=dropdown href=#>Espèce<span class=caret></span></a>
-                            <ul class=dropdown-menu>
-                                <li><a href=#>Fruits/légumes</a></li>
-                                <li><a href=#>Arbres</a></li>
-                                <li><a href=#>Techniques générales</a></li>
-                                <li><a href=#>Fleurs</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="form-group buttonChoix">
-                            <a class=dropdown-toggle data-toggle=dropdown href=#>Type de produit<span
-                                    class=caret></span></a>
-                            <ul class=dropdown-menu>
-                                <li><a href=#>Fruits/légumes</a></li>
-                                <li><a href=#>Arbres</a></li>
-                                <li><a href=#>Techniques générales</a></li>
-                                <li><a href=#>Fleurs</a></li>
-                            </ul>
-                        </div>
-                        <DIV>
-                            <p>Ou</p>
-                        </DIV>
-                        <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Recherche par mot-clé..."
-                                aria-label="Search" aria-describedby="search-addon" />
-                            <span class="input-group-text border-0" id="search-addon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4"></div>
-                            <div class="col-sm-4"><button class="button1" style=" margin-top: 25px">VALIDER</button>
-                            </div>
-                        </div>
-                    </form>
-
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-7" style="justify-content: center">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div
+                        style="text-align: center; padding: 4px; background-color: #56A632; margin-top: 54px; border-radius: 3px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);">
+                        <h1 class="g-titre">Les annonces du moment</h1>
+                    </div>
                 </div>
             </div>
 
+            <div style="margin: 10px;" *ngFor='let an of response'>
 
-        </form>
+                <div class="card  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+                    <div style="background-color :#D6FF79; border-radius: 10px">
+                        <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce -
+                            {{an.stock}}pièces</p>
+                        <p class="categorie">
+                            {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.palnte.espece}}</p>
+                        <p class="donneur">
+                            {{an.user.prenom}} {{an.user.nom}} </p>
+                    </div>
+
+                    <p class="description">
+                        {{an.description}}</p>
+                    <div style="margin-right: 5px; margin-bottom: 8px;">
+                        <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
 
-    </div>
-    <div class="col-sm-2">
+
+
+
+
+</body>-->
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-5" style="  justify-content: center">
+            <div class="col-sm-4"></div>
+
+            <button [disabled]="!connexion.isConnected()" class="button1" type="button" style="margin-top:60px!important" (click)="verification()">Proposer un don</button>
+            <form>
+                <div class=" justify-content: center" style="margin-top: 25px">
+                    <div style="width: 100%;">
+
+                        <form #fConnect="ngForm" (ngSubmit)="rechercheEspece(fConnect.value)">
+
+                            <div class="input-group rounded">
+                                <input type="search" class="form-control rounded" placeholder="Recherche..."
+                                    aria-label="Search" aria-describedby="search-addon" name="espece" ngModel="">
+                                <span class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                         <div class="row">
+                                <div class="col-sm-4"></div>
+                                <button type="button" class="button1" (click)="ngOnInit()"
+                                    style="display: inline-block!important;margin:20px;padding:1%">Afficher
+                                    tout</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </form>
+            <br>
+            <div class="card p-3" >
+                <img src="assets/images/logo2.png" width="50" height="50" alt="">
+                <p>Si tu veux profiter de ses dons et faire de ton chez toi un véritable havre de paix, n'hésites pas à t'inscrire! Tu pourras alors non seulement accéder à ces dons mais également avoir accès à des tutos ou encore participer à des événements! </p>
+            </div>
+        </div>
+       <!-- <div class="col-sm-7" style="justify-content: center">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div
+                        style="text-align: center; padding: 4px; background-color: #56A632; margin-top: 54px; border-radius: 3px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);">
+                        <h1 class="g-titre">Les annonces du moment</h1>
+                    </div>
+
+    </div>-->
+   
+    <div class="col-sm-1">
         <p></p>
     </div>
-    <div class="col-sm-5" style="float: left ">
-
+    <div class="col-sm-6">
+        
+            <div style="padding: 4px; margin-top: 54px; border-radius: 3px;color: #56A632;text-align: center!important;">
+                <h3 class="titrevent">Les annonces</h3><hr>
+            </div>
+       
         <div style="margin-top: 20px;" *ngFor='let an of response'>
             
             <div class="card  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
                 <div style="background-color :#D6FF79; border-radius: 10px">
                     <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces</p>
                     <p class="categorie">
-                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.plante.espece}}</p>
                     <p class="donneur">
                         {{an.user.prenom}} {{an.user.nom}} </p>
+                
                 </div>
-               
                 <p class="description">
                     {{an.description}}</p>
+                    <div>
+                        <button style="margin : 10px" class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
+                    </div>
+            
+            </div>
+          
+                
+           <!-- <div style="margin: 10px;" *ngFor='let an of response'>
+                <div class="card p-2  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+                    <div style="background-color :#D6FF79; border-radius: 10px">
+                        <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce -
+                            {{an.stock}}pièces</p>
+                        <p class="categorie">
+                            {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.palnte.espece}}</p>
+                        <p class="donneur">
+                            {{an.user.prenom}} {{an.user.nom}} </p>
+                    </div>
+
+                    <p class="description">
+                        {{an.description}}</p>
                     <div style="margin-right: 5px; margin-bottom: 8px;">
                         <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
                     </div>
-                    
-            </div>
-           
+
+                </div>
+
+                <div class="card  my-shadow" style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+                    <div class="card-header" style="background-color:#D6FF79;padding-bottom: 1px;">
+                        <p class="titreAnnonce">Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce -
+                            {{an.stock}}pièces</p>
+                        <p class="categorie"> {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.palnte.espece}}</p>
+                        <p class="donneur">{{an.user.prenom}} {{an.user.nom}}</p>
+                    </div>
+                    <div class="card-body" style="height:75px;overflow: hidden;text-overflow: ellipsis;">
+                        <p>{{an.description}}</p>
+                    </div>
+                    <div>
+                        <button class="buttonCommander" (click)="ouvrirCommande(an)">Commander?</button>
+                    </div>
+                </div>
+            </div>-->
+
         </div>
-
-
-
     </div>
 
 
-</body>
+
+</div>

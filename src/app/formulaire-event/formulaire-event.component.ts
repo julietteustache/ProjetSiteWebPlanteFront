@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class FormulaireEventComponent implements OnInit {
 evenement:any;
-
+evenementd:any;
 
 
   constructor(private http:HttpClient,private route:Router,public uConnect:AuthService) { }
@@ -20,10 +20,10 @@ evenement:any;
   ngOnInit(): void {
   }
   formulaireE(val:any):void{
-    
-    this.http.post('http://localhost:8085/insertEvent/'+this.uConnect.getUserConnect,val).subscribe({
+    let evenementd = {titre:val.titre, description:val.description, NbParticipants:val.NbParticipants, date:val.date, heure:val.heure,user:this.uConnect.getUserConnect(), plante :this.uConnect.getUserConnect().adresse}
+    this.http.post('http://localhost:8085/insertEvent',evenementd).subscribe({
       next:(data)=>{this.evenement=data
-        this.route.navigateByUrl('Evenement');
+        this.route.navigateByUrl('evenement');
       },
   
       error:(err)=>{console.log(err)}

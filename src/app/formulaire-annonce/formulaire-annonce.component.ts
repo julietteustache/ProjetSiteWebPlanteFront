@@ -87,12 +87,33 @@ export class FormulaireAnnonceComponent implements OnInit {
 
   }
 
-
-  formulaireAnnonce(val: any): void {
+  formulaire(val:any): void{
     let annonce = {description: val.description, stock:val.stock, type:val.type, user:this.createur, plante :val.plante}
-    console.log(val.plante);
-    console.log(annonce);
-    this.http.post('http://localhost:8085/new_annonce', annonce).subscribe({
+    console.log(val.plante),
+    console.log(annonce),
+    this.http.post('http://localhost:8085/newAnnonce/' ,annonce).subscribe({
+
+      next :(data2)=>{
+        this.an=data2;
+        console.log("test");
+        
+        console.log(this.p);
+        console.log(this.createur);
+        console.log(this.an);
+        this.route.navigateByUrl('annonce');
+      }
+    })
+  }
+
+ /* formulaireAnnonce(val: any): void {
+
+   // let an = {an: val.an, plante :this.p}
+    this.http.post('http://localhost:8085/newAnnonce/' +this.createur, + this.p, val).subscribe({
+      
+    let annonce = {description: val.description, stock:val.stock, type:val.type, user:this.createur, plante :val.plante}
+    
+    //this.http.post('http://localhost:8085/new_annonce', annonce).subscribe({
+
       next: (data) => {
         console.log("test");
         this.an = data;
@@ -105,7 +126,7 @@ export class FormulaireAnnonceComponent implements OnInit {
 
       error: (err) => { console.log(err) }
     })
-  }
+  }*/
 
 
 

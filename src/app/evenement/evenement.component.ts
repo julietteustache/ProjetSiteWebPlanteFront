@@ -53,6 +53,7 @@ score:any;
   }
 
   verification(){
+    console.log(this.connexion.getUserConnect().statut)
     if (this.connexion.isConnected()==true && this.connexion.getUserConnect().score>=1000){
       this.route.navigateByUrl('formulaireEvent')
     }
