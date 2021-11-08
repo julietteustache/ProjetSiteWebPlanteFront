@@ -161,6 +161,9 @@ export class AnnonceComponent implements OnInit {
     });
    
  }
+
+ 
+
  
 
   /*recupAnnonceByCategorie(item : any) {
@@ -193,6 +196,15 @@ export class AnnonceComponent implements OnInit {
     })
 
   }
+  recupType(type : any){
+    this.http.get('http://localhost:8085/annonce_type'+type.type).subscribe({
+      next: (data1) => {
+        this.response = data1;
+      },
+      error: (err) => { console.log(err) }
+    })
+  
+   }
 
 
 

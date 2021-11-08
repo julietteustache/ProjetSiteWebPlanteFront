@@ -137,7 +137,7 @@ export class CommandeComponent implements OnInit {
 
     ;
     this.ngOnInit();
-
+    this.route.navigateByUrl('annonce');
     }
     else{
 

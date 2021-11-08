@@ -15,9 +15,9 @@
     color: #fff;
     background-color: #56A632;
     border: none;
-    border-radius: 40px;
+    border-radius: 10px;
 
-    box-shadow: 0 3px #999;
+   /* box-shadow: 0 3px #999;*/
 }
 .card{
     border-radius: 10px !important;
@@ -25,6 +25,21 @@
 .buttonCommander:hover {background-color: #3e8e41}
   
   .buttonCommander:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(1px);
+  }
+  .btn{
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    padding: 5px 15px !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+  }
+  .btn:hover {background-color: #3e8e41}
+  
+  .btn:active {
     background-color: #3e8e41;
     box-shadow: 0 2px #666;
     transform: translateY(1px);
