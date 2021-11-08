@@ -110,6 +110,7 @@ export class AfficherPlanteComponent implements OnInit {
             this.user = data;
             this.comField="";
             this.recupCom();
+            this.uConnect.gestionScore(this.user);
           },
           error: (err) => { console.log(err) }
         })

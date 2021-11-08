@@ -9,17 +9,17 @@ import { UserConnect } from '../user-connect';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
-user:User=new User();
+user:any;
 nom:any;
 prenom:any;
 login:any;
-adresse:Adress=new Adress;
+adresse:any;
 statut:any;
 score:any;
 rue:any;
 cp:any;
 ville:any;
-  constructor(private uConnect:AuthService,) { }
+  constructor(private uConnect:AuthService) { }
 
   ngOnInit(): void {
     this.user=this.uConnect.getUserConnect();
@@ -32,7 +32,8 @@ ville:any;
     this.ville=this.adresse.ville;
     this.statut=this.user.statut;
     this.score=this.user.score;
-    console.log(this.user.score)
+    console.log(this.score)
+    console.log(this.user.score);
   }
 
 }

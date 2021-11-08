@@ -55,8 +55,8 @@ export class AuthService {
   }
   gestionScore(u:any){
     
-    if (u.score>=50 && u.score<100){
-      this.getUserConnect().statut="Tulipe printanière";
+    if (u.score>=100 && u.score<500){
+      u.statut="Tulipe printanière";
       console.log(u.statut)
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
@@ -67,8 +67,8 @@ export class AuthService {
             error: (err) => { console.log(err) }
           })
     }
-    else if (u.score>=100 && u.score<500){
-      u.statut='avancé';
+    else if (u.score>=500 && u.score<1000){
+      u.statut='Buisson ardent';
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
         next: (data) => {
@@ -77,8 +77,8 @@ export class AuthService {
         error: (err) => { console.log(err) }
       })
     }
-    else if (u.score>=500 && u.score<1000){
-      u.statut='expert';
+    else if (u.score>=1000 && u.score<5000){
+      u.statut='Grand chêne';
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser,u).subscribe({
         next: (data) => {
@@ -87,8 +87,8 @@ export class AuthService {
         error: (err) => { console.log(err) }
       })
     }
-    else if (u.score>=1000){
-      u.statut='maitre';
+    else if (u.score>=5000){
+      u.statut='Olivier centenaire';
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
         next: (data) => {
