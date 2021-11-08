@@ -72,13 +72,13 @@ validation() {
       error:(err)=>{console.log(err)}
     })
   this.dialogref.close()
-    
+  this.connexion.gestionScore() 
   }
 
   else{
   
   }
-  this.connexion.gestionScore()
+  
   };
 
   fermeture(){
