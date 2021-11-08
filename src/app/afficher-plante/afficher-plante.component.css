@@ -2,3 +2,20 @@
     margin-left: 250px !important;
     width:100%-250px !important;
 }
+
+.blocgris {
+    background-color:#DCE1E9;
+    height:250px;
+}
+
+.titrepage {
+    position:relative;
+    bottom: -120px;
+    color:black;
+    padding-left: 32px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+}

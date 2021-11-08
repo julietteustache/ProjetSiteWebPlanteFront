@@ -1,11 +1,13 @@
 <app-navdoc></app-navdoc>
 <div class="main">
-    <div style="background-color:#DCE1E9; padding:10px">
-        <h1>{{espece|titlecase}}</h1>
-        <p style="font-size: 14px; color: grey;">Catégorie : {{categorie|titlecase}} - Sous-catégorie :
-            {{sousCategorie|titlecase}}</p>
+    <div class="blocgris">
+        <div class="titrepage">
+            <h1>{{espece|titlecase}}</h1>
+            <p style="font-size: 14px; color: grey;">Catégorie : {{categorie|titlecase}} - Sous-catégorie :
+                {{sousCategorie|titlecase}}</p>
+        </div>
     </div>
-    <div style="padding:10px">
+    <div style="padding:32px">
         <div *ngIf="mediaExist(p.image)">
             <img [src]="changeFormatMedia(p.image)" style="float: right;max-height: 250px; max-width: 250px;">
         </div>
@@ -21,7 +23,7 @@
         </div>
     </div><br><br><br>
     <form #fConnect="ngForm" (ngSubmit)="newCom(fConnect.value)" style="margin-bottom: 10px; padding:10px">
-        <h4>Commentaires</h4><br>
+        <h4 style="padding:32px">Commentaires</h4><br>
         <div class="form-group">
             <label class="grey-text"><i>Commentaire</i></label>
             <textarea class="form-control" name="commentaire" ngModel="" style="height: 100px;"></textarea>
