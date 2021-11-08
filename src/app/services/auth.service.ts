@@ -53,7 +53,7 @@ export class AuthService {
       this.route.navigateByUrl('accueil');
     }
   }
-  /*gestionScore(){
+  gestionScore(){
     
     if (this.getUserConnect().score>=50 && this.getUserConnect().score<100){
       this.getUserConnect().statut='intermédiaire';
@@ -96,5 +96,5 @@ export class AuthService {
         error: (err) => { console.log(err) }
       })
     }
-  }*/
+  }
 }

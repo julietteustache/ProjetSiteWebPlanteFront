@@ -34,7 +34,7 @@ constructor( private http: HttpClient,private servi : EvenementSpec,private dial
     this.m = this.servi.evenement;
     this.Nb=this.m.nbParticipants;
     console.log('Terrain : ' +  this.m.idEvenement);
-    this.u=this.connexion.getUserConnect;
+    this.u=this.connexion.getUserConnect();
     this.idUser = this.u.idUser;
     this.score=this.u.score;
     this.titre = this.m.titre;
@@ -42,7 +42,7 @@ constructor( private http: HttpClient,private servi : EvenementSpec,private dial
     this.date=this.m.date;
     this.description = this.m.description;
     this.participants = this.m.nbParticipants;
-    console.log(this.participants);
+    console.log(this.score);
     this.organisateur = this.m.organisateur;
     this.adresse = this.m.adresse;
 
@@ -78,6 +78,7 @@ validation() {
   else{
   
   }
+  this.connexion.gestionScore()
   };
 
   fermeture(){

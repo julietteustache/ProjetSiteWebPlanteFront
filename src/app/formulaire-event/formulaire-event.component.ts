@@ -21,7 +21,7 @@ evenement:any;
   }
   formulaireE(val:any):void{
     
-    this.http.post('http://localhost:8085/insertEvent/'+this.uConnect.getUserConnect,val).subscribe({
+    this.http.post('http://localhost:8085/insertEvent/'+this.uConnect.getUserConnect(),val).subscribe({
       next:(data)=>{this.evenement=data
         this.route.navigateByUrl('Evenement');
       },
