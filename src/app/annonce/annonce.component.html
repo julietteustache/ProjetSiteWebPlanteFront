@@ -1,4 +1,12 @@
 <!--<body>
+
+<div class="container">
+    
+
+<div class="row">
+    
+
+
     <div class="col-sm-5" style="  justify-content: center">
         <div class="row">
             <div class="col-sm-4">
@@ -115,6 +123,27 @@
                         style="text-align: center; padding: 4px; background-color: #56A632; margin-top: 54px; border-radius: 3px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);">
                         <h1 class="g-titre">Les annonces du moment</h1>
                     </div>
+
+    </div>
+    <div class="col-sm-1">
+        <p></p>
+    </div>
+    <div class="col-sm-6">
+        
+            <div style="padding: 4px; margin-top: 54px; border-radius: 3px;color: #56A632;text-align: center!important;">
+                <h3 class="titrevent">Les annonces</h3><hr>
+            </div>
+       
+        <div style="margin-top: 20px;" *ngFor='let an of response'>
+            
+            <div class="card  my-shadow " style="width: 100% ; margin-top: 10px; margin-bottom: 10px; ">
+                <div style="background-color :#D6FF79; border-radius: 10px">
+                    <p class="titreAnnonce"> Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces</p>
+                    <p class="categorie">
+                        {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+                    <p class="donneur">
+                        {{an.user.prenom}} {{an.user.nom}} </p>
+
                 </div>
             </div>
             <div style="margin: 10px;" *ngFor='let an of response'>
@@ -155,4 +184,7 @@
         </div>
     </div>
 
+
+
+</div>
 </div>

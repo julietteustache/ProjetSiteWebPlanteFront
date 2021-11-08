@@ -2,6 +2,24 @@
     margin-left: 250px !important;
     width:100%-250px !important;
     background-image: url('../../assets/images/jardin.jfif');
-    border: 0.010px solid black;
     height:100% !important;
+    
+}
+
+.imagetitre {
+
+}
+
+.p-2 {
+    width:90% !important;
+    height:600px;
+    margin:0 auto !important; 
+    background-color:rgb(255, 255, 255);
+    padding: 32px!important;
+}
+
+.titrebloc {
+    font-size: 1.75rem;
+    text-align: center;
+    color:#56A632;
 }
