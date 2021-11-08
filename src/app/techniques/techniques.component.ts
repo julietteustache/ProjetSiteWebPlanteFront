@@ -52,7 +52,7 @@ export class TechniquesComponent implements OnInit {
       this.msg = "Votre niveau n'est pas assez élevé";
     }
     else {
-      this.route.navigateByUrl('creer_plante');
+      this.route.navigateByUrl('nouvelleTechnique');
     }
 
   }

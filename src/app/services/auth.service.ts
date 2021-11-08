@@ -56,7 +56,7 @@ export class AuthService {
   gestionScore(u:any){
     
     if (u.score>=100 && u.score<500){
-      this.getUserConnect().statut="Tulipe printanière";
+      u.statut="Tulipe printanière";
       console.log(u.statut)
       localStorage.setItem('userConnect', JSON.stringify(u));
       this.http.put('http://localhost:8085/modifuser/' + u.idUser, u).subscribe({
