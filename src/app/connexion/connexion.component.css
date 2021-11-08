@@ -1,0 +1,16 @@
+.main {
+    
+    margin-top:100px!important;
+    margin:auto;
+    width: 25%;
+}
+
+.titrebloc {
+    font-size: 1.75rem;
+    text-align: center;
+    color:#56A632;
+}
+
+.texte {
+    text-align: center!important;
+}
