@@ -72,7 +72,7 @@ validation() {
       error:(err)=>{console.log(err)}
     })
   this.dialogref.close()
-  this.connexion.gestionScore() 
+  this.connexion.gestionScore(this.u) 
   }
 
   else{

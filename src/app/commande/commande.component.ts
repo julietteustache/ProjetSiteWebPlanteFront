@@ -126,7 +126,9 @@ export class CommandeComponent implements OnInit {
         this.msg="Vous n'avez pas assez de points!"
       }
   
-    };
+    }
+    else{}
+    ;
 
     }
 
