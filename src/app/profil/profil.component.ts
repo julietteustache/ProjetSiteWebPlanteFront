@@ -32,6 +32,7 @@ ville:any;
     this.ville=this.adresse.ville;
     this.statut=this.user.statut;
     this.score=this.user.score;
+    console.log(this.score)
     console.log(this.user.score);
   }
 
