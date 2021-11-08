@@ -30,7 +30,7 @@
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title >
             <p class="titreAnnonce">Annonce {{an.idAnnonce}} - {{an.plante.prix}}pts/pièce - {{an.stock}}pièces </p>
-            <p class="categorie"> {{an.plante.categorie}} - {{an.plante.sousCategorie}} - {{an.type}}</p>
+            <p class="categorie"> {{an.plante.categorie}} - {{an.type}}</p>
             <p class="donneur">{{an.user.prenom}} {{an.user.nom}}</p>
         </mat-card-title>
 
@@ -54,7 +54,6 @@
 
            <button mat-button  class="button1" type="submit" style="display: inline-block!important;margin-left: 250px;" >Confirmer</button> 
 
-           <button mat-button class="button1" type="submit" style="display: inline-block!important;margin-left: 250px;" >Confirmer</button> 
             <button mat-button (click)="fermeture()" class="button1" style="display: inline-block!important;" >Retour</button>
 
             <p class="text-center text-danger">{{msg}}</p>
