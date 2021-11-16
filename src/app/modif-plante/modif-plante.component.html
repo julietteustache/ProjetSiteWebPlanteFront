@@ -8,8 +8,15 @@
             </div>
             <form #fConnect="ngForm" (ngSubmit)="modifPlante(fConnect.value)">
                 <div class="form-group">
-                    <label class="grey-text">Catégorie</label>
-                    <input type="text" class="form-control" name="categorie" ngModel="{{categorie}}">
+                    <mat-form-field style="width:100%">
+                        <mat-label>Selectionner une catégorie</mat-label>
+
+                        <mat-select ngModel="{{categorie}}" name="categorie" required>
+                            <mat-option *ngFor="let c of categories" [value]="c">
+                                {{c}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
                 </div>
                 <div class="form-group">

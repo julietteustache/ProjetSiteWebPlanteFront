@@ -31,6 +31,10 @@ export class ModifPlanteComponent implements OnInit {
 
   mediaUrl:any;
 
+  categories:any;
+
+  
+
   constructor(private http: HttpClient, public laplante: Plantespecial, private route: Router, private uConnect: AuthService) { }
 
   ngOnInit(): void {
@@ -48,6 +52,9 @@ export class ModifPlanteComponent implements OnInit {
     this.prix = this.p.prix;
     this.exposition = this.p.exposition;
     this.image=this.p.image;
+
+    this.categories = ['Arbres', 'Plantes', 'Légumes'];
+
   }
 
   modifPlante(val: any): void {
@@ -62,7 +69,7 @@ export class ModifPlanteComponent implements OnInit {
       next: (data) => {
         this.plante = data;
         this.stock(this.plante);
-        this.laplante.plante = this.plante; //A corriger, pour l'instant ça ne fait qu'afficher l'ancienne version non actualisée
+        this.laplante.plante = this.plante;
         this.route.navigateByUrl('afficher_plante');
         this.score = this.score+50;
         

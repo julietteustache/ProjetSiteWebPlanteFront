@@ -19,7 +19,7 @@ export class CreerTechniqueComponent implements OnInit {
 
   msg: any;
 
-  constructor(private http: HttpClient, private route: Router, private uConnect:AuthService) { }
+  constructor(private http: HttpClient, private route: Router, private uConnect: AuthService) { }
 
   ngOnInit(): void {
     this.msg = "";
@@ -39,6 +39,18 @@ export class CreerTechniqueComponent implements OnInit {
         next: (data) => {
           this.technique = data;
           this.route.navigateByUrl('techniques');
+
+          this.score = this.score + 100;
+
+          this.user.score = this.score;
+          localStorage.setItem('userConnect', JSON.stringify(this.user));
+          this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
+            next: (data) => {
+              this.user = data;
+              this.uConnect.gestionScore(this.user)
+            },
+            error: (err) => { console.log(err) }
+          })
         },
         error: (err) => { console.log(err) }
       })

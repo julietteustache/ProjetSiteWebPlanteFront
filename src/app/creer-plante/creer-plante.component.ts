@@ -20,10 +20,14 @@ export class CreerPlanteComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, private uConnect: AuthService) { }
 
   ngOnInit(): void {
+    this.user = this.uConnect.getUserConnect();
+    this.idUser = this.user.idUser;
+    this.score = this.user.score;
+
   }
 
   creerPlante(val: any): void {
-    if (this.statut === "Petit cactus") {
+    if (this.statut === "Petit cactus" || this.statut === "Tulipe printanière") {
       this.msg = "Votre niveau n'est pas assez élevé";
     }
     else {
@@ -31,6 +35,17 @@ export class CreerPlanteComponent implements OnInit {
         next: (data) => {
           this.plante = data;
           this.route.navigateByUrl('liste_plantes');
+          this.score = this.score + 100;
+
+          this.user.score = this.score;
+          localStorage.setItem('userConnect', JSON.stringify(this.user));
+          this.http.put('http://localhost:8085/modifuser/' + this.idUser, this.user).subscribe({
+            next: (data) => {
+              this.user = data;
+              this.uConnect.gestionScore(this.user)
+            },
+            error: (err) => { console.log(err) }
+          })
         },
         error: (err) => { console.log(err) }
       })
