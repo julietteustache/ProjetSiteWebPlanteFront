@@ -1,1 +1,19 @@
-<p>publications works!</p>
+<div class="container">
+    <div style="text-align: center;">
+        <h2>Vos Publications</h2>
+        <p class="grey-text" style="font-style: italic;">Partagez vos expériences avec les autres !</p>
+        <br><br>
+    </div>
+<div class="col-sm-12" *ngFor='let p of publications'>
+    <div class="card p-2 my-shadow" style="border-radius:25px;border:solid 3px #D38B5D; margin-bottom: 5px !important;">
+        <div *ngIf="mediaExist(p.image)">
+            <img [src]="changeFormatMedia(p.image)" style="float: right;max-height: 250px; max-width: 250px;">
+        </div>
+        <p class="text-secondary" style="text-align:right">Publié le {{p.date|date:'medium'}} </p>
+        <div>
+            <p>{{p.contenu}}</p>
+        </div>
+    </div>
+    <br>
+</div>
+</div>
