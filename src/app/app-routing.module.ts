@@ -33,6 +33,7 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
 import { MsgRecusComponent } from './msg-recus/msg-recus.component';
 import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
 import { NvMsgComponent } from './nv-msg/nv-msg.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -65,7 +66,8 @@ const routes: Routes = [
   {path: 'msg_recus', component:MsgRecusComponent},
   {path: 'msg_envoyes', component:MsgEnvoyesComponent},
   {path: 'nv_msg', component:NvMsgComponent},
-  {path: '', redirectTo: 'accueil', pathMatch: 'full'}
+  {path: '', redirectTo: 'accueil', pathMatch: 'full'},
+  {path: 'publications', component:PublicationsComponent}
 ];
 
 @NgModule({

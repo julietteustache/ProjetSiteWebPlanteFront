@@ -55,6 +55,7 @@ import { ModifTechniqueComponent } from './modif-technique/modif-technique.compo
 import { MsgRecusComponent } from './msg-recus/msg-recus.component';
 import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
 import { NvMsgComponent } from './nv-msg/nv-msg.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { NvMsgComponent } from './nv-msg/nv-msg.component';
     ModifTechniqueComponent,
     MsgRecusComponent,
     MsgEnvoyesComponent,
-    NvMsgComponent
+    NvMsgComponent,
+    PublicationsComponent
   ],
   imports: [
     BrowserModule,
