@@ -56,6 +56,7 @@ import { MsgRecusComponent } from './msg-recus/msg-recus.component';
 import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
 import { NvMsgComponent } from './nv-msg/nv-msg.component';
 import { PublicationsComponent } from './publications/publications.component';
+import { CreerPublicationComponent } from './creer-publication/creer-publication.component';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { PublicationsComponent } from './publications/publications.component';
     MsgRecusComponent,
     MsgEnvoyesComponent,
     NvMsgComponent,
-    PublicationsComponent
+    PublicationsComponent,
+    CreerPublicationComponent
   ],
   imports: [
     BrowserModule,
