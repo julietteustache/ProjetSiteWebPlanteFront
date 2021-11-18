@@ -46,4 +46,8 @@ export class PublicationsComponent implements OnInit {
     }
   }
 
+  goPublier(): void {
+      this.route.navigateByUrl('nv_publication');
+  }
+
 }

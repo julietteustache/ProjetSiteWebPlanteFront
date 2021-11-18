@@ -1,26 +1,28 @@
-<div class="container">
-    <div class="blocnoir">
-        <div class="imagetitre"></div>
-        <div class="titrepage">
-            <h1>Documentation</h1>
-            <p>Bienvenue dans la catégorie Documentation ! Utilisez le menu sur le côté ou ci-dessous pour naviguer
-                entre les pages. <br>
-                N'hésitez pas à enrichir la documentation une fois que vous aurez atteint le niveau nécessaire !</p>
-        </div>
+<div class="blocnoir">
+    <div class="imagetitre"></div>
+    <div class="titrepage">
+        <h1>Publications</h1>
+        <p>Retrouvez ici vos publications. Tout ce que vous ajoutez ici est public ! Partagez vos expériences et vos réussites pour contribuer à la communauté ! <br>
+        </p>
+        <button (click)="goPublier()" class="bouton" type="button">Ajouter une publication</button>
     </div>
-    
-<div class="col-sm-12" *ngFor='let p of publications'>
-    <div class="card p-2 my-shadow" style="border-radius:25px;border:solid 3px #D38B5D; margin-top: 30px !important;">
-        <p class="text-secondary" style="text-align:right">Publié le {{p.date|date:'medium'}} </p>
-        <div *ngIf="mediaExist(p.image)">
-            <img [src]="changeFormatMedia(p.image)" style=" max-height: 250px; max-width: 250px;margin-left:auto;margin-right:auto;display:block">
-            <br>
-        </div>
-       
-        <div style="white-space: pre-wrap">
-            <p>{{p.contenu}}</p>
-        </div>
-    </div>
-    <br>
 </div>
+<div class="container">
+
+    <div class="col-sm-12" *ngFor='let p of publications'>
+        <div class="card p-2 my-shadow"
+            style="border-radius:25px;border:solid 3px #D38B5D; margin-top: 30px !important;">
+            <p class="text-secondary" style="text-align:right">Publié le {{p.date|date:'medium'}} </p>
+            <div *ngIf="mediaExist(p.image)">
+                <img [src]="changeFormatMedia(p.image)"
+                    style=" max-height: 250px; max-width: 250px;margin-left:auto;margin-right:auto;display:block">
+                <br>
+            </div>
+
+            <div style="white-space: pre-wrap">
+                <p>{{p.contenu}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
 </div>
