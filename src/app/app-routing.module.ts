@@ -35,6 +35,7 @@ import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
 import { NvMsgComponent } from './nv-msg/nv-msg.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { CreerPublicationComponent } from './creer-publication/creer-publication.component';
+import { CommunauteComponent } from './communaute/communaute.component';
 
 const routes: Routes = [
   {path:'formulaireEvent',component:FormulaireEventComponent},
@@ -69,7 +70,8 @@ const routes: Routes = [
   {path: 'nv_msg', component:NvMsgComponent},
   {path: '', redirectTo: 'accueil', pathMatch: 'full'},
   {path: 'publications', component:PublicationsComponent},
-  {path: 'nv_publication',component:CreerPublicationComponent}
+  {path: 'nv_publication',component:CreerPublicationComponent},
+  {path: 'communaute',component:CommunauteComponent}
 ];
 
 @NgModule({

@@ -1,10 +1,18 @@
+.main {
+    position:absolute;
+    top: 62px;
+    margin-left: 250px !important;
+    width:-webkit-fill-available;
+    height:100% !important;
+}
+
 .blocnoir {
     height:250px!important;
     background-color:black;
 }
 
 .imagetitre {
-    background-image: linear-gradient(90deg, rgba(12, 54, 29, 0.9), rgba(12, 54, 29, 0.2)), url('../../assets/images/jardin.jfif');
+    background-image: linear-gradient(90deg, rgba(12, 54, 29, 0.9), rgba(12, 54, 29, 0.2)), url('../../assets/images/jardinage.jpg');
     height:-webkit-fill-available;
     filter:brightness(80%)
 }
@@ -30,6 +38,6 @@ h1 {
 
 .titrebloc {
     font-size: 1.75rem;
-    text-align: center;
+    text-align: left;
     color:#56A632;
 }

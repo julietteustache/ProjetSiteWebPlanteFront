@@ -57,6 +57,7 @@ import { MsgEnvoyesComponent } from './msg-envoyes/msg-envoyes.component';
 import { NvMsgComponent } from './nv-msg/nv-msg.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { CreerPublicationComponent } from './creer-publication/creer-publication.component';
+import { CommunauteComponent } from './communaute/communaute.component';
 
 
 @NgModule({
@@ -104,7 +105,8 @@ import { CreerPublicationComponent } from './creer-publication/creer-publication
     MsgEnvoyesComponent,
     NvMsgComponent,
     PublicationsComponent,
-    CreerPublicationComponent
+    CreerPublicationComponent,
+    CommunauteComponent
   ],
   imports: [
     BrowserModule,
