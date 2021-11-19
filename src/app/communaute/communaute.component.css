@@ -41,3 +41,29 @@ h1 {
     text-align: left;
     color:#56A632;
 }
+
+.bouton {
+    /* Placement 
+    display: block;
+    margin:0 auto ; */ 
+
+    /* Style */
+    padding: 5px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    color: #fff;
+    background-color: #714955;
+    border: none;
+    border-radius: 40px;
+
+    /* box-shadow: 0 3px #999; */
+    
+    
+
+    /* box-shadow: 0 3px #999; */    
+
+  }

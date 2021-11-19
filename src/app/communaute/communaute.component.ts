@@ -66,4 +66,8 @@ export class CommunauteComponent implements OnInit {
     });
   }
 
+  goPublier(): void {
+    this.route.navigateByUrl('nv_publication');
+}
+
 }
