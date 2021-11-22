@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Plante } from '../plante';
 import { AfficherPlanteComponent } from '../afficher-plante/afficher-plante.component';
@@ -12,6 +12,12 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './plantes.component.html',
   styleUrls: ['./plantes.component.css']
 })
+
+//Permet d'utiliser le component depuis d'autres component en l'important (nécessaire pour la navdoc)
+@Injectable({ 
+  providedIn: 'root',
+})
+
 export class PlantesComponent implements OnInit {
   plantes: any;
   idPlante: any;
